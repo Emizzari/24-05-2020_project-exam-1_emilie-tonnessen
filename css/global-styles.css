@@ -51,7 +51,7 @@ body{
 
 
 /* FONT STYLES: -------------------------- */
-h1, h2, h3, h4, h5, h6{
+/* h1, h2, h3, h4, h5, h6{
     font-family: brandon-grotesque, sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -93,17 +93,20 @@ h6{
 
 P{
     font-size: 16px;
-}
+} */
+
+
 
 
 /* HEADER: ------------------------------- */
-.header-container{
+/* .header-container{
     text-align: center;
-}
+} */
+
 
 
 /* LINKS: -------------------------------- */
-.link{
+/* .link{
     color: #005288;
     text-decoration: none;
 }
@@ -131,12 +134,12 @@ P{
 
 .link__uppercase{
     text-transform: uppercase;
-}
+} */
 
 
 
 /* BUTTONS: ------------------------------ */
-.btn{
+/* .btn{
     text-align: center;
     padding: 20px;
     border-radius: 5px;
@@ -149,4 +152,4 @@ P{
 .btn:hover{
     background-color: transparent;
     color: #000;
-}
+} */
