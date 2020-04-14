@@ -1,39 +1,13 @@
-/* COLOUR PALETTE: 
-Light grey     -      #f0f0f0;
-Grey           -      #757575;
-Light pink     -      #e0aab9;
-White          -      #FFFFFF;
-Dark Green     -      #394f4c;
-BUTTONS: 
-Background color      #394f4c;
-Text color            #FFFFFF;
------------------------------------------- */
-
-
-/* TYPOGRAPHY:
-Body 
-font-family: 'Montserrat', sans-serif;
-
-Headline
-font-family: ;
------------------------------------------- */
-
-
 /* CSS IMPORTS: -------------------------- */
-@import url('nav.css');
-@import url('products.css');
+@import url('global-styles.css');
+@import url('about.css');
+@import url('contact.css');
+@import url('launch.css');
+@import url('home.css');
 @import url('footer.css');
+@import url('nav.css');
+
+
 
 /* FONT IMPORTS: ------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;500;700&family=Montserrat&family=Ubuntu&display=swap');
-
-
-
-
-
-
-
-
-
-
-@import url()
+@import url("https://use.typekit.net/enq2msv.css");
