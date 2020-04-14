@@ -1,0 +1,152 @@
+/* COLOUR PALETTE: 
+Midnight Blue     -    rgb(0, 82, 136)      -    #005288;
+
+Metallic Silver   -    rgb(167, 169, 172)   -    #A7A9AC;
+
+Chinese Black     -    rgb(15, 17, 18)      -    #0F1112;
+
+Eerie Black       -    rgb(24, 28, 31)      -    #181C1F;
+
+White             -    rgb(255, 255, 255)   -    #FFFFFF;
+
+Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
+------------------------------------------ */
+
+/* Color Theme Swatches in Hex */
+.midnight-blue { color: #005288; }
+.metallic-silver { color: #0F1112; }
+.chinese-black { color: #181C1F; }
+.eerie-black { color: #22272B; }
+.dark-gunmetal { color: #A7A9AC; }
+
+/* Color Theme Swatches in RGBA */
+.midnight-blue-rgb { color: rgba(0, 82, 136, 1); }
+.metallic-silver-rgb { color: rgba(15, 17, 18, 1); }
+.chinese-black-rgb { color: rgba(24, 28, 31, 1); }
+.eerie-black-rgb { color: rgba(34, 39, 43, 1); }
+.dark-gunmetal-rgb { color: rgba(167, 169, 172, 1); }
+
+
+
+/* TYPOGRAPHY:
+Headline
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+Body 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+------------------------------------------ */
+
+
+
+/* RESET BODY STYLES: -------------------- */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* FONT STYLES: -------------------------- */
+h1, h2, h3, h4, h5, h6{
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+p, a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 40px;
+}
+
+h2{
+    font-size: 35px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+h4{
+    font-size: 25px;
+}
+
+h5{
+    font-size: 22px;
+}
+
+h6{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+P{
+    font-size: 16px;
+}
+
+
+/* HEADER: ------------------------------- */
+.header-container{
+    text-align: center;
+}
+
+
+/* LINKS: -------------------------------- */
+.link{
+    color: #005288;
+    text-decoration: none;
+}
+
+.link:hover{
+    border-bottom: 1px solid #005288;
+    cursor: pointer;
+}
+
+.link-white{
+    color: #FFFFFF;
+}
+
+.link-white:hover{
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.link-silver{
+    color: #A7A9AC;
+}
+
+.link-silver:hover{
+    border-bottom: 1px solid #A7A9AC;
+}
+
+.link__uppercase{
+    text-transform: uppercase;
+}
+
+
+
+/* BUTTONS: ------------------------------ */
+.btn{
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #FFFFFF;
+    box-shadow: #000;
+    border: 1px solid #000000;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: #000;
+}
