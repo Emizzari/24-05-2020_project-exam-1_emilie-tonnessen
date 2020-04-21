@@ -11,3 +11,158 @@ White             -    rgb(255, 255, 255)   -    #FFFFFF;
 
 Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
 ------------------------------------------ */
+
+
+
+/* TOP NAVIGATION BAR: ------------------- */
+.top-nav-container{
+    width: 100%;
+    height: 100px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    color: #FFF;
+    background-color: #0F1112;
+    display: none;
+}
+
+.top-nav{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+#logo{
+    width: 200px;
+    padding: 30px;
+}
+
+.top-menu{
+    display: inline-block;
+}
+
+.top-menu a{
+    color: #FFF;
+    text-decoration: none;
+}
+/* --------------------------------------- */
+
+
+
+/* MOBILE NAVIGATION BAR: ---------------- */
+.mobile-nav{
+    width: 100%;
+    height: 80px;
+    color: #FFF;
+    background-color: #0F1112;
+    position: fixed;
+    bottom: 0;   
+    text-align: center;
+}
+
+.hamburger-container{
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hamburger-container:hover{
+    cursor: pointer;
+}
+
+#hamburger{
+    font-size: 40px;
+    padding: 20px 0;
+}
+/* -------------------------------------- */
+
+
+
+/* MOBILE MENU BLOCK: ------------------- */
+#mobile-block-container{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #0F1112;
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-block{
+    height: 100%;
+    display: grid;
+    grid-template: 
+        "logo"
+        "menu"
+        "icon";
+}
+
+.mobile-block-logo{
+    text-align: center;
+    grid-area: logo;
+}
+
+.mobile-block-logo img{
+    width: 70%;
+    padding: 40px;
+}
+
+.mobile-menu{
+    grid-area: menu;
+    align-self: center;
+}
+
+.mobile-menu a {
+  color: white;
+  background-color: #0F1112;  
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.mobile-menu a:hover{
+    background-color: #FFF;
+    color: #0F1112;
+}
+
+.mobile-menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.icon__menu-close{
+    text-align: center;
+    font-size: 40px;
+    align-self: end;
+    grid-area: icon;
+    padding: 20px 0;
+}
+
+.icon__menu-close:hover{
+    cursor: pointer;
+}
+/* --------------------------------------- */
+
+
+
+/* Removing randome whitespace above the mobile menu block */
+.fontawesome-i2svg-active{
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+} 
+
+ .fontawesome-i2svg-complete{
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+} 
+
+html{
+    margin: 0;
+    padding: 0;
+}
