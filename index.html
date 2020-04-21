@@ -18,8 +18,8 @@
     <link rel="icon" href="images/siteicon/siteicon.png">
 
     <!-- Font Awesome: -->
-    <script src="https://kit.fontawesome.com/43eb665885.js" crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/f0fe9be787.js" crossorigin="anonymous"></script>
+    
     <!-- CSS Link: -->
     <link rel="stylesheet" type="text/css" href="css/master.css">
 </head>
@@ -28,18 +28,53 @@
 
 <body>
     <!-- NAVIGATION: --------------------------------------------------->
+    <!-- Top Bar: -->
     <nav class="top-nav-container">
         <div class="top-nav">
-
+            <div class="logo">
+                <img id="logo" src="images/logo/logo-white_tr.png" alt="Logo">
+            </div>
+            <div class="top-menu">
+                <a href="index.html">Home</a>
+                <a href="launch.html">Launch</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </div>
         </div>
     </nav>
 
 
-    <nav class="mobile-nav-container">
-        <div class="mobile-nav">
-    
+    <h1></h1>
+
+    <!-- Mobile Bar: -->
+    <nav class="mobile-nav">  
+        <div onclick="toogleMobileMenu()" class="hamburger-container"> 
+            <i id="hamburger" class="fa fa-bars"></i>     
         </div>
     </nav>
+
+    <!-- Mobile Menu: -->
+    <div id="mobile-block-container">
+        <div class="mobile-block">
+            <div class="mobile-block-logo">
+                <img src="images/logo/logo-white_tr.png" alt="Logo">
+            </div>
+            
+            <div class="mobile-menu">
+                <a href="index.html">Home</a>
+                <a href="launch.html">Launch</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </div>
+            
+            
+            <div class="icon__menu-close" onclick="toogleMobileMenu()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        
+    </div>
     <!-- End of Navigation --------------------------------------------->
 
 
