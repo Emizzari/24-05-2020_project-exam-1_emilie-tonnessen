@@ -1,15 +1,15 @@
 /* COLOUR PALETTE: 
-Midnight Blue     -    rgb(0, 82, 136)      -    #005288;
+Blue          -  rgb(0, 82, 136)    -  #005288;
 
-Metallic Silver   -    rgb(167, 169, 172)   -    #A7A9AC;
+Light Black   -  rgb(34, 39, 43)    -  #22272B;
+Medium black  -  rgb(24, 28, 31)    -  #181C1F;
+Dark black    -  rgb(15, 17, 18)    -  #0F1112;
 
-Chinese Black     -    rgb(15, 17, 18)      -    #0F1112;
+White         -  rgb(255, 255, 255) -  #FFFFFF;
+Black         -  rgb(0,0,0)         -  #000000;
 
-Eerie Black       -    rgb(24, 28, 31)      -    #181C1F;
-
-White             -    rgb(255, 255, 255)   -    #FFFFFF;
-
-Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
+Grey          -  rgb(167, 169, 172)   - #A7A9AC;
+Red           -                       - #AE0000;
 ------------------------------------------ */
 
 
@@ -21,7 +21,6 @@ Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
     color: #FFF;
     background-color: #0F1112;
-    display: none;
 }
 
 .top-nav{
@@ -42,6 +41,8 @@ Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
     color: #FFF;
     text-decoration: none;
 }
+
+
 /* --------------------------------------- */
 
 
@@ -165,4 +166,26 @@ Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
 html{
     margin: 0;
     padding: 0;
+}
+
+
+/* Mobile: */
+@media screen and (max-width: 480px){
+    .top-nav-container{
+        display: none;
+    }
+}
+
+/* Tablet: */
+@media screen and (max-width: 1199px) and (min-width: 481px){
+    .mobile-nav{
+        display: none;
+    }
+}
+
+/* Desktop: */
+@media screen and (min-width: 1200px){
+    .mobile-nav{
+        display: none;
+    }
 }

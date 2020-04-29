@@ -1,30 +1,16 @@
 /* COLOUR PALETTE: 
-Midnight Blue     -    rgb(0, 82, 136)      -    #005288;
+Blue          -  rgb(0, 82, 136)    -  #005288;
 
-Metallic Silver   -    rgb(167, 169, 172)   -    #A7A9AC;
+Light Black   -  rgb(34, 39, 43)    -  #22272B;
+Medium black  -  rgb(24, 28, 31)    -  #181C1F;
+Dark black    -  rgb(15, 17, 18)    -  #0F1112;
 
-Chinese Black     -    rgb(15, 17, 18)      -    #0F1112;
+White         -  rgb(255, 255, 255) -  #FFFFFF;
+Black         -  rgb(0,0,0)         -  #000000;
 
-Eerie Black       -    rgb(24, 28, 31)      -    #181C1F;
-
-White             -    rgb(255, 255, 255)   -    #FFFFFF;
-
-Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
+Grey          -  rgb(167, 169, 172)   - #A7A9AC;
+Red           -                       - #AE0000;
 ------------------------------------------ */
-
-/* Color Theme Swatches in Hex */
-.midnight-blue { color: #005288; }
-.metallic-silver { color: #0F1112; }
-.chinese-black { color: #181C1F; }
-.eerie-black { color: #22272B; }
-.dark-gunmetal { color: #A7A9AC; }
-
-/* Color Theme Swatches in RGBA */
-.midnight-blue-rgb { color: rgba(0, 82, 136, 1); }
-.metallic-silver-rgb { color: rgba(15, 17, 18, 1); }
-.chinese-black-rgb { color: rgba(24, 28, 31, 1); }
-.eerie-black-rgb { color: rgba(34, 39, 43, 1); }
-.dark-gunmetal-rgb { color: rgba(167, 169, 172, 1); }
 
 
 
@@ -42,10 +28,29 @@ Body
 
 
 
-/* RESET BODY STYLES: -------------------- */
+/* RESET DEFAULT STYLES: ----------------- */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #22272B;
+    color: #FFFFFF;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
 img{
     width: 100%;
 }
+
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
 
 /* GRID & SECTIONS: ---------------------- */
 .grid{
@@ -93,44 +98,152 @@ h1, h2, h3, h4, h5, h6{
     font-style: normal;
     margin-bottom: 10px;
     text-transform: uppercase;
+    padding: 0;
+    margin: 0;
 }
 
 p, a{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-style: normal;
+    padding: 0;
+    margin: 0;
 }
 
-/* h1{
-    font-weight: 600;
-    font-size: 40px;
+/* Mobile: */
+@media screen and (max-width: 480px){
+    h1{
+        font-size: 30px;
+    }
+
+    h2{
+        font-size: 35px;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 25px;
+    } 
+
+    P{
+    font-size: 12px;
+    }
 }
 
-h2{
-    font-size: 35px;
+/* Tablet: */
+@media screen and (max-width: 1199px) and (min-width: 481px){
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 35px;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 25px;
+    } 
+
+    P{
+    font-size: 15px;
+    }
 }
 
-h3{
-    font-size: 30px;
+/* Desktop: */
+@media screen and (min-width: 1200px){
+    h1{
+        font-size: 50px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 25px;
+    } 
+
+    P{
+    font-size: 18px;
+    }
+}
+/* --------------------------------------- */
+
+
+
+/* QUESTIONS: ---------------------------- */
+.question-section-container{
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
-h4{
-    font-size: 25px;
+
+
+/* Mobile: */
+@media screen and (max-width: 480px){
+    .question-section-container{
+        background-image: url('/../images/questions_mobile.jpg');
+        height: 400px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+     }
+    }
+
+    .question-section{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .question-section h3{
+        color: #005288;
+        font-size: 30px;
+        font-weight: 700;
+    }
 }
 
-h5{
-    font-size: 22px;
+/* Tablet: */
+@media screen and (max-width: 1199px) and (min-width: 481px){
+.question-section-container{
+        background-image: url('/../images/questions_tablet.jpg');
+        height: 300px;
+    }
+
+    .question-section h3{
+        color: #005288;
+        font-size: 40px;
+        font-weight: 700;
+    }
 }
 
-h6{
-    font-weight: 600;
-    font-size: 20px;
-}
+/* Desktop: */
+@media screen and (min-width: 1200px){
+    .question-section-container{
+        background-image: url('/../images/questions_desktop.jpg');
+        height: 550px;
+    }
 
-P{
-    font-size: 16px;
+    .question-section h3{
+        color: #005288;
+        font-size: 50px;
+        font-weight: 700;
+    }
 }
-
+/* --------------------------------------- */
 
 
 
@@ -175,17 +288,33 @@ P{
 
 
 /* BUTTONS: ------------------------------ */
-/* .btn{
+.btn{
     text-align: center;
     padding: 20px;
-    border-radius: 5px;
-    background-color: #000;
+    border-radius: 15px;
+    background: linear-gradient(150deg, #006BB1, #002F4E);
     color: #FFFFFF;
-    box-shadow: #000;
-    border: 1px solid #000000;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    border: 0px solid #000000;
+    width: 170px;
+    text-transform: uppercase;
 }
 
 .btn:hover{
-    background-color: transparent;
-    color: #000;
-} */ 
+    background: linear-gradient(150deg, #AE0000, #0F1112);
+
+} 
+
+/* COLOUR PALETTE: 
+Blue          -  rgb(0, 82, 136)    -  #005288;
+
+Light Black   -  rgb(34, 39, 43)    -  #22272B;
+Medium black  -  rgb(24, 28, 31)    -  #181C1F;
+Dark black    -  rgb(15, 17, 18)    -  #0F1112;
+
+White         -  rgb(255, 255, 255) -  #FFFFFF;
+Black         -  rgb(0,0,0)         -  #000000;
+
+Grey          -  rgb(167, 169, 172)   - #A7A9AC;
+Red           -                       - #AE0000;
+------------------------------------------ */
