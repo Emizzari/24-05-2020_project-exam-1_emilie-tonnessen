@@ -43,15 +43,46 @@ Body
 
 
 /* RESET BODY STYLES: -------------------- */
-body{
-    margin: 0;
-    padding: 0;
+img{
+    width: 100%;
 }
 
-html{
-    margin: 0;
-    padding: 0;
+/* GRID & SECTIONS: ---------------------- */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
+@media screen and (max-width: 480px){
+    .grid{
+        grid-gap: 20px;
+        margin: 20px;
+    }
+
+    .section__img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 481px){
+    .grid{
+        
+        grid-gap: 30px;
+        margin: 30px;
+    }
+
+    .section__img{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .grid{
+        grid-gap: 50px;
+        margin: 50px;
+    }
+}
+
 
 
 
@@ -70,7 +101,7 @@ p, a{
     font-style: normal;
 }
 
-h1{
+/* h1{
     font-weight: 600;
     font-size: 40px;
 }
@@ -104,14 +135,14 @@ P{
 
 
 /* HEADER: ------------------------------- */
-.header-container{
+/* .header-container{
     text-align: center;
-}
+} */
 
 
 
 /* LINKS: -------------------------------- */
-.link{
+/* .link{
     color: #005288;
     text-decoration: none;
 }
@@ -139,12 +170,12 @@ P{
 
 .link__uppercase{
     text-transform: uppercase;
-}
+} */
 
 
 
 /* BUTTONS: ------------------------------ */
-.btn{
+/* .btn{
     text-align: center;
     padding: 20px;
     border-radius: 5px;
@@ -157,4 +188,4 @@ P{
 .btn:hover{
     background-color: transparent;
     color: #000;
-}
+} */ 

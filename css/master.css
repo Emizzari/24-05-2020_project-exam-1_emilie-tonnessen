@@ -2,6 +2,8 @@
 @import url('global-styles.css');
 @import url('about.css');
 @import url('contact.css');
+@import url('sites.css');
+@import url('rockets.css');
 @import url('launch.css');
 @import url('home.css');
 @import url('footer.css');
@@ -11,3 +13,14 @@
 
 /* FONT IMPORTS: ------------------------- */
 @import url("https://use.typekit.net/enq2msv.css");
+
+/* RESET BODY STYLES: -------------------- */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
