@@ -13,3 +13,43 @@ Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
 
 
 
+.home-header{
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+    /* Center the content */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile: */
+@media screen and (max-width: 480px){
+    .home-header{
+        background-image: url('/../images/home_header_vertical.jpg');
+    }
+}
+
+/* Tablet: */
+@media screen and (max-width: 1199px) and (min-width: 481px){
+    .home-header{
+        background-image: url('/../images/home_header.jpg');
+    }
+}
+
+/* Desktop: */
+@media screen and (min-width: 1200px){
+    .home-header{
+        background-image: url('/../images/home_header.jpg');
+        height: 850px;
+    }
+}
+
