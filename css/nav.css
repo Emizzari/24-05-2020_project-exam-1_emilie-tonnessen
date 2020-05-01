@@ -1,15 +1,12 @@
 /* COLOUR PALETTE: 
-Blue          -  rgb(0, 82, 136)    -  #005288;
-
-Light Black   -  rgb(34, 39, 43)    -  #22272B;
-Medium black  -  rgb(24, 28, 31)    -  #181C1F;
-Dark black    -  rgb(15, 17, 18)    -  #0F1112;
-
-White         -  rgb(255, 255, 255) -  #FFFFFF;
-Black         -  rgb(0,0,0)         -  #000000;
-
-Grey          -  rgb(167, 169, 172)   - #A7A9AC;
-Red           -                       - #AE0000;
+Blue         -  rgb(0, 82, 136)    - #005288;
+Light Black  -  rgb(34, 39, 43)    - #22272B;
+Medium black -  rgb(24, 28, 31)    - #181C1F;
+Dark black   -  rgb(15, 17, 18)    - #0F1112;
+White        -  rgb(255, 255, 255) - #FFFFFF;
+Black        -  rgb(0,0,0)         - #000000;
+Grey         -  rgb(167, 169, 172) - #A7A9AC;
+Red          -  rgb(174, 0, 0)     - #AE0000;
 ------------------------------------------ */
 
 
@@ -20,31 +17,86 @@ Red           -                       - #AE0000;
     height: 100px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
     color: #FFF;
-    background-color: #0F1112;
+    background: linear-gradient(150deg, rgb(29, 101, 163), rgb(8, 10, 10));
+    position: fixed;
+    position: -webkit-sticky; /* safari */
+    top: 0;
+}
+
+.top-nav-container__transparent{
+    width: 100%;
+    height: 100px;
+    color: #FFF;
+    background-color: transparent;
+    position: absolute;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 1); */
+}
+
+.top-nav-container__black{
+    width: 100%;
+    height: 100px;
+    color: #FFF;
+    background-color: #000;
 }
 
 .top-nav{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 3fr;
 }
 
-#logo{
-    width: 200px;
-    padding: 30px;
+.logo{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
-
-.top-menu{
-    display: inline-block;
-}
-
-.top-menu a{
-    color: #FFF;
-    text-decoration: none;
-}
-
-
 /* --------------------------------------- */
 
+
+/* DESKTOP MENU: ------------------------- */
+.desktop-menu{
+    text-align: right;
+}
+
+.desktop-menu a{
+    display: inline-block;
+    line-height: 100px;  
+    height: 100px;
+}
+
+.desktop-menu a div{
+    color: #FFFFFF;
+    text-decoration: none;
+    height: 100px;
+}
+
+.desktop-menu a div:hover{
+    background: rgb(0, 82, 136);
+}
+/* End of Desktop Menu ------------------- */
+
+
+
+/* TABLET MENU: -------------------------- */
+.tablet-menu div{
+    float: right;
+    padding: 0px 20px;
+    text-align: center;
+}
+
+
+
+
+/* End of Tablet Menu -------------------- */
+
+
+/* ACTIVE: ------------------------------- */
+#active{
+    background: rgb(0, 82, 136, 0.5);
+}
+/* --------------------------------------- */
 
 
 /* MOBILE NAVIGATION BAR: ---------------- */
@@ -82,11 +134,15 @@ Red           -                       - #AE0000;
     display: none;
     width: 100%;
     height: 100%;
-    position: absolute;
     background-color: #0F1112;
     color: #FFF;
     margin: 0;
     padding: 0;
+
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 999;
 }
 
 .mobile-block{
@@ -150,36 +206,36 @@ Red           -                       - #AE0000;
 
 
 
-/* Removing randome whitespace above the mobile menu block */
-.fontawesome-i2svg-active{
-    font-size: 0;
-    padding: 0;
-    margin: 0;
-} 
-
- .fontawesome-i2svg-complete{
-    font-size: 0;
-    padding: 0;
-    margin: 0;
-} 
-
-html{
-    margin: 0;
-    padding: 0;
-}
-
-
+/* RESPONSIVE: --------------------------- */
 /* Mobile: */
 @media screen and (max-width: 480px){
-    .top-nav-container{
+    .top-nav-container, .top-nav-container__transparent{
         display: none;
     }
+
 }
 
 /* Tablet: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
     .mobile-nav{
         display: none;
+    }
+
+    .desktop-menu{
+        display: none;
+    }
+
+    .top-nav{
+        padding-left: 20px;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .logo{
+        max-width: 380px;
+    }
+
+    #hamburger{
+        font-size: 40px;
     }
 }
 
@@ -188,4 +244,18 @@ html{
     .mobile-nav{
         display: none;
     }
+
+    .tablet-menu{
+        display: none;
+    }
+
+    .top-nav{
+        padding-left: 20px;
+    }
+
+    .desktop-menu a div{
+        font-size: 20px;
+        padding: 0px 20px;
+    }
 }
+/* --------------------------------------- */
