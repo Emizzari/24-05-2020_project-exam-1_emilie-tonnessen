@@ -1,17 +1,3 @@
-/* COLOUR PALETTE: 
-Blue          -  rgb(0, 82, 136)    -  #005288;
-
-Light Black   -  rgb(34, 39, 43)    -  #22272B;
-Medium black  -  rgb(24, 28, 31)    -  #181C1F;
-Dark black    -  rgb(15, 17, 18)    -  #0F1112;
-
-White         -  rgb(255, 255, 255) -  #FFFFFF;
-Black         -  rgb(0,0,0)         -  #000000;
-
-Grey          -  rgb(167, 169, 172)   - #A7A9AC;
-Red           -                       - #AE0000;
------------------------------------------- */
-
 /* CSS IMPORTS: -------------------------- */
 @import url('global-styles.css');
 @import url('about.css');
@@ -22,11 +8,21 @@ Red           -                       - #AE0000;
 @import url('home.css');
 @import url('footer.css');
 @import url('nav.css');
+/* --------------------------------------- */
 
 
 
 /* FONT IMPORTS: ------------------------- */
 @import url("https://use.typekit.net/enq2msv.css");
+
+/* --------------------------------------- */
+
+
+
+/* MEDIA QUERY TEMPLATE: ----------------- */
+/* Basing my breakpoints on the navigation bars. The content will be responsive with
+   the grid system. */
+
 
 
 /* Mobile: */
@@ -34,10 +30,14 @@ Red           -                       - #AE0000;
 
 }
 
+
+
 /* Tablet: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
 
 }
+
+
 
 /* Desktop: */
 @media screen and (min-width: 1200px){
