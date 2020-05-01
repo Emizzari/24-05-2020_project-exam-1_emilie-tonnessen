@@ -1,26 +1,39 @@
 /* COLOUR PALETTE: 
-Blue          -  rgb(0, 82, 136)    -  #005288;
-
-Light Black   -  rgb(34, 39, 43)    -  #22272B;
-Medium black  -  rgb(24, 28, 31)    -  #181C1F;
-Dark black    -  rgb(15, 17, 18)    -  #0F1112;
-
-White         -  rgb(255, 255, 255) -  #FFFFFF;
-Black         -  rgb(0,0,0)         -  #000000;
-
-Grey          -  rgb(167, 169, 172)   - #A7A9AC;
-Red           -                       - #AE0000;
+Blue         -  rgb(0, 82, 136)    - #005288;
+Light Black  -  rgb(34, 39, 43)    - #22272B;
+Medium black -  rgb(24, 28, 31)    - #181C1F;
+Dark black   -  rgb(15, 17, 18)    - #0F1112;
+White        -  rgb(255, 255, 255) - #FFFFFF;
+Black        -  rgb(0,0,0)         - #000000;
+Grey         -  rgb(167, 169, 172) - #A7A9AC;
+Red          -                     - #AE0000;
 ------------------------------------------ */
 
 
 
-/* CONTAINER: ---------------------------- */
 .footer-container{
     background-color: #0F1112;
     text-align: center;
     margin: 0;
-    display: block;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
+
+.footer{
+    display: grid;
+}
+
+.footer-headline{
+    border-bottom: 1px solid #FFFFFF;
+    padding: 0px 15px 5px 15px;
+}
+
+.footer-headline h4{
+    font-weight: 300;
+    font-style: italic;
+}
+
 
 .copyright-container{
     background-color: #000000;
@@ -29,14 +42,28 @@ Red           -                       - #AE0000;
     display: block;
 }
 
+
+
 /* Mobile: */
 @media screen and (max-width: 480px){
     .footer-container{
-        height: 200px;
+        height: 250px;
+    }
+
+    .footer{
+        grid-gap: 10px;
+    }
+
+    .footer-headline h4{
+        font-size: 25px;
+    }
+
+    .footer-icon a{
+        font-size: 35px;
+        padding: 0px 10px;
     }
 
     .copyright-container{
-
         padding: 10px;
         font-size: 10px;
     }
@@ -46,11 +73,22 @@ Red           -                       - #AE0000;
 @media screen and (max-width: 1199px) and (min-width: 481px){
     .footer-container{
         height: 250px;
-        padding: 30px;
+    }
+
+    .footer{
+        grid-gap: 10px;
+    }
+
+    .footer-headline h4{
+        font-size: 30px;
+    }
+
+    .footer-icon a{
+        font-size: 35px;
+        padding: 0px 15px;
     }
 
     .copyright-container{
-
         padding: 12px;
         font-size: 12px;
     }
@@ -60,7 +98,19 @@ Red           -                       - #AE0000;
 @media screen and (min-width: 1200px){
     .footer-container{
         height: 280px;
+    }
 
+    .footer{
+        grid-gap: 15px;
+    }
+
+    .footer-headline h4{
+        font-size: 35px;
+    }
+
+    .footer-icon a{
+        font-size: 45px;
+        padding: 0px 20px;
     }
 
     .copyright-container{
@@ -68,11 +118,4 @@ Red           -                       - #AE0000;
         font-size: 15px;
     }
 }
-/* End of Container: */
 
-
-
-
-/* COPYRIGHT: ---------------------------- */
-
-/* End of Copyright: */
