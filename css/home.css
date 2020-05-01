@@ -1,14 +1,12 @@
 /* COLOUR PALETTE: 
-Midnight Blue     -    rgb(0, 82, 136)      -    #005288;
-
-Metallic Silver   -    rgb(167, 169, 172)   -    #A7A9AC;
-
-Chinese Black     -    rgb(15, 17, 18)      -    #0F1112;
-
-Eerie Black       -    rgb(24, 28, 31)      -    #181C1F;
-
-Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
-
+Blue         -  rgb(0, 82, 136)    - #005288;
+Light Black  -  rgb(34, 39, 43)    - #22272B;
+Medium black -  rgb(24, 28, 31)    - #181C1F;
+Dark black   -  rgb(15, 17, 18)    - #0F1112;
+White        -  rgb(255, 255, 255) - #FFFFFF;
+Black        -  rgb(0,0,0)         - #000000;
+Grey         -  rgb(167, 169, 172) - #A7A9AC;
+Red          -                     - #AE0000;
 ------------------------------------------ */
 
 
@@ -18,6 +16,8 @@ Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
     width: 100%;
     background-size: cover;
     background-position: center;
+
+    top: 0;
 
     /* Center the content */
     display: grid;
@@ -31,10 +31,16 @@ Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
     justify-content: center;
 }
 
+.black-overlay{
+    background-color: rgb(15, 17, 18, 1);
+    width: 100%;
+}
+
 /* Mobile: */
 @media screen and (max-width: 480px){
     .home-header{
         background-image: url('/../images/home_header_vertical.jpg');
+        height: 900px;
     }
 }
 
@@ -42,6 +48,7 @@ Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
 @media screen and (max-width: 1199px) and (min-width: 481px){
     .home-header{
         background-image: url('/../images/home_header.jpg');
+        height: 924px;
     }
 }
 
@@ -49,7 +56,15 @@ Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
 @media screen and (min-width: 1200px){
     .home-header{
         background-image: url('/../images/home_header.jpg');
-        height: 850px;
+        height: 937px;
+        background-color: rgba(15, 17, 18, );
     }
 }
 
+
+
+.home-button{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
