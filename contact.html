@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Technical: -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+
+    <!-- SEO/Information: -->
+    <meta name="author" content="Emilie H. K. Tønnessen">
+    <meta name="keywords" content=" ">
+    <meta name="description" content=" ">
+
+    <!-- Page Title: -->
+    <title>SpaceX</title>
+
+    <!-- Site Icon: -->
+    <link rel="icon" href="images/siteicon/siteicon.png">
+
+    <!-- Font Awesome: -->
+    <script src="https://kit.fontawesome.com/f0fe9be787.js" crossorigin="anonymous"></script>
+
+    <!-- CSS Link: -->
+    <link rel="stylesheet" rel="stylesheet" type="text/css" href="css/master.css">
+</head>
+
+
+
+<body>
+    <!-- NAVIGATION: --------------------------------------------------->
+    <!-- Top Bar: -->
+    <nav class="top-nav-container">
+        <div class="top-nav">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo/logo-white_tr.png" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="desktop-menu">
+                <a href="index.html"><div>home</div></a>
+                <a href="launch.html"><div>launch</div></a>
+                <a href="rockets.html"><div>rockets</div></a>
+                <a href="sites.html"><div>sites</div></a>
+                <a id="desktop-active" href="contact.html"><div>contact</div></a>
+                <a href="about.html"><div> about</div></a>
+            </div>
+
+            <!-- Icons for Tablet: -->
+            <div onclick="toogleTabletMenu()" class="icon-container">
+                <i id="hamburger" class="fa fa-bars"></i>
+                <i id="cross" class="fas fa-times"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tablet Menu: -->
+    <div id="tablet-menu">
+        <div class="tablet-menu-list">
+            <a href="index.html"><div>home</div></a>
+                <a href="launch.html"><div>launch</div></a>
+                <a href="rockets.html"><div>rockets</div></a>
+                <a href="sites.html"><div>sites</div></a>
+                <a id="tablet-active" href="contact.html"><div>contact</div></a>
+                <a href="about.html"><div> about</div></a>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Bar: -->
+    <!-- Renaming to bottom nav? -->
+    <nav class="mobile-nav" id="mobile-scroll-menu">
+        <div onclick="toogleMobileMenu()" class="hamburger-container">
+            <i id="hamburger" class="fa fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu: -->
+    <!-- Renaming to mobile-menu? -->
+    <div id="mobile-block-container">
+        <div class="mobile-block">
+
+            <div class="mobile-block-logo">
+                <a href="index.html">
+                    <img src="images/logo/logo-white_tr.png" alt="Logo">
+                </a>
+            </div>
+
+            <!-- mobile menu list? -->
+            <div class="mobile-menu">
+                <a href="index.html"><div>home</div></a>
+                <a href="launch.html"><div>launch</div></a>
+                <a href="rockets.html"><div>rockets</div></a>
+                <a href="sites.html"><div>sites</div></a>
+                <a id="mobile-active" href="contact.html"><div>contact</div></a>
+                <a href="about.html"><div> about</div></a>
+            </div>
+
+            <div class="icon__menu-close" onclick="toogleMobileMenu()">
+                <i class="fas fa-times"></i>
+            </div>
+
+        </div>
+    </div>
+    <!-- End of Navigation --------------------------------------------->
+
+
+
+    <!-- HEADER: ------------------------------------------------------->
+    <header class="header__sites">
+
+
+    </header>
+    
+    <!-- End of Header ------------------------------------------------->
+
+
+
+    <!-- MAIN CONTENT: ------------------------------------------------->
+    <main class="main-container">
+        <div class="grid">
+            <div class="headline">
+                <h1>launch sites</h1>
+            </div>
+
+
+        </div>
+    </main>
+    <!-- End of Main Content ------------------------------------------->
+
+
+
+    <!-- Question Section: --------------------------------------------->
+    <div class="question-container">
+        <div class="question">
+            <h3 class="questions-headline">got any questions?</h3>
+            <a href="contact.html">
+                <div class="btn btn__large">
+                    contact us
+                </div>
+            </a>
+        </div>
+        <div class="empty-div">
+    
+        </div>
+    </div>
+    <!-- End of Question Section --------------------------------------->
+
+
+    <!-- FOOTER: ------------------------------------------------------->
+    <footer class="footer-container">
+        <div class="footer">
+            <div class="footer-headline">
+                <h4>follow our journey</h4>
+            </div>
+            <div class="footer-icon">
+                <a href="" class="icon-link"><i class="fab fa-twitter-square"></i></a>
+                <a href="" class="icon-link"><i class="fab fa-youtube-square"></i></a>
+                <a href="" class="icon-link"><i class="fab fa-flickr"></i></a>
+                <a href="" class="icon-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="copyright-container">
+        <div class="copyright">
+            <p>&copy; 2020 SPACE EXPLORATION TECHNOLOGIES CORP.</p>
+        </div>
+    </div>
+    <!-- End of Footer ------------------------------------------------->
+
+
+
+    <!-- JAVASCRIPT: --------------------------------------------------->
+    <script src="js/script.js"></script>
+    <script src="js/next-launch.js"></script>
+    <!-- End of JavaScript --------------------------------------------->
+</body>
+
+</html>
