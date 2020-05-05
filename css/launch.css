@@ -10,63 +10,64 @@ Red          -                     - #AE0000;
 ------------------------------------------ */
 
 
-/* Header: ------------------------------- */
-.header-launch{
+/* HEADER: ------------------------------- */
+/* --------------------------------------- */
+
+
+/* HEADLINE: ----------------------------- */
+/* --------------------------------------- */
+
+
+
+/* SECTION IMG: -------------------------- */
+.section__launch{
+    background: url('../images/launch_section.jpg');
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
     background-position: center;
-    top: 0;
-}
-
-
-/* Mobile: */
-@media screen and (max-width: 480px){
-    .header-launch{
-        background-image: url('/../images/launch_header_vertical.jpg');
-        height: 900px;
-    }
-
-    .image-section__tablet{
-        display: none;
-    }
-}
-
-/* Tablet: */
-@media screen and (max-width: 1199px) and (min-width: 481px){
-    .header-launch{
-        background-image: url('/../images/launch_header.jpg');
-        height: 924px;
-    }
-}
-
-/* Desktop: */
-@media screen and (min-width: 1200px){
-    .header-launch{
-        background-image: url('/../images/launch_header.jpg');
-        height: 937px;
-    }
-
-    .image-section__tablet{
-        display: none;
-    }
 }
 /* --------------------------------------- */
 
+/* COUNTDOWN LAUNCH: --------------------- */
+.countdown-wrap{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+    background: linear-gradient(150deg, rgb(0, 153, 255), rgb(1, 46, 78));
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+#countdown__launch{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    grid-gap: 5%;
+}
+
+.ct-letters__launch{
+    font-family: brandon-grotesque, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px; 
+    padding-bottom: 5px; 
+}
+
+.ct-numbers__launch{
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+/* --------------------------------------- */
 
 
 /* NEXT LAUNCH: -------------------------- */
 .next-launch{
     background-color: #0F1112;
     padding: 20px;
-}
 
-.countdown{
-    width: 100%;
-    background-color: #005288;
-    height: 80px;
-    margin-top: 20px;
-    color: #FFFFFF;
 }
 
 .border-bottom{
@@ -77,75 +78,17 @@ Red          -                     - #AE0000;
 .border-bottom__below{
     margin-bottom: 20px;
 }
-
-
-/* Mobile: */
-@media screen and (max-width: 480px){
-
-}
-
-/* Tablet: */
-@media screen and (max-width: 1199px) and (min-width: 481px){
-
-}
-
-/* Desktop: */
-@media screen and (min-width: 1200px){
-
-}
 /* --------------------------------------- */
 
 
 
 /* UPCOMING LAUNCH: ---------------------- */
-
-
-/* Mobile: */
-@media screen and (max-width: 480px){
-
-}
-
-
-
-/* Tablet: */
-@media screen and (max-width: 1199px) and (min-width: 481px){
-
-}
-
-
-
-/* Desktop: */
-@media screen and (min-width: 1200px){
-
-}
 /* --------------------------------------- */
 
 
 
 /* COMPLETED LAUNCH: --------------------- */
-
-
-/* Mobile: */
-@media screen and (max-width: 480px){
-
-}
-
-
-
-/* Tablet: */
-@media screen and (max-width: 1199px) and (min-width: 481px){
-
-}
-
-
-
-/* Desktop: */
-@media screen and (min-width: 1200px){
-
-}
 /* --------------------------------------- */
-
-
 
 
 
@@ -187,24 +130,47 @@ Red          -                     - #AE0000;
 .dd-btn:hover{
     cursor: pointer;
 }
+/* --------------------------------------- */
 
 
 /* Mobile: */
 @media screen and (max-width: 480px){
+    .header__launch{
+        background-image: url('../images/launch_header_vertical.jpg');
+    }
+
+    .headline{
+        margin: 20px;
+    }
+
+    .section__launch{
+        display: none;
+    }
 
 }
-
-
 
 /* Tablet: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
+    .header__launch{
+        background-image: url('../images/launch_header.jpg');
+    }
 
+    .headline{
+        margin: 30px;
+    }
 }
-
-
 
 /* Desktop: */
 @media screen and (min-width: 1200px){
+    .header__launch{
+        background-image: url('../images/launch_header.jpg');
+    }
 
+    .headline{
+        margin: 50px;
+    }
+
+    .section__launch{
+        display: none;
+    }
 }
-/* --------------------------------------- */

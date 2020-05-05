@@ -11,63 +11,146 @@ Red          -                     - #AE0000;
 
 
 
-.home-header{
+/* BACKGROUND: --------------------------- */
+.header{
     background-repeat: no-repeat;
     width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     top: 0;
+}
 
-    /* Center the content */
+.overlay__dark{
+    background-color: rgb(15, 17, 18, 0.5);
+    width: 100%;
+    height: 100%;
     display: grid;
     align-items: center;
     justify-content: center;
-
 }
 
+.header-wrap{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    padding: 10px;
+}
+/* --------------------------------------- */
 
-.header{
+
+
+/* HEADLINE: ----------------------------- */
+.headline__home{
+        border-bottom: 3px solid #FFF;
+        padding: 0px 10px;
+    }
+/* --------------------------------------- */
+
+
+
+/* COUNTDOWN HOME: ----------------------- */
+.countdown-wrap{
+    
+    /* Center the Loader */
     display: grid;
     align-items: center;
     justify-content: center;
    
 }
 
-.black-overlay{
-    background-color: rgb(15, 17, 18, 1);
-    width: 100%;
-    height: 100%;
+.countdown-wrap__tr{
+    background: transparent;
+    /* Center the Loader */
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
+
+#countdown{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 5px;
+    margin: 10px 0px;
+}
+
+.ct-letters{
+    font-family: brandon-grotesque, sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 5px; 
+}
+
+.ct-numbers{
+    font-size: 45px;
+}
+/* --------------------------------------- */
+
+
+
+/* CTA BUTTON: --------------------------- */
+.home-button{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+/* --------------------------------------- */
+
+
+
+/* SECTION 3: IMG ------------------------ */
+.section__home{
+    background: url('../images/home_section.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+/* --------------------------------------- */
+
+
 
 /* Mobile: */
 @media screen and (max-width: 480px){
-    .home-header{
-        background-image: url('/../images/home_header_vertical.jpg');
-        height: 900px;
+    .header__home{
+        background-image: url('../images/home_header_vertical.jpg');
+    }
+
+    .headline__home{
+        font-size: 40px;
+    }
+
+    .section__home{
+        display: none;
     }
 }
 
 /* Tablet: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
-    .home-header{
-        background-image: url('/../images/home_header.jpg');
-        height: 924px;
+    .header__home{
+        background-image: url('../images/home_header.jpg');
+    }
+
+    .headline__home{
+        font-size: 50px;  
+    }
+
+    .section__home{
+        display: none;
     }
 }
 
 /* Desktop: */
 @media screen and (min-width: 1200px){
-    .home-header{
-        background-image: url('/../images/home_header.jpg');
-        height: 937px;
-        background-color: rgba(15, 17, 18, );
+    .header__home{
+        background-image: url('../images/home_header.jpg');
     }
-}
 
-
-
-.home-button{
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    .headline__home{
+        font-size: 55px;
+    }
 }
