@@ -21,6 +21,7 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
     position: fixed;
     position: -webkit-sticky; /* safari */
     top: 0;
+    z-index: 999;
 }
 
 .top-nav-container__transparent{
@@ -30,6 +31,7 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
     background-color: transparent;
     position: absolute;
     /* border-bottom: 1px solid rgba(255, 255, 255, 1); */
+    z-index: 999;
 }
 
 
@@ -92,7 +94,8 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
     width: 250px;
     transition: 0.4s;
     overflow: auto;
-    z-index: 999;
+    z-index: 888;
+    position: absolute;
 }
 
 .tablet-menu-list a{
@@ -129,6 +132,7 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
     position: fixed;
     bottom: 0;   
     text-align: center;
+    z-index: 888;
 }
 
 .hamburger-container{

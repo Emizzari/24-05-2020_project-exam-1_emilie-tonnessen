@@ -1,12 +1,15 @@
 // Mobile menu toogle
 function toogleMobileMenu() {
     var mobileMenu = document.getElementById("mobile-block-container");
+    var body = document.getElementById("body");
 
 
     if (mobileMenu.style.display === "block") {
         mobileMenu.style.display = "none";
+        body.style.position = "absolute";
     } else {
         mobileMenu.style.display = "block";
+        body.style.position = "fixed";
     }
 }
 
@@ -16,16 +19,13 @@ var prevScrollpos = window.pageYOffset;
 
 
 window.onscroll = function () {
-
     var currentScrollPos = window.pageYOffset;
-
 
     if (prevScrollpos > currentScrollPos) {
         document.getElementById("mobile-scroll-menu").style.bottom = "0";
     } else {
         document.getElementById("mobile-scroll-menu").style.bottom = "-100px";
     }
-
 
     prevScrollpos = currentScrollPos;
 }
@@ -44,6 +44,8 @@ function toogleTabletMenu() {
 
         hamburgerIcon.style.display = "none";
         crossIcon.style.display = "block";
+
+        body.style.position = "fixed";
     }
     
     
@@ -52,6 +54,8 @@ function toogleTabletMenu() {
 
         hamburgerIcon.style.display = "block";
         crossIcon.style.display = "none";
+
+        body.style.position = "absolute";
     }
 }
 
