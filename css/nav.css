@@ -91,11 +91,12 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
     right: -250px;
     height: 100%;
     position: fixed;
+    top: 100px;
     width: 250px;
     transition: 0.4s;
-    overflow: auto;
+    overflow: scroll;
     z-index: 888;
-    position: absolute;
+    
 }
 
 .tablet-menu-list a{
