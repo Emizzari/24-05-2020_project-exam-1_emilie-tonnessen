@@ -21,7 +21,7 @@
     <script src="https://kit.fontawesome.com/f0fe9be787.js" crossorigin="anonymous"></script>
     
     <!-- CSS Link: -->
-    <link rel="stylesheet" rel="stylesheet" type="text/css" href="css/master.css">
+    <link rel="stylesheet" type="text/css" href="css/master.css">
 </head>
 
 
@@ -29,7 +29,7 @@
 <body id="body">
     <!-- NAVIGATION: --------------------------------------------------->
     <!-- Top Bar: -->
-    <nav class="top-nav-container">
+    <nav class="top-nav-container__transparent">
         <div class="top-nav" >
 
             <!-- Logo -->
@@ -41,7 +41,7 @@
 
             <!-- Desktop Menu -->
             <div class="desktop-menu">    
-                <a id="desktop-active" href="index.html"><div>home</div></a>
+                <a href="index.html"><div>home</div></a>
                 <a href="launch.html"><div>launch</div></a>
                 <a href="rockets.html"><div>rockets</div></a>
                 <a href="sites.html"><div>sites</div></a>
@@ -109,39 +109,44 @@
 
 
     <!-- HEADER: ------------------------------------------------------->
-    <div class="black-overlay"></div>
-    <header class="home-header">
-        
+    <header class="header header__home">
+        <div class="overlay__dark">
+            <div class="header-wrap">
 
-        
-            <div class="header">
-
-
-                <!-- Headline -->
-                <div class="headline">
-                    <h1>next launch</h1>
+                <!-- Headline: -->
+                <div>
+                    <h1 class="headline__home">next launch</h1>
                 </div>
 
+                <!-- Countdown: -->
+                <div class="countdown-wrap__tr">
+                    <!-- loader: -->
+                    <div class="loader">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div> 
 
-                <!-- Big countdown -->
-                <div class="countdown">
-
-                </div>
-
-
-                <!-- Button -->
+                <!-- CTA Button: -->
                 <a href="launch.html" class="home-button">
                     <div class="btn btn__large">
                         learn more
                     </div>
                 </a>
 
-
-
             </div>
-        
+        </div>
     </header>
-    </div>
     <!-- End of Header ------------------------------------------------->
 
 
@@ -151,7 +156,7 @@
         <div class="grid">
 
             <!-- Section 1: Our Rockets -->
-            <div class="section grid-1">
+            <div class="section">
                 <img src="images/rockets_header.jpg" alt="Rockets">
                 <h2>our rockets</h2>
                 <p>
@@ -168,7 +173,7 @@
 
 
             <!-- Section 2: Launch Sites -->
-            <div class="section grid-2">
+            <div class="section">
                 <img src="images/sites_header.jpg" alt="Map over USA">
                 <h2>launch sites</h2>
                 <p>
@@ -185,8 +190,8 @@
 
 
             <!-- Section 3: Image -->
-            <div class="section section__img grid-3">
-                <img src="images/home_section.jpg" alt="Satelite">
+            <div class="section section__home">
+                
             </div>
 
 
