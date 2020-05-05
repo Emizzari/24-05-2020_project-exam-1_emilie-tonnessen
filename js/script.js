@@ -45,7 +45,7 @@ function toogleTabletMenu() {
         hamburgerIcon.style.display = "none";
         crossIcon.style.display = "block";
 
-        body.style.position = "fixed";
+       // body.style.position = "fixed";
     }
     
     
@@ -55,9 +55,11 @@ function toogleTabletMenu() {
         hamburgerIcon.style.display = "block";
         crossIcon.style.display = "none";
 
-        body.style.position = "absolute";
+       // body.style.position = "absolute";
     }
 }
+
+
 
 
 
