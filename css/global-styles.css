@@ -169,6 +169,12 @@ a{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.grid__center{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Mobile: */
 @media screen and (max-width: 549px){
@@ -321,6 +327,14 @@ a{
     }
 }
 
+.bold{
+    font-weight: 800;
+}
+
+.italic{
+    font-style: italic;
+
+}
 
 
 /* Desktop: */
