@@ -28,6 +28,12 @@ html{
     height: 100%;
 }
 
+.main-container{
+    margin-top: auto;
+    margin-left: auto;
+    max-width: 1700px;
+}
+
 img{
     width: 100%;
 }
@@ -37,14 +43,6 @@ a{
     text-decoration: none;
 }
 /* --------------------------------------- */
-
-
-.main-container{
-    margin-top: auto;
-    margin-left: auto;
-    max-width: 1300px;
-}
-
 
 
 
@@ -69,6 +67,19 @@ a{
     font-family: brandon-grotesque, sans-serif;
     cursor: pointer;
     text-transform: uppercase;
+}
+
+
+.bold{
+    font-weight: 600;
+}
+
+.bolder{
+    font-weight: 900;
+}
+
+.italic{
+    font-style: italic;
 }
 
 /* Mobile: */
@@ -137,7 +148,7 @@ a{
     } 
 
     P{
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 /* --------------------------------------- */
@@ -166,7 +177,7 @@ a{
 /* GRID & SECTIONS: ---------------------- */
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .grid__center{
@@ -326,16 +337,6 @@ a{
         justify-content: center;
     }
 }
-
-.bold{
-    font-weight: 800;
-}
-
-.italic{
-    font-style: italic;
-
-}
-
 
 /* Desktop: */
 @media screen and (min-width: 1200px){
