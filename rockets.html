@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <!-- Technical: -->
     <meta charset="UTF-8">
@@ -13,7 +15,7 @@
     <meta name="description" content=" ">
 
     <!-- Page Title: -->
-    <title>SpaceX</title>
+    <title>SpaceX - Rockets</title>
 
     <!-- Site Icon: -->
     <link rel="icon" href="images/siteicon/siteicon.png">
@@ -32,15 +34,15 @@
     <!-- Top Bar: -->
     <nav class="top-nav-container">
         <div class="top-nav">
-
-            <!-- Logo -->
+    
+            <!-- Logo: -->
             <div class="logo">
                 <a href="index.html">
                     <img src="images/logo/logo-white_tr.png" alt="Logo">
                 </a>
             </div>
 
-            <!-- Desktop Menu -->
+            <!-- Desktop Menu: -->
             <div class="desktop-menu">
                 <a href="index.html"><div>home</div></a>
                 <a href="launch.html"><div>launch</div></a>
@@ -51,10 +53,11 @@
             </div>
 
             <!-- Icons for Tablet: -->
-            <div onclick="toogleTabletMenu()" class="icon-container">
-                <i id="hamburger" class="fa fa-bars"></i>
-                <i id="cross" class="fas fa-times"></i>
+            <div onclick="toogleTabletMenu()"  class="icon-container">  
+                    <i id="hamburger" class="fa fa-bars"></i>    
+                    <i id="cross" class="fas fa-times"></i>
             </div>
+
         </div>
     </nav>
 
@@ -62,11 +65,11 @@
     <div id="tablet-menu">
         <div class="tablet-menu-list">
             <a href="index.html"><div>home</div></a>
-                <a href="launch.html"><div>launch</div></a>
-                <a id="tablet-active" href="rockets.html"><div>rockets</div></a>
-                <a href="sites.html"><div>sites</div></a>
-                <a href="contact.html"><div>contact</div></a>
-                <a href="about.html"><div> about</div></a>
+            <a href="launch.html"><div>launch</div></a>
+            <a id="tablet-active" href="rockets.html"><div>rockets</div></a>
+            <a href="sites.html"><div>sites</div></a>
+            <a href="contact.html"><div>contact</div></a>
+            <a href="about.html"><div> about</div></a>
         </div>
     </div>
 
@@ -77,18 +80,18 @@
             <i id="hamburger" class="fa fa-bars"></i>
         </div>
     </nav>
-
+    
     <!-- Mobile Menu: -->
     <!-- Renaming to mobile-menu? -->
     <div id="mobile-block-container">
         <div class="mobile-block">
-
+    
             <div class="mobile-block-logo">
                 <a href="index.html">
                     <img src="images/logo/logo-white_tr.png" alt="Logo">
                 </a>
             </div>
-
+    
             <!-- mobile menu list? -->
             <div class="mobile-menu">
                 <a href="index.html"><div>home</div></a>
@@ -98,7 +101,7 @@
                 <a href="contact.html"><div>contact</div></a>
                 <a href="about.html"><div> about</div></a>
             </div>
-
+    
             <div class="icon__menu-close" onclick="toogleMobileMenu()">
                 <i class="fas fa-times"></i>
             </div>
@@ -110,22 +113,47 @@
 
 
     <!-- HEADER: ------------------------------------------------------->
-    <header class="header__sites">
-
-
-    </header>
-    
+    <header class="header header__rockets"></header>
     <!-- End of Header ------------------------------------------------->
 
 
 
     <!-- MAIN CONTENT: ------------------------------------------------->
     <main class="main-container">
-        <div class="grid">
-            <div class="headline">
-                <h1>launch sites</h1>
-            </div>
 
+        <!-- Headline: -->
+        <h1 class="headline">rockets</h1>
+
+        <!-- Grid: -->
+        <div class="grid">
+
+            <!-- Image Section: Desktop -->
+            <div class="section__rockets"></div>
+
+            <!-- Rockets: -->
+            <div class="rockets-wrap">
+                <div class="rockets">
+
+                    <!-- Loader: -->
+                    <div class="grid__center">
+                        <div class="loader">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
     </main>
@@ -143,11 +171,10 @@
                 </div>
             </a>
         </div>
-        <div class="empty-div">
-    
-        </div>
+        <div class="empty-div"></div>
     </div>
     <!-- End of Question Section --------------------------------------->
+
 
 
     <!-- FOOTER: ------------------------------------------------------->
@@ -165,7 +192,6 @@
         </div>
     </footer>
 
-
     <div class="copyright-container">
         <div class="copyright">
             <p>&copy; 2020 SPACE EXPLORATION TECHNOLOGIES CORP.</p>
@@ -177,7 +203,7 @@
 
     <!-- JAVASCRIPT: --------------------------------------------------->
     <script src="js/script.js"></script>
-    <script src="js/next-launch.js"></script>
+    <script src="js/rockets.js"></script>
     <!-- End of JavaScript --------------------------------------------->
 </body>
 
