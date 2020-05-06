@@ -171,14 +171,14 @@ function displayUpcomingLaunches(upcomingLaunches){
     for (let i = 1; i < upcomingLaunches.length; i++) {
         html += 
             `
-                <div class="dd-btn-container"> 
+                <div class="dd-container"> 
                     <input type="checkbox" id="toggle_id-${i}" class="checkbox"/>
                     <label for="toggle_id-${i}" class="dd-btn">
                             <h6>${upcomingLaunches[i].mission_name} - ${convertDate(upcomingLaunches[i].launch_date_unix)}</h6>  
                         <i class="fas fa-plus"></i>
                         <i class="fas fa-minus"></i>
                     </label>
-                    <div class="dd-btn-content">
+                    <div class="dd-content">
                         <h5><span class ="bold">rocket: </span>${upcomingLaunches[i].rocket.rocket_name}</h5>  
                         <h5><span class ="bold">site: </span>${upcomingLaunches[i].launch_site.site_name}</h5>  
             `
@@ -202,7 +202,6 @@ function displayUpcomingLaunches(upcomingLaunches){
     upcomingLaunchesContainer.innerHTML = html;
 }
 // END OF UPCOMING LAUNCHES ------------------------------------------------------
-
 
 
 
@@ -240,21 +239,21 @@ function displayCompletedLaunches(completedLaunches) {
         
         html +=
             `
-                <div class="dd-btn-container">
+                <div class="dd-container">
                     <input type="checkbox" id="toggle_id-${i}" class="checkbox"/>
                     <label for="toggle_id-${i}" class="dd-btn">
                             <h6>${completedLaunches[i].mission_name} - ${convertDate(completedLaunches[i].launch_date_unix)}</h6>  
                         <i class="fas fa-plus"></i>
                         <i class="fas fa-minus"></i>
                     </label>
-                    <div class="dd-btn-content">
+                    <div class="dd-content">
                         <h5><span class ="bold">rocket: </span>${completedLaunches[i].rocket.rocket_name}</h5>  
                         <h5><span class ="bold">site: </span>${completedLaunches[i].launch_site.site_name}</h5>
                         <p class="details">${completedLaunches[i].details}</p>
                     </div>
                 </div>
             `
-            ;
+        ;
     }
 
     completedLaunchesContainer.innerHTML = html;
