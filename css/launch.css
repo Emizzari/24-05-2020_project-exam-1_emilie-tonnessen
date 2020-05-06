@@ -97,7 +97,7 @@ Red          -                     - #AE0000;
 
 
 /* DROP DOWN BUTTONS: -------------------- */
-.dd-btn-container{
+.dd-container{
     margin-top: 20px;
 }
 
@@ -111,34 +111,41 @@ Red          -                     - #AE0000;
     text-align: end;
 }
 
-.dd-btn-content{
-    background-color: #0F1112;
-    padding: 20px;
-    display: none;
-}
-
-.checkbox{
-    display: none;
-}
-
-.checkbox:checked ~ .dd-btn-content{
-    display: block;
-}
-
-
-
 .dd-btn h6{
     text-align: start;
-}
-
-.fa-minus{
-    display: none;
 }
 
 .dd-btn:hover{
     cursor: pointer;
 }
-/* --------------------------------------- */
+
+.dd-content{
+    background-color: #0F1112;
+    padding: 20px;
+}
+
+.dd-content h5{
+    font-size: 18px;
+}
+
+.dd-content p{
+    border-top: 1px solid #FFF;
+    padding-top: 15px;
+}
+
+.checkbox,
+.fa-minus,
+.dd-content,
+.checkbox:checked ~ label .fa-plus{
+    display: none;
+}
+
+.checkbox:checked ~ .dd-content,
+.checkbox:checked ~ label .fa-minus{
+    display: block;
+}
+/* End of Drop Down Buttons -------------- */
+
 
 
 /* Mobile: */
