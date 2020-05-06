@@ -78,6 +78,10 @@ Red          -                     - #AE0000;
 .border-bottom__below{
     margin-bottom: 20px;
 }
+
+.details{
+    margin-top: 15px;
+}
 /* --------------------------------------- */
 
 
@@ -97,27 +101,31 @@ Red          -                     - #AE0000;
     margin-top: 20px;
 }
 
-
-
-.dd-btn-content{
-    background-color: #0F1112;
-    padding: 20px;
-    top:0;
-}
-
 .dd-btn{
     background-color: #005288;
-    
-    
-    
     display: grid;
     grid-template-columns: 4fr 1fr;
     padding: 20px;
-
     font-size: 22px;
     font-weight: 300;
     text-align: end;
 }
+
+.dd-btn-content{
+    background-color: #0F1112;
+    padding: 20px;
+    display: none;
+}
+
+.checkbox{
+    display: none;
+}
+
+.checkbox:checked ~ .dd-btn-content{
+    display: block;
+}
+
+
 
 .dd-btn h6{
     text-align: start;
