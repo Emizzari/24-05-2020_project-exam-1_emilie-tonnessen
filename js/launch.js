@@ -174,21 +174,21 @@ function displayUpcomingLaunches(upcomingLaunches){
                 <div class="dd-container"> 
                     <input type="checkbox" id="toggle_id-${i}" class="checkbox"/>
                     <label for="toggle_id-${i}" class="dd-btn">
-                            <h6>${upcomingLaunches[i].mission_name} - ${convertDate(upcomingLaunches[i].launch_date_unix)}</h6>  
+                            <h6 class="dd-btn__title">${upcomingLaunches[i].mission_name} - ${convertDate(upcomingLaunches[i].launch_date_unix)}</h6>  
                         <i class="fas fa-plus"></i>
                         <i class="fas fa-minus"></i>
                     </label>
-                    <div class="dd-content">
-                        <h5><span class ="bold">rocket: </span>${upcomingLaunches[i].rocket.rocket_name}</h5>  
-                        <h5><span class ="bold">site: </span>${upcomingLaunches[i].launch_site.site_name}</h5>  
+                    <div class="dd-content launch">
+                        <h5 class="launch-title"><span class ="bold">rocket: </span>${upcomingLaunches[i].rocket.rocket_name}</h5>  
+                        <h5 class="launch-title"><span class ="bold">site: </span>${upcomingLaunches[i].launch_site.site_name}</h5>  
             `
         ;
 
         if (!upcomingLaunches[i].details) {
-            html +=     `<p class="details"><span class="italic">No current details at this moment.</span></p>`;
+            html +=     `<p class="launch-details"><span class="italic">No current details at this moment.</span></p>`;
         }
         else {
-            html +=     `<p class="details">${upcomingLaunches[i].details}</p>`;
+            html +=     `<p class="launch-details">${upcomingLaunches[i].details}</p>`;
         }
 
         html += 
@@ -242,14 +242,14 @@ function displayCompletedLaunches(completedLaunches) {
                 <div class="dd-container">
                     <input type="checkbox" id="toggle_id-${i}" class="checkbox"/>
                     <label for="toggle_id-${i}" class="dd-btn">
-                            <h6>${completedLaunches[i].mission_name} - ${convertDate(completedLaunches[i].launch_date_unix)}</h6>  
+                            <h6 class="dd-btn__title">${completedLaunches[i].mission_name} - ${convertDate(completedLaunches[i].launch_date_unix)}</h6>  
                         <i class="fas fa-plus"></i>
                         <i class="fas fa-minus"></i>
                     </label>
-                    <div class="dd-content">
-                        <h5><span class ="bold">rocket: </span>${completedLaunches[i].rocket.rocket_name}</h5>  
-                        <h5><span class ="bold">site: </span>${completedLaunches[i].launch_site.site_name}</h5>
-                        <p class="details">${completedLaunches[i].details}</p>
+                    <div class="dd-content launch">
+                        <h5 class="launch-title"><span class ="bold">rocket: </span>${completedLaunches[i].rocket.rocket_name}</h5>  
+                        <h5 class="launch-title"><span class ="bold">site: </span>${completedLaunches[i].launch_site.site_name}</h5>
+                        <p class="launch-details">${completedLaunches[i].details}</p>
                     </div>
                 </div>
             `

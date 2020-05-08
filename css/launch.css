@@ -111,7 +111,7 @@ Red          -                     - #AE0000;
     text-align: end;
 }
 
-.dd-btn h6{
+.dd-btn__title{
     text-align: start;
 }
 
@@ -121,14 +121,17 @@ Red          -                     - #AE0000;
 
 .dd-content{
     background-color: #0F1112;
+}
+
+.launch{
     padding: 20px;
 }
 
-.dd-content h5{
+.launch-title{
     font-size: 18px;
 }
 
-.dd-content p{
+.launch-details{
     border-top: 1px solid #FFF;
     padding-top: 15px;
 }
@@ -143,6 +146,10 @@ Red          -                     - #AE0000;
 .checkbox:checked ~ .dd-content,
 .checkbox:checked ~ label .fa-minus{
     display: block;
+}
+
+.dd-container:first-child{
+    margin-top: 0px !important;
 }
 /* End of Drop Down Buttons -------------- */
 
