@@ -123,51 +123,63 @@
 
         <div class="contact-form">
 
-            <!-- Submit Message: -->
-            <div id="submitMessage">
-                <div>Thank you!</div>
-                <div>Your message has been successfully sent. We will contact you very soon!</div>
-            </div>
+            
 
             <!-- Image: -->
             <div class="imgSection__contact"></div>
 
             <!-- Contact Form: -->
             <form action="" id="contactForm" class="contactGrid"> 
+                <!-- Submit Message: -->
+                <div id="submitMessage">
+                    <div>Thank you!</div>
+                    <div>Your message has been successfully sent. We will contact you very soon!</div>
+                </div>
+
                 <h1 class="title">CONTACT FORM</h1>
 
                 <div class="contactSection firstName">
-                    <div class="firstName__title">First name:</div>
-                    <input class="contactInput" placeholder="First name.." id="firstName" />
-                    <i id="firstNameErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
+                    <div class="firstName__title"><h5>First name:</h5></div>
+                    <div class="inputParent">
+                        <input class="contactInput" placeholder="First name.." id="firstName" />
+                        <i id="firstNameErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
+                    </div>
                     <div class="error" id="firstNameError">Please enter your first name</div>
                 </div>
             
                 <div class="contactSection lastName">
-                    <div class="lastName__title">Last name:</div>
-                    <input class="contactInput" placeholder="Last name.." id="lastName" />
-                    <i id="lastNameErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
+                    <div class="lastName__title"><h5>Last name:</h5></div>
+                    <div class="inputParent">
+                        <input class="contactInput" placeholder="Last name.." id="lastName" />
+                        <i id="lastNameErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
+                    </div>
                     <div class="error" id="lastNameError">Please enter your last name</div>
                 </div>
 
                 <div class="contactSection email">
-                    <div class="email__title">Email:</div>
-                    <input class="contactInput" placeholder="Email.." id="email" />
-                    <i id="emailErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
+                    <div class="email__title"><h5>Email:</h5></div>
+                    <div class="inputParent">
+                        <input class="contactInput" placeholder="Email.." id="email" />
+                        <i id="emailErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
+                    </div>
                     <div class="error" id="emailError">Please enter a valid email address</div>
                 </div>
 
                 <div class="contactSection topic">
-                    <div class="topic__title">Topic:</div>
-                    <input class="contactInput" placeholder="Topic.." id="topic" />
-                    <i id="topicErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
+                    <div class="topic__title"><h5>Topic:</h5></div>
+                    <div class="inputParent">
+                        <input class="contactInput" placeholder="Topic.." id="topic" />
+                        <i id="topicErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
+                    </div>
                     <div class="error" id="topicError">Please describe what the message is about</div>
                 </div>
 
                 <div class="contactSection message">
-                    <div class="message__title">Message:</div>
-                    <textarea class="textarea" placeholder="Ask us anything.." id="message"></textarea>
-                    <i id="messageErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
+                    <div class="message__title"><h5>Message:</h5></div>
+                    <div class="inputParent">
+                        <textarea class="textarea" placeholder="Ask us anything.." id="message"></textarea>
+                        <i id="messageErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
+                    </div>
                     <div class="error" id="messageError">Please describe what the message is about</div>
                 </div>
             
