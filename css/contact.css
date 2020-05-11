@@ -8,9 +8,19 @@ Black        -  rgb(0,0,0)         - #000000;
 Grey         -  rgb(167, 169, 172) - #A7A9AC;
 Red          -                     - #AE0000;
 ------------------------------------------ */
+#submitMessage {
+    display: none;
+}
 
+.errorIcon{
+    color: #AE0000;
+    display: none;
+}
 
-
+.error{
+    color:#AE0000;
+    display: none;
+}
 
 
 /* RESPONSIVE CSS: ----------------------- */
