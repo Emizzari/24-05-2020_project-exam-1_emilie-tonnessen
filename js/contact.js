@@ -6,7 +6,7 @@ const firstNameError = document.querySelector("#firstNameError");
 const firstNameErrorIcon = document.querySelector("#firstNameErrorIcon");
 let firstNameHasError = false;
 
-const lastName = document.querySelector("#firstName");
+const lastName = document.querySelector("#lastName");
 const lastNameError = document.querySelector("#lastNameError");
 const lastNameErrorIcon = document.querySelector("#lastNameErrorIcon");
 let lastNameHasError = false;
