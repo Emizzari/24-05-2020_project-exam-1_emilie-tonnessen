@@ -10,3 +10,29 @@ Red          -                     - #AE0000;
 ------------------------------------------ */
 
 
+
+
+
+/* RESPONSIVE CSS: ----------------------- */
+/* Mobile: */
+@media screen and (max-width: 480px){
+    .header__contact{
+        background-image: url('../images/contact_header_vertical.jpg');
+    }
+
+}
+
+/* Tablet: */
+@media screen and (max-width: 1199px) and (min-width: 481px){
+    .header__contact{
+        background-image: url('../images/contact_header.jpg');
+    }
+}
+
+/* Desktop: */
+@media screen and (min-width: 1200px){
+    .header__contact{
+        background-image: url('../images/contact_header_slim.jpg');
+    }
+}
+/* --------------------------------------- */
