@@ -119,55 +119,59 @@
     <main class="main-container">
 
         <!-- Headline: -->
-        <div class="headline"><h1>contact form</h1></div>
+        <!-- <div class="headline"><h1>contact form</h1></div> -->
 
         <div class="contact-form">
 
             <!-- Submit Message: -->
             <div id="submitMessage">
-                Thank you! Your message has been successfully sent. We will contact you very soon!
+                <div>Thank you!</div>
+                <div>Your message has been successfully sent. We will contact you very soon!</div>
             </div>
 
+            <!-- Image: -->
+            <div class="imgSection__contact"></div>
+
             <!-- Contact Form: -->
-            
-            <form action="" id="contactForm">
-                
-                <div>
+            <form action="" id="contactForm" class="contactGrid"> 
+                <h1 class="title">CONTACT FORM</h1>
+
+                <div class="contactSection firstName">
                     <div class="firstName__title">First name:</div>
-                    <input placeholder="First name.." id="firstName" />
+                    <input class="contactInput" placeholder="First name.." id="firstName" />
                     <i id="firstNameErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
                     <div class="error" id="firstNameError">Please enter your first name</div>
                 </div>
             
-                <div>
+                <div class="contactSection lastName">
                     <div class="lastName__title">Last name:</div>
-                    <input placeholder="Last name.." id="lastName" />
+                    <input class="contactInput" placeholder="Last name.." id="lastName" />
                     <i id="lastNameErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
                     <div class="error" id="lastNameError">Please enter your last name</div>
                 </div>
 
-                <div>
+                <div class="contactSection email">
                     <div class="email__title">Email:</div>
-                    <input placeholder="Email.." id="email" />
+                    <input class="contactInput" placeholder="Email.." id="email" />
                     <i id="emailErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
                     <div class="error" id="emailError">Please enter a valid email address</div>
                 </div>
 
-                <div>
+                <div class="contactSection topic">
                     <div class="topic__title">Topic:</div>
-                    <input placeholder="Topic.." id="topic" />
+                    <input class="contactInput" placeholder="Topic.." id="topic" />
                     <i id="topicErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
                     <div class="error" id="topicError">Please describe what the message is about</div>
                 </div>
 
-                <div>
+                <div class="contactSection message">
                     <div class="message__title">Message:</div>
-                    <textarea placeholder="Ask us anything.." id="message"></textarea>
+                    <textarea class="textarea" placeholder="Ask us anything.." id="message"></textarea>
                     <i id="messageErrorIcon" class="errorIcon fas fa-exclamation-circle"></i>
                     <div class="error" id="messageError">Please describe what the message is about</div>
                 </div>
             
-                <button class="btn" type="submit">send</button>
+                <button class="btn btnContactArea" type="submit">send</button>
             </form>
 
         </div>
