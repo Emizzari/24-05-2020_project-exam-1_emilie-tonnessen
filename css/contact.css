@@ -8,19 +8,127 @@ Black        -  rgb(0,0,0)         - #000000;
 Grey         -  rgb(167, 169, 172) - #A7A9AC;
 Red          -                     - #AE0000;
 ------------------------------------------ */
+
+
+/* CONTACT FORM CONTAINER: --------------- */
+.contact-form{
+    background: linear-gradient(150deg, rgb(31, 69, 102), rgb(8, 10, 10));
+    background-size: cover;
+    background-position: center;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    max-width: 1400px;
+}
+/* --------------------------------------- */
+
+
+
+/* SUBMIT MESSAGE: ----------------------- */
 #submitMessage {
     display: none;
+    padding: 20px;
+    text-align: center;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
 }
 
+#submitMessage div{
+    padding: 10px 0px; 
+}
+/* --------------------------------------- */
+
+
+/* IMAGE SECTION: ------------------------ */
+.imgSection__contact{
+    background: url("../images/contact.jpg");
+    background-size: cover;
+    background-position: center;
+    border-right: 8px solid #0077c7;
+}
+/* --------------------------------------- */
+
+/* CONTACT FORM: ------------------------- */
+#contactForm{
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+}
+
+.contactSection{
+    position: relative;
+    height: 80px;
+    width: 100%;
+}
+
+.contactInput{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+}
+
+.textarea{
+    width: 100%;
+    height: 200px;
+    padding: 5px;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+}
+/* --------------------------------------- */
+
+
+/* ERROR MESSAGES: ----------------------- */
 .errorIcon{
     color: #AE0000;
-    display: none;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    /* z-index: 999; */
+    /* display: none; */
 }
 
 .error{
     color:#AE0000;
-    display: none;
+    /* display: none; */
 }
+/* --------------------------------------- */
+
+
+
+/* GRID: --------------------------------- */
+.contactGrid{
+    display: grid;
+}
+
+.title{
+    grid-area: title;
+}
+
+.firstName{
+    grid-area: firstName;
+}
+
+.lastName{
+    grid-area: lastName;
+}
+
+.email{
+    grid-area: email;
+}
+
+.topic{
+    grid-area: topic;
+}
+
+.message{
+    grid-area: message;
+}
+
+.btnContactArea{
+    grid-area: btn;
+}
+/* --------------------------------------- */
+
 
 
 /* RESPONSIVE CSS: ----------------------- */
@@ -30,12 +138,38 @@ Red          -                     - #AE0000;
         background-image: url('../images/contact_header_vertical.jpg');
     }
 
+    .contactGrid{
+        grid-template-columns: 1fr;
+        margin: 20px;
+        grid-gap: 20px;
+    }   
+
+    .imgSection__contact{
+        display: none;
+    }
+
 }
 
 /* Tablet: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
     .header__contact{
-        background-image: url('../images/contact_header.jpg');
+        background-image: url('../images/contact_header_full.jpg');
+    }
+
+    .contactGrid{
+        grid-template-areas: 
+            'title title'
+            'firstName lastName'
+            'email topic'
+            'message message'
+            'btn btn'
+        ;
+        margin: 30px;
+        grid-gap: 30px;
+    }   
+
+    .imgSection__contact{
+        display: none;
     }
 }
 
@@ -43,6 +177,24 @@ Red          -                     - #AE0000;
 @media screen and (min-width: 1200px){
     .header__contact{
         background-image: url('../images/contact_header_slim.jpg');
+    }
+
+    .contactGrid{
+        grid-template-areas: 
+            'title title'
+            'firstName lastName'
+            'email topic'
+            'message message'
+            'btn btn'
+        ;
+        margin: 50px;
+        grid-gap: 50px;
+        max-width: 800px;
+    }
+    
+    .textarea{
+        grid-column: 2fr;
+        width: 100%;
     }
 }
 /* --------------------------------------- */
