@@ -123,11 +123,56 @@
     <main class="main-container">
 
         <!-- Headline: -->
-        <div class="headline"><h1>launch sites</h1></div>
+        <div class="headline"><h1>contact form</h1></div>
 
-        <div class="grid">
+        <div class="contact-form">
+
+            <!-- Submit Message: -->
+            <div class="submitMessage">
+                Thank you! Your message has been successfully sent. We will contact you very soon!
+            </div>
+
+            <!-- Contact Form: -->
             
+            <form action="" id="contactForm">
+                
+                <div>
+                    <div class="firstName__title">First name:</div>
+                    <input placeholder="First name.." id="firstName" />
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="error" id="firstNameError">Please enter your first name</div>
+                </div>
+            
+                <div>
+                    <div class="lastName__title">Last name:</div>
+                    <input placeholder="Last name.." id="lastName" />
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="error" id="firstNameError">Please enter your last name</div>
+                </div>
 
+                <div>
+                    <div class="email__title">Email:</div>
+                    <input placeholder="Email.." id="email" />
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="error" id="emailError">Please enter a valid email address</div>
+                </div>
+
+                <div>
+                    <div class="topic__title">Topic:</div>
+                    <input placeholder="Topic.." id="topic" />
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="error" id="topicError">Please describe what the message is about</div>
+                </div>
+
+                <div>
+                    <div class="topic__title">Message:</div>
+                    <textarea placeholder="Ask us anything.." id="message"></textarea>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="error" id="messageError">Please describe what the message is about</div>
+                </div>
+            
+                <button class="btn" type="submit">send</button>
+            </form>
 
         </div>
     </main>
