@@ -1,0 +1,196 @@
+/* COLOUR PALETTE: 
+Blue         -  rgb(0, 82, 136)    - #005288;
+Light Black  -  rgb(34, 39, 43)    - #22272B;
+Medium black -  rgb(24, 28, 31)    - #181C1F;
+Dark black   -  rgb(15, 17, 18)    - #0F1112;
+White        -  rgb(255, 255, 255) - #FFFFFF;
+Black        -  rgb(0,0,0)         - #000000;
+Grey         -  rgb(167, 169, 172) - #A7A9AC;
+Red          -                     - #AE0000;
+------------------------------------------ */
+
+
+
+/* FONT DEFINITION: ----------------------- */
+h1, h2, h3, h4, h5, h6, a{
+    font-family: brandon-grotesque, sans-serif;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a{  
+    cursor: pointer;
+}
+/* ---------------------------------------- */
+
+
+
+/* FONT STYLES: --------------------------- */
+.thinner{
+    font-weight: 100;
+}
+
+.thin{
+    font-weight: 300;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.bolder{
+    font-weight: 900;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.quote{
+    font-family: brandon-grotesque, sans-serif;
+    text-align: center;
+    background: #181C1F;
+    color: #A7A9AC;
+    border-radius: 20px;
+}
+/* ---------------------------------------- */
+
+
+
+/* RESPONSIVE CSS: ------------------------ */
+/* Mobile/Small Viewport: */
+@media screen and (max-width: 480px){
+    /* Headline */
+    h1{
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    /* Sub-headline */
+    h2{
+        font-size: 23px;
+        font-weight: 600;
+    }
+
+    /* Question Section Headline */
+    /* h3{
+        font-size: 30px;
+    } */
+
+    /* Footer Headline/ DD Title */
+    /* h4{
+        font-size: 25px;
+        font-weight: 400;
+    } */
+    
+    /* Content Panel Headline */
+    h5{
+        font-size: 20px;
+        font-weight: 400;
+    } 
+
+    /* Content Panel Title */
+    h6{
+        font-size: 18px;
+        font-weight: 400;
+    } 
+
+    P{
+        font-size: 15px;
+    } 
+
+    .quote{
+        line-height: 25px;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 20px;
+        margin: 20px 0;
+    }
+}
+
+
+/* Tablet/Medium Viewport: */
+@media screen and (max-width: 1199px) and (min-width: 481px){
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 25px;
+    } 
+
+    h5{
+        font-size: 25px;
+    } 
+
+    h6{
+        font-size: 25px;
+    } 
+
+    P{
+        font-size: 17px;
+    }
+
+    .quote{
+        line-height: 25px;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 20px;
+        margin: 20px 0;
+    }
+}
+
+/* Desktop/Large Viewport: */
+@media screen and (min-width: 1200px){
+    h1{
+        font-size: 50px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 25px;
+    } 
+
+    h5{
+        font-size: 25px;
+    } 
+
+    h6{
+        font-size: 25px;
+    } 
+
+    P{
+        font-size: 19px;
+    }
+
+    .quote{
+        line-height: 25px;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 20px;
+        margin: 20px 0;
+    }
+}
+/* --------------------------------------- */
