@@ -1,13 +1,74 @@
 /* COLOUR PALETTE: 
-Midnight Blue     -    rgb(0, 82, 136)      -    #005288;
-
-Metallic Silver   -    rgb(167, 169, 172)   -    #A7A9AC;
-
-Chinese Black     -    rgb(15, 17, 18)      -    #0F1112;
-
-Eerie Black       -    rgb(24, 28, 31)      -    #181C1F;
-
-White             -    rgb(255, 255, 255)   -    #FFFFFF;
-
-Dark Gunmetal     -    rgb(34, 39, 43)      -    #22272B;
+Blue         -  rgb(0, 82, 136)    - #005288;
+Light Black  -  rgb(34, 39, 43)    - #22272B;
+Medium black -  rgb(24, 28, 31)    - #181C1F;
+Dark black   -  rgb(15, 17, 18)    - #0F1112;
+White        -  rgb(255, 255, 255) - #FFFFFF;
+Black        -  rgb(0,0,0)         - #000000;
+Grey         -  rgb(167, 169, 172) - #A7A9AC;
+Red          -                     - #AE0000;
 ------------------------------------------ */
+
+
+
+/* HEADER: ------------------------------- */
+.header__about{
+    height: 40% !important;
+}
+/* --------------------------------------- */
+
+
+.sectionIMG_about{
+    background: url("../images/about.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    background-repeat: no-repeat;
+}
+
+
+/* RESPONSIVE CSS: ----------------------- */
+/* Mobile: */
+@media screen and (max-width: 480px){
+    .header__about{
+        background: url("../images/about_header_full.jpg"); 
+        height: 30% !important;
+        background-position: 100% 100%  !important;   
+    }
+
+    .sectionIMG_about{
+        display: none;
+    }
+}
+
+/* Tablet: */
+@media screen and (max-width: 1199px) and (min-width: 481px){
+    .header__about{
+        background: url("../images/about_header_full.jpg"); 
+        background-position: center bottom !important;   
+    }
+    
+    .sectionIMG_about{
+        display: none;
+    }
+}
+
+
+
+/* Desktop: */
+@media screen and (min-width: 1200px){
+    .header__about{
+        background: url("../images/about_header_slim.jpg"); 
+        background-position: center bottom !important;   
+    }
+}
+/* --------------------------------------- */
+
+/* HEADER: ------------------------------- */
+/* --------------------------------------- */
+
+/* HEADER: ------------------------------- */
+/* --------------------------------------- */
+
+/* HEADER: ------------------------------- */
+/* --------------------------------------- */
