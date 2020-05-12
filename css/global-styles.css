@@ -500,6 +500,12 @@ a{
     cursor: pointer;
 } 
 
+   .parentBTN__center{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
 
 
 /* Mobile: */
