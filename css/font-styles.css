@@ -69,8 +69,8 @@ a{
 @media screen and (max-width: 480px){
     /* Headline */
     h1{
-        font-size: 30px;
-        font-weight: 400;
+        font-size: 35px;
+        font-weight: 500;
     }
 
     /* Sub-headline */
@@ -79,31 +79,9 @@ a{
         font-weight: 600;
     }
 
-    /* Question Section Headline */
-    /* h3{
-        font-size: 30px;
-    } */
-
-    /* Footer Headline/ DD Title */
-    /* h4{
-        font-size: 25px;
-        font-weight: 400;
-    } */
-    
-    /* Content Panel Headline */
-    h5{
-        font-size: 20px;
-        font-weight: 400;
-    } 
-
-    /* Content Panel Title */
-    h6{
-        font-size: 18px;
-        font-weight: 400;
-    } 
-
     P{
         font-size: 15px;
+        line-height: 20px;
     } 
 
     .quote{
@@ -118,38 +96,27 @@ a{
 
 /* Tablet/Medium Viewport: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
+    /* Headline */
     h1{
         font-size: 40px;
+        font-weight: 500;
     }
 
+    /* Sub-headline */
     h2{
         font-size: 26px;
+        font-weight: 600;
     }
-
-    h3{
-        font-size: 30px;
-    }
-
-    h4{
-        font-size: 25px;
-    } 
-
-    h5{
-        font-size: 25px;
-    } 
-
-    h6{
-        font-size: 25px;
-    } 
 
     P{
         font-size: 17px;
-    }
+        line-height: 23px;
+    } 
 
     .quote{
-        line-height: 25px;
+        line-height: 28px;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 23px;
         padding: 20px;
         margin: 20px 0;
     }
@@ -157,38 +124,27 @@ a{
 
 /* Desktop/Large Viewport: */
 @media screen and (min-width: 1200px){
+        /* Headline */
     h1{
         font-size: 50px;
+        font-weight: 500;
     }
 
+    /* Sub-headline */
     h2{
         font-size: 30px;
+        font-weight: 600;
     }
-
-    h3{
-        font-size: 30px;
-    }
-
-    h4{
-        font-size: 25px;
-    } 
-
-    h5{
-        font-size: 25px;
-    } 
-
-    h6{
-        font-size: 25px;
-    } 
 
     P{
         font-size: 19px;
-    }
+        line-height: 25px;
+    } 
 
     .quote{
-        line-height: 25px;
+        line-height: 30px;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 25px;
         padding: 20px;
         margin: 20px 0;
     }
