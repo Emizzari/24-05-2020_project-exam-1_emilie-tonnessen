@@ -104,8 +104,20 @@ Red          -                     - #AE0000;
     margin-top: 20px;
 }
 
+.dd-container:first-child{
+    margin-top: 0px !important;
+}
+
+/* DD BUTTON */
 .dd-btn{
-    background-color: #005288;
+    background: 
+        linear-gradient(
+            90deg, 
+            rgb(0, 204, 255), 
+            rgb(21, 115, 192),
+            rgb(4, 36, 71)
+    );
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     display: grid;
     grid-template-columns: 4fr 1fr;
     padding: 20px;
@@ -114,51 +126,103 @@ Red          -                     - #AE0000;
     text-align: end;
 }
 
-.dd-btn__title{
-    text-align: start;
-}
-
 .dd-btn:hover{
     cursor: pointer;
 }
 
-.dd-content{
-    background-color: #0F1112;
+.dd-btn__title{
+    text-align: start;
+    font-weight: 600;
+    color: rgb(0, 25, 75);
+    
 }
 
-.launch{
+.dd-btn__icon{
+    position: relative;
+    box-sizing: border-box;
+}
+
+.dd-btn__icon-1{
+    box-sizing: border-box;
+    height: 3px;
+    width: 25px;
+    background: rgb(0, 204, 255);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%); 
+    transform: translate(-50%,-50%);
+}
+
+.dd-btn__icon-2{
+    box-sizing: border-box;
+    width: 3px;
+    height: 25px;
+    background: rgb(0, 204, 255);
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* DD CONTENT: */
+.dd-content{
+    background-color: #0F1112;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dd-content__panel{
     padding: 20px;
 }
 
-.launch-title{
+.dd-content__title{
     font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1.5px solid rgb(21, 115, 192);
+    padding-top: 25px;
+    background: 
+        linear-gradient(
+            90deg, 
+            rgb(0, 204, 255), 
+            rgb(21, 115, 192)  
+        );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.launch-details{
-    border-top: 1px solid #FFF;
-    padding-top: 15px;
+.dd-content__title:first-child{
+    padding-top: 0;
 }
 
+.dd-content__description{
+    padding-top: 10px;
+}
+
+/* TOOGLE: */
 .checkbox,
-.fa-minus,
-.dd-content,
-.checkbox:checked ~ label .fa-plus{
+.dd-content{
     display: none;
 }
 
-.checkbox:checked ~ .dd-content,
-.checkbox:checked ~ label .fa-minus{
+.checkbox:checked ~ .dd-content{
     display: block;
 }
 
-.dd-container:first-child{
-    margin-top: 0px !important;
+.checkbox:checked ~ label .dd-btn__icon-1{
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+
+.checkbox:checked ~ label .dd-btn__icon-2{
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
 }
 /* End of Drop Down Buttons -------------- */
 
 
 
-/* Mobile: */
+/* RESPONSIVE CSS: ----------------------- */
+/* Mobile/Small Viewport: */
 @media screen and (max-width: 480px){
     .header__launch{
         background-image: url('../images/launch_header_vertical.jpg');
@@ -170,14 +234,14 @@ Red          -                     - #AE0000;
 
 }
 
-/* Tablet: */
+/* Tablet/Medium Viewport: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
     .header__launch{
         background-image: url('../images/launch_header.jpg');
     }
 }
 
-/* Desktop: */
+/* Desktop/Large Viewport: */
 @media screen and (min-width: 1200px){
     .header__launch{
         background-image: url('../images/launch_header.jpg');
@@ -187,3 +251,4 @@ Red          -                     - #AE0000;
         display: none;
     }
 }
+/* --------------------------------------- */
