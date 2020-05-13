@@ -68,23 +68,23 @@ function displayNextLaunch(nextLaunch) {
         html += `<p class="details">${nextLaunch[i].details}</p>`;
     }
 
-    html += `<div class="CT-wrap__launch"> 
-                    <div class="loader">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>                            
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+    html +=`<div class="CT-wrap__launch"> 
+                <div class="loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>                            
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
-            `;
+            </div>
+        `;
 
     nextLaunchWrap.innerHTML = html;
 }
@@ -156,30 +156,33 @@ function displayUpcomingLaunches(upcomingLaunches) {
             `
                 <div class="dd-container"> 
                     <input type="checkbox" id="toggle_id-${i}" class="checkbox"/>
-                    <label for="toggle_id-${i}" class="dd-btn">
-                            <h6 class="dd-btn__title">${upcomingLaunches[i].mission_name} - ${convertDate(upcomingLaunches[i].launch_date_unix)}</h6>  
-                        <i class="fas fa-plus"></i>
-                        <i class="fas fa-minus"></i>
+                    <label class="dd-btn" for="toggle_id-${i}">
+                        <h6 class="dd-btn__title">${upcomingLaunches[i].mission_name} - ${convertDate(upcomingLaunches[i].launch_date_unix)}</h6>  
+                        <div class="dd-btn__icon grid__center">
+                            <div class="dd-btn__icon-1"></div>
+                            <div class="dd-btn__icon-2"></div> 
+                        </div>
                     </label>
-                    <div class="dd-content launch">
-                        <h5 class="launch-title"><span class ="bold">rocket: </span>${upcomingLaunches[i].rocket.rocket_name}</h5>  
-                        <h5 class="launch-title"><span class ="bold">site: </span>${upcomingLaunches[i].launch_site.site_name}</h5>  
-            `
-            ;
+                    <div class="dd-content dd-content__panel">
+                        <h6 class="dd-content__title">Rocket</h6>  
+                        <p class="dd-content__description">${upcomingLaunches[i].rocket.rocket_name}</p>
+                        
+                        <h6 class="dd-content__title">Launch site</h6>
+                        <p class="dd-content__description">${upcomingLaunches[i].launch_site.site_name}</p>
+                        
+                        <h6 class="dd-content__title">details</h6>
+            `;
 
         if (!upcomingLaunches[i].details) {
-            html += `<p class="launch-details"><span class="italic">No current details at this moment.</span></p>`;
+            html += `   <p class="dd-content__description"><span class="italic">No current details at this moment.</span></p>`;
         }
         else {
-            html += `<p class="launch-details">${upcomingLaunches[i].details}</p>`;
+            html += `   <p class="dd-content__description">${upcomingLaunches[i].details}</p>`;
         }
 
-        html +=
-            `
-                    </div>   
+        html +=`    </div>   
                 </div>
-            `
-            ;
+            `;
     }
 
     upcomingLaunchesContainer.innerHTML = html;
@@ -199,23 +202,27 @@ function displayCompletedLaunches(completedLaunches) {
     // Backwards loop
     for (var i = completedLaunches.length - 1; i >= 0; i--) {
 
-        html +=
-            `
-                <div class="dd-container">
-                    <input type="checkbox" id="toggle_id-${i}" class="checkbox"/>
-                    <label for="toggle_id-${i}" class="dd-btn">
-                            <h6 class="dd-btn__title">${completedLaunches[i].mission_name} - ${convertDate(completedLaunches[i].launch_date_unix)}</h6>  
-                        <i class="fas fa-plus"></i>
-                        <i class="fas fa-minus"></i>
+        html +=`<div class="dd-container">
+                    <input class="checkbox" type="checkbox" id="toggle_id-${i}"/>
+                    <label class="dd-btn" for="toggle_id-${i}">
+                        <h6 class="dd-btn__title">${completedLaunches[i].mission_name} - ${convertDate(completedLaunches[i].launch_date_unix)}</h6>  
+                        <div class="dd-btn__icon grid__center">
+                            <div class="dd-btn__icon-1"></div>
+                            <div class="dd-btn__icon-2"></div> 
+                        </div>
                     </label>
-                    <div class="dd-content launch">
-                        <h5 class="launch-title"><span class ="bold">rocket: </span>${completedLaunches[i].rocket.rocket_name}</h5>  
-                        <h5 class="launch-title"><span class ="bold">site: </span>${completedLaunches[i].launch_site.site_name}</h5>
-                        <p class="launch-details">${completedLaunches[i].details}</p>
-                    </div>
+                    <div class="dd-content dd-content__panel">
+                        <h6 class="dd-content__title">Rocket</h6>
+                        <p class="dd-content__description">${completedLaunches[i].rocket.rocket_name}</p>
+                        
+                        <h6 class="dd-content__title">Launch site</h6>
+                        <p class="dd-content__description">${completedLaunches[i].launch_site.site_name}</p>
+                        
+                        <h6 class="dd-content__title">details</h6>
+                        <p class="dd-content__description">${completedLaunches[i].details}</p>
+                    </div> 
                 </div>
-            `
-            ;
+            `;
     }
 
     completedLaunchesContainer.innerHTML = html;
