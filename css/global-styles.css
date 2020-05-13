@@ -11,6 +11,47 @@ Red          -                     - #AE0000;
 
 
 
+/* HEADER: ------------------------------- */
+
+/* --------------------------------------- */
+
+/* HEADLINE: ----------------------------- */
+.headline__about{
+        margin: 0px 20px 20px 0px;
+    }
+
+
+/* RESPONSIVE CSS: ----------------------- */
+/* Mobile/Small Viewport: */
+@media screen and (max-width: 480px){
+    .headline{
+        margin: 20px 20px 0px 20px;
+        text-align: center;
+    }
+}
+
+/* Tablet/Medium Viewport: */
+@media screen and (max-width: 1199px) and (min-width: 481px){
+    .headline{
+        margin: 30px 30px 0px 30px;
+    }
+}
+
+/* Desktop/Large Viewport: */
+@media screen and (min-width: 1200px){
+    .headline{
+        margin: 50px 50px 0px 50px;
+    }
+}
+/* --------------------------------------- */
+
+
+
+
+
+
+
+
 /* COUNTDOWN: ---------------------------- */
 .countdown-container{
     display: grid;
