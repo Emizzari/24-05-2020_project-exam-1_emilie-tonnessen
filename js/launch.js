@@ -1,72 +1,74 @@
 // Declare API
+const launchAPI = "https://api.spacexdata.com/v3/launches";
 const nextLaunchAPI = "https://api.spacexdata.com/v3/launches/next";
-
+const upcomingLaunchesAPI = "https://api.spacexdata.com/v3/launches/upcoming";
+const completedLaunchesAPI = "https://api.spacexdata.com/v3/launches/past";
 
 //Fetch json API
-async function fetchNextLaunch() {
+async function fetchAPI() {
     try {
-        const response = await fetch(nextLaunchAPI);
-
-        const nextLaunch = await response.json();
-
-        // Display Function in order
+        // Next Launch:
+        const nextLaunchResponse = await fetch(nextLaunchAPI);
+        const nextLaunch = await nextLaunchResponse.json();
         displayNextLaunch(nextLaunch);
         displayCountdown(nextLaunch);
+
+        // Upcoming Launches:
+        const upcomingLaunchesResponse = await fetch(upcomingLaunchesAPI);
+        const upcomingLaunches = await upcomingLaunchesResponse.json();
+        displayUpcomingLaunches(upcomingLaunches);
+
+        // Completed Launches
+        const completedLaunchesResponse = await fetch(completedLaunchesAPI);
+        const completedLaunches = await completedLaunchesResponse.json();
+        displayCompletedLaunches(completedLaunches);
+
     } catch (error) {
         console.log(error);
     }
- }
+}
+
 
 // Call the fetch function
-fetchNextLaunch();
+fetchAPI();
 
 
-// Converting to date
+// CONVERT TO DATE FORMAT ------------------------------------------------------
 function convertDate(launchDate) {
     let date = new Date(launchDate * 1000);
     return date.toLocaleDateString();
 }
+// END OF DATE FORMAT ----------------------------------------------------------
+
 
 
 // DISPLAY NEXT LAUNCH ---------------------------------------------------------
 function displayNextLaunch(nextLaunch) {
     // console.log(nextLaunch);
-    
+
     // Target the container
     const nextLaunchWrap = document.querySelector(".next-launch");
-    
+
     let html = "";
 
-        html +=
-            `
-                <h2 class="border-bottom">next launch</h2>
+    html += `<h2 class="border-bottom">next launch</h2>
                 <h5 class="border-bottom__below">mission: ${nextLaunch.mission_name}</h5>
                 <h5><span class="bold">Date:</span> ${convertDate(nextLaunch.launch_date_unix)}</h5>
                 <h5><span class="bold">site:</span> ${nextLaunch.launch_site.site_name}</h5>
                 <h5><span class="bold">rocket:</span> ${nextLaunch.rocket.rocket_name}</h5>
-            `
-        ;
+            `;
 
-        if (!nextLaunch.details) {
-            html +=
-                `
-                        <p class="details"> 
-                            <span class="italic">No current details at this moment.</span>
-                        </p>
-                    `
-                ;
-        }
-        else {
-            html +=
-                `
-                        <p class="details">${nextLaunch[i].details}</p>`;
-        }
+    if (!nextLaunch.details) {
+        html += `<p class="details"> 
+                        <span class="italic">No current details at this moment.</span>
+                    </p>
+                `;
+    }
+    else {
+        html += `<p class="details">${nextLaunch[i].details}</p>`;
+    }
 
-        
-                
-        html +=   
-            `                     
-                <div class="countdown-wrap"> 
+    html += `<div class="countdown-wrap"> 
                     <div class="loader">
                         <div></div>
                         <div></div>
@@ -82,9 +84,7 @@ function displayNextLaunch(nextLaunch) {
                         <div></div>
                     </div>
                 </div>
-            `
-        ;
-    
+            `;
 
     nextLaunchWrap.innerHTML = html;
 }
@@ -93,7 +93,7 @@ function displayNextLaunch(nextLaunch) {
 
 
 // DISPLAY COUNTDOWN TIMER: ----------------------------------------------------
-function displayCountdown(nextLaunch) { 
+function displayCountdown(nextLaunch) {
 
     // Countdown Variable
     var deadline = nextLaunch.launch_date_utc;
@@ -141,28 +141,7 @@ function displayCountdown(nextLaunch) {
 
 
 // DISPLAY UPCOMING LAUNCHES: ----------------------------------------------------
-// Declare API
-const upcomingLaunchesAPI = "https://api.spacexdata.com/v3/launches/upcoming";
-
-
-//Fetch json API
-async function fetchUpcomingLaunches() {
-    try {
-        const response = await fetch(upcomingLaunchesAPI);
-
-        const upcomingLaunches = await response.json();
-
-        // Display Function in order
-        displayUpcomingLaunches(upcomingLaunches);
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-// Call the fetch function
-fetchUpcomingLaunches();
-
-function displayUpcomingLaunches(upcomingLaunches){
+function displayUpcomingLaunches(upcomingLaunches) {
 
     const upcomingLaunchesContainer = document.querySelector(".upcoming-launch-wrap");
 
@@ -170,7 +149,7 @@ function displayUpcomingLaunches(upcomingLaunches){
 
     // Function starting at 1 as the "next launch" section displays that one
     for (let i = 1; i < upcomingLaunches.length; i++) {
-        html += 
+        html +=
             `
                 <div class="dd-container"> 
                     <input type="checkbox" id="toggle_id-${i}" class="checkbox"/>
@@ -183,21 +162,21 @@ function displayUpcomingLaunches(upcomingLaunches){
                         <h5 class="launch-title"><span class ="bold">rocket: </span>${upcomingLaunches[i].rocket.rocket_name}</h5>  
                         <h5 class="launch-title"><span class ="bold">site: </span>${upcomingLaunches[i].launch_site.site_name}</h5>  
             `
-        ;
+            ;
 
         if (!upcomingLaunches[i].details) {
-            html +=     `<p class="launch-details"><span class="italic">No current details at this moment.</span></p>`;
+            html += `<p class="launch-details"><span class="italic">No current details at this moment.</span></p>`;
         }
         else {
-            html +=     `<p class="launch-details">${upcomingLaunches[i].details}</p>`;
+            html += `<p class="launch-details">${upcomingLaunches[i].details}</p>`;
         }
 
-        html += 
+        html +=
             `
                     </div>   
                 </div>
             `
-        ;
+            ;
     }
 
     upcomingLaunchesContainer.innerHTML = html;
@@ -207,27 +186,6 @@ function displayUpcomingLaunches(upcomingLaunches){
 
 
 // DISPLAY COMPLETED LAUNCHES: ---------------------------------------------------
-// Declare API
-const completedLaunchesAPI = "https://api.spacexdata.com/v3/launches/past";
-
-
-//Fetch json API
-async function fetchCompletedLaunches() {
-    try {
-        const response = await fetch(completedLaunchesAPI);
-
-        const completedLaunches = await response.json();
-
-        // Display Function in order
-        displayCompletedLaunches(completedLaunches);
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-// Call the fetch function
-fetchCompletedLaunches();
-
 function displayCompletedLaunches(completedLaunches) {
     console.log(completedLaunches);
 
@@ -237,7 +195,7 @@ function displayCompletedLaunches(completedLaunches) {
 
     // Backwards loop
     for (var i = completedLaunches.length - 1; i >= 0; i--) {
-        
+
         html +=
             `
                 <div class="dd-container">
@@ -254,15 +212,9 @@ function displayCompletedLaunches(completedLaunches) {
                     </div>
                 </div>
             `
-        ;
+            ;
     }
 
     completedLaunchesContainer.innerHTML = html;
 }
 // END OF COMPLETED LAUNCHES -----------------------------------------------------
-
-
-
-document.querySelector(".toggle").addEventListener("click", function (e) {
-    e.target.parentNode.click(); // propagate the click event to the label
-});
