@@ -85,7 +85,7 @@ Red          -                     - #AE0000;
 @media screen and (max-width: 549px){
     .grid{
         grid-gap: 50px;
-        padding: 50px 20px;
+        padding: 20px 20px 50px 20px;
     }
 
     .section img{
@@ -264,6 +264,91 @@ Red          -                     - #AE0000;
 /* --------------------------------------- */
 
 
+
+
+
+/* BUTTONS: ------------------------------ */
+.btn{
+    /* Font style */
+    text-align: center;
+    color: #FFFFFF;
+        font-weight: 500;
+
+    /* Button style: */
+    /* background: linear-gradient(150deg, #006BB1, #002F4E); */
+    background: linear-gradient(150deg, rgb(0, 153, 255), rgb(0, 21, 36));
+    box-shadow: 
+        inset 6px 6px 15px rgba(0, 195, 255, 0.3), 
+        inset -6px -6px 15px rgba(0, 0, 0, 0.5),
+        5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.btn__large{
+    border-radius: 25px;
+}
+
+.btn:hover{
+    background: linear-gradient(150deg, #22272B, #0F1112);
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.9);   
+    cursor: pointer;
+} 
+
+   .parentBTN__center{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+/* Mobile: */
+@media screen and (max-width: 480px){
+    .btn{
+        font-size: 18px;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .btn__large{
+        font-size: 25px;
+        width: 200px;
+        padding: 15px;
+    }
+}
+
+/* Tablet: */
+@media screen and (max-width: 1199px) and (min-width: 481px){
+    .btn{
+        font-size: 18px;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .btn__large{
+        font-size: 25px;
+        width: 200px;
+        padding: 15px;
+    }
+}
+
+/* Desktop: */
+@media screen and (min-width: 1200px){
+    .btn{
+        font-size: 18px;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .btn__large{
+        font-size: 25px;
+        width: 200px;
+        padding: 15px;
+    }
+}
+/* --------------------------------------- */
+
+
 /* NOT MY CODE!!!!!!! NEED TO DOCUMENT. The code is free to use */
 /* ELEGANT LOADER: ----------------------- */
 .loader {
@@ -364,86 +449,4 @@ Red          -                     - #AE0000;
     transform: scale(1.5);
   }
 } 
-/* --------------------------------------- */
-
-
-/* BUTTONS: ------------------------------ */
-.btn{
-    /* Font style */
-    text-align: center;
-    color: #FFFFFF;
-        font-weight: 500;
-
-    /* Button style: */
-    /* background: linear-gradient(150deg, #006BB1, #002F4E); */
-    background: linear-gradient(150deg, rgb(0, 153, 255), rgb(0, 21, 36));
-    box-shadow: 
-        inset 6px 6px 15px rgba(0, 195, 255, 0.3), 
-        inset -6px -6px 15px rgba(0, 0, 0, 0.5),
-        5px 5px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-}
-
-.btn__large{
-    border-radius: 25px;
-}
-
-.btn:hover{
-    background: linear-gradient(150deg, #22272B, #0F1112);
-    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.9);   
-    cursor: pointer;
-} 
-
-   .parentBTN__center{
-        display: grid;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-
-/* Mobile: */
-@media screen and (max-width: 480px){
-    .btn{
-        font-size: 18px;
-        width: 150px;
-        padding: 10px;
-    }
-
-    .btn__large{
-        font-size: 25px;
-        width: 200px;
-        padding: 15px;
-    }
-}
-
-/* Tablet: */
-@media screen and (max-width: 1199px) and (min-width: 481px){
-    .btn{
-        font-size: 18px;
-        width: 150px;
-        padding: 10px;
-    }
-
-    .btn__large{
-        font-size: 25px;
-        width: 200px;
-        padding: 15px;
-    }
-}
-
-/* Desktop: */
-@media screen and (min-width: 1200px){
-    .btn{
-        font-size: 18px;
-        width: 150px;
-        padding: 10px;
-    }
-
-    .btn__large{
-        font-size: 25px;
-        width: 200px;
-        padding: 15px;
-    }
-}
 /* --------------------------------------- */
