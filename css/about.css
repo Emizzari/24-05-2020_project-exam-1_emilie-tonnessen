@@ -31,7 +31,7 @@ Red          -                     - #AE0000;
 /* Mobile: */
 @media screen and (max-width: 480px){
     .header__about{
-        background: url("../images/about_header_full.jpg"); 
+        background: url("../images/header_about.jpg"); 
         height: 30% !important;
         background-position: 100% 100%  !important;   
     }
@@ -44,7 +44,7 @@ Red          -                     - #AE0000;
 /* Tablet: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
     .header__about{
-        background: url("../images/about_header_full.jpg"); 
+        background: url("../images/header_about.jpg"); 
         background-position: center bottom !important;   
     }
     
@@ -58,7 +58,7 @@ Red          -                     - #AE0000;
 /* Desktop: */
 @media screen and (min-width: 1200px){
     .header__about{
-        background: url("../images/about_header_slim.jpg"); 
+        background: url("../images/header_about.jpg"); 
         background-position: center bottom !important;   
     }
 }
