@@ -20,6 +20,7 @@ async function fetchNextLaunch() {
 // Call the fetch function
 fetchNextLaunch();
 
+
 // Converting to date
 function convertDate(launchDate) {
     let date = new Date(launchDate * 1000);
