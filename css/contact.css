@@ -53,6 +53,8 @@ Red          -                     - #AE0000;
     font-family: brandon-grotesque, sans-serif;
 }
 
+
+
 .inputParent{
     position: relative;
     padding: 0;
@@ -89,10 +91,25 @@ Red          -                     - #AE0000;
 
 /* ERROR MESSAGES: ----------------------- */
 .errorIcon{
+    box-sizing: border-box;
     display: none;
     color: #AE0000;
-    position: absolute;
     text-align: center;
+
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    -webkit-transform: translate(-5px,-50%);
+    transform: translate(-5px,-50%);
+}
+
+.errorIconMessage{
+    display: none;
+    color: #AE0000;
+    text-align: center;
+    position: absolute;
+    top: 18px;
+    right: 10px;
 }
 
 .error{
@@ -132,7 +149,7 @@ Red          -                     - #AE0000;
     grid-area: message;
 }
 
-.parentBTN__center{
+.btn-grid-area{
     grid-area: btn;
 }
 
@@ -169,30 +186,32 @@ Red          -                     - #AE0000;
         margin: 20px;
         grid-gap: 20px;
     }
+
+
+    .input-title h5{
+        font: 15px;
+        font-weight: 400;
+    }
     
     .contactInput{
-        height: 40px;
-        padding: 5px;
+        height: 50px;
+        padding: 10px;
         margin: 5px 0px;
     }
 
     .textarea{
         height: 180px;
-        padding: 5px;
+        padding: 10px;
+        margin: 5px 0px;
     }
 
     .imgSection__contact{
         display: none;
     }
 
-    .errorIcon{
+    .errorIcon,
+    .errorIconMessage{
         font-size: 18px;
-        right: 10px;
-        top: 11px;
-    }
-
-    .parentBTN__center{
-        margin: 10px 0;
     }
 
     #submitMessage{
@@ -234,6 +253,12 @@ Red          -                     - #AE0000;
         display: none;
     }
 
+
+    .input-title h5{
+        font: 17px;
+        font-weight: 400;
+    }
+
     .contactInput{
         height: 45px;
         padding: 8px;
@@ -250,10 +275,9 @@ Red          -                     - #AE0000;
         margin: 10px 0;
     }
 
-    .errorIcon{
+    .errorIcon,
+    .errorIconMessage{
         font-size: 18px;
-        right: 10px;
-        top: 21px;
     }
 
     #submitMessage div{
@@ -304,15 +328,22 @@ Red          -                     - #AE0000;
         
     }
 
+    .input-title{
+        font-size: 17px;
+        font-weight: 400;
+    }
+
     .contactInput{
         height: 50px;
         padding: 5px 10px;
+        margin: 8px 0px;
     }
 
     .textarea{
         height: 250px;
         padding: 10px;
         font-weight: 400;
+        margin: 8px 0px;
     }
 
     #contactForm{
@@ -324,10 +355,9 @@ Red          -                     - #AE0000;
         width: 100%;
     }
 
-    .errorIcon{
+    .errorIcon,
+    .errorIconMessage{
         font-size: 18px;
-        right: 10px;
-        top: 18px;
     }
 }
 /* --------------------------------------- */
