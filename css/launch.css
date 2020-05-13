@@ -161,10 +161,6 @@ Red          -                     - #AE0000;
         background-image: url('../images/launch_header_vertical.jpg');
     }
 
-    .headline{
-        margin: 20px;
-    }
-
     .section__launch{
         display: none;
     }
@@ -176,20 +172,12 @@ Red          -                     - #AE0000;
     .header__launch{
         background-image: url('../images/launch_header.jpg');
     }
-
-    .headline{
-        margin: 30px;
-    }
 }
 
 /* Desktop: */
 @media screen and (min-width: 1200px){
     .header__launch{
         background-image: url('../images/launch_header.jpg');
-    }
-
-    .headline{
-        margin: 50px;
     }
 
     .section__launch{
