@@ -29,38 +29,7 @@ Red          -                     - #AE0000;
 }
 /* --------------------------------------- */
 
-/* COUNTDOWN LAUNCH: --------------------- */
-.countdown-wrap{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; 
-    background: linear-gradient(150deg, rgb(0, 153, 255), rgb(1, 46, 78));
-    margin-top: 20px;
-    color: #FFFFFF;
-}
 
-#countdown__launch{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    text-align: center;
-    grid-gap: 5%;
-}
-
-.ct-letters__launch{
-    font-family: brandon-grotesque, sans-serif;
-    text-transform: uppercase;
-    font-size: 12px; 
-    padding-bottom: 5px; 
-}
-
-.ct-numbers__launch{
-    font-size: 30px;
-    margin-bottom: 0px;
-}
-/* --------------------------------------- */
 
 
 /* NEXT LAUNCH: -------------------------- */
@@ -81,6 +50,40 @@ Red          -                     - #AE0000;
 
 .details{
     margin-top: 15px;
+}
+/* --------------------------------------- */
+
+
+/* COUNTDOWN LAUNCH: --------------------- */
+.CT-wrap__launch{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+    background: linear-gradient(150deg, rgb(0, 153, 255), rgb(1, 46, 78));
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+#CT__launch{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    grid-gap: 5%;
+}
+
+.CT-letters__launch{
+    font-family: brandon-grotesque, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px; 
+    padding-bottom: 5px; 
+}
+
+.CT-numbers__launch{
+    font-size: 30px;
+    margin-bottom: 0px;
 }
 /* --------------------------------------- */
 
