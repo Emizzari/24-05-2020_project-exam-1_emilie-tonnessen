@@ -12,8 +12,55 @@ Red          -                     - #AE0000;
 
 
 /* HEADER: ------------------------------- */
+.header{
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    margin-top: 100px;
+}
+
+.header__home{
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+/* Mobile: */
+@media screen and (max-width: 480px){
+    .header__home{
+        background-image: url('../images/header3.png');
+    }
+    .header{
+        margin-top: 0;
+    }
+}
+
+/* Tablet: */
+@media screen and (max-width: 1199px) and (min-width: 481px){
+    .header__home{
+        background-image: url('../images/header3.png');
+    }
+}
+
+/* Desktop: */
+@media screen and (min-width: 1200px){
+    .header__home{
+        background-image: url('../images/header3.png');
+        
+    }
+
+}
+
 
 /* --------------------------------------- */
+
+
 
 /* HEADLINE: ----------------------------- */
 .headline__about{
@@ -53,17 +100,7 @@ Red          -                     - #AE0000;
 
 
 /* COUNTDOWN: ---------------------------- */
-.countdown-container{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-}    
 
-#countdown{
-    font-size: 50px;
-    color: white;
-}
 /* --------------------------------------- */
 
 
@@ -72,12 +109,14 @@ Red          -                     - #AE0000;
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    box-sizing: border-box;
 }
 
 .grid__center{
     display: grid;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 
@@ -269,51 +308,56 @@ Red          -                     - #AE0000;
 
 /* BUTTONS: ------------------------------ */
 .btn{
-    /* Font style */
     text-align: center;
     color: #FFFFFF;
-        font-weight: 500;
-
-    /* Button style: */
-    /* background: linear-gradient(150deg, #006BB1, #002F4E); */
-    background: linear-gradient(150deg, rgb(0, 153, 255), rgb(0, 21, 36));
+    font-weight: 500;
+    background: linear-gradient(
+        150deg, 
+        rgb(56, 215, 255), 
+        rgb(2, 103, 219),
+        rgb(0, 13, 36));
     box-shadow: 
         inset 6px 6px 15px rgba(0, 195, 255, 0.3), 
         inset -6px -6px 15px rgba(0, 0, 0, 0.5),
         5px 5px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
+    transition: ease-in-out 0.15s;
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn__large{
-    border-radius: 25px;
-}
-
-.btn:hover{
-    background: linear-gradient(150deg, #22272B, #0F1112);
-    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.9);   
-    cursor: pointer;
+.btn:hover{  
+    background: transparent;
+    box-shadow: 
+        inset 8px 8px 20px rgba(0, 0, 0, 1),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.3);   
+    border: 1px solid #FFF;
 } 
 
-   .parentBTN__center{
-        display: grid;
-        align-items: center;
-        justify-content: center;
-    }
-
+.btn__hover-dark:hover{
+    background: linear-gradient(
+        150deg, 
+        #22272B, 
+        #0F1112);
+    border: 0px;
+}
 
 
 /* Mobile: */
 @media screen and (max-width: 480px){
     .btn{
-        font-size: 18px;
+        font-size: 16px;
         width: 150px;
-        padding: 10px;
+        height: 50px;
+        border-radius: 25px;
     }
 
     .btn__large{
         font-size: 25px;
-        width: 200px;
-        padding: 15px;
+        width: 220px;
+        height: 60px;
+        border-radius: 30px;
     }
 }
 
@@ -321,14 +365,16 @@ Red          -                     - #AE0000;
 @media screen and (max-width: 1199px) and (min-width: 481px){
     .btn{
         font-size: 18px;
-        width: 150px;
-        padding: 10px;
+        width: 160px;
+        height: 50px;
+        border-radius: 25px; 
     }
 
     .btn__large{
         font-size: 25px;
-        width: 200px;
-        padding: 15px;
+        width: 220px;
+        height: 70px;
+        border-radius: 40px;
     }
 }
 
@@ -336,14 +382,16 @@ Red          -                     - #AE0000;
 @media screen and (min-width: 1200px){
     .btn{
         font-size: 18px;
-        width: 150px;
-        padding: 10px;
+        width: 160px;
+        height: 50px;
+        border-radius: 25px; 
     }
 
     .btn__large{
         font-size: 25px;
-        width: 200px;
-        padding: 15px;
+        width: 230px;
+        height: 80px;
+        border-radius: 40px;
     }
 }
 /* --------------------------------------- */
