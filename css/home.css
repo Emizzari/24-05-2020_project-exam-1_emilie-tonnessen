@@ -11,90 +11,68 @@ Red          -                     - #AE0000;
 
 
 
-/* BACKGROUND: --------------------------- */
-.header{
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 60%;
-    background-size: cover;
-    background-position: center;
-    margin-top: 100px;
-}
-
-.header__home{
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    top: 0;
-}
-
-.overlay__dark{
-    background-color: rgb(15, 17, 18, 0.5);
-    width: 100%;
-    height: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
-.header-wrap{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-align: center; 
-    padding: 10px;
-}
-/* --------------------------------------- */
-
-
-
 /* HEADLINE: ----------------------------- */
 .headline__home{
         border-bottom: 3px solid #FFF;
         padding: 0px 10px;
+        text-align: center;  
     }
 /* --------------------------------------- */
 
 
 
 /* COUNTDOWN HOME: ----------------------- */
-.countdown-wrap{
-    
-    /* Center the Loader */
-    display: grid;
-    align-items: center;
-    justify-content: center;
+.CT-wrap{ 
+    width: 100%;
+    background: rgba(0, 0, 0, 0.377);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    padding: 40px 10px;  
+    box-sizing: border-box;
+    height: 400px;  
 }
 
-.countdown-wrap__tr{
+.CT-wrap__tr{
+    box-sizing: border-box;
     background: transparent;
-    /* Center the Loader */
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    max-width: 500px;  
 }
 
-#countdown{
+#CT{
+    color: white;
+    padding: 20px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
     text-align: center;
-    grid-gap: 5px;
-    margin: 10px 0px;
+    box-sizing: border-box; 
 }
 
-.ct-letters{
+.CT-block{
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.CT-block:first-child{
+    padding-left: 0;
+}
+
+.CT-letters{
     font-family: brandon-grotesque, sans-serif;
     text-transform: uppercase;
     font-size: 15px;
     padding: 5px; 
+    box-sizing: border-box;
 }
 
-.ct-numbers{
+.CT-numbers{
     font-size: 45px;
+    box-sizing: border-box;
+    margin: 10px 0;
 }
 /* --------------------------------------- */
 
@@ -124,10 +102,6 @@ Red          -                     - #AE0000;
 
 /* Mobile: */
 @media screen and (max-width: 480px){
-    .header__home{
-        background-image: url('../images/home_header_vertical.jpg');
-    }
-
     .headline__home{
         font-size: 40px;
     }
@@ -135,18 +109,10 @@ Red          -                     - #AE0000;
     .section__home{
         display: none;
     }
-
-    .header{
-        margin-top: 0;
-    }
 }
 
 /* Tablet: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
-    .header__home{
-        background-image: url('../images/home_header.jpg');
-    }
-
     .headline__home{
         font-size: 50px;  
     }
@@ -158,10 +124,6 @@ Red          -                     - #AE0000;
 
 /* Desktop: */
 @media screen and (min-width: 1200px){
-    .header__home{
-        background-image: url('../images/home_header.jpg');
-    }
-
     .headline__home{
         font-size: 55px;
     }
