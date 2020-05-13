@@ -74,9 +74,9 @@ Red          -                     - #AE0000;
         padding: 0px 10px;
     }
 
-    .copyright-container{
+    .copyright p{
         padding: 10px;
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
