@@ -68,7 +68,7 @@ function displayNextLaunch(nextLaunch) {
         html += `<p class="details">${nextLaunch[i].details}</p>`;
     }
 
-    html += `<div class="countdown-wrap"> 
+    html += `<div class="CT-wrap__launch"> 
                     <div class="loader">
                         <div></div>
                         <div></div>
@@ -116,16 +116,18 @@ function displayCountdown(nextLaunch) {
 
     // Initiate the timer
     function initializeCountdown(id, endtime) {
-        var countdownWrap = document.querySelector(".countdown-wrap");
+        var countdownWrap = document.querySelector(".CT-wrap__launch");
 
         var timeinterval = setInterval(function () {
             var t = getTimeRemaining(endtime);
 
             countdownWrap.innerHTML =
-                `<div id="countdown__launch"><div class="ct-block_launch"><p class="ct-letters__launch">days</p><p class="ct-numbers__launch">` + t.days + `</p></div>` +
-                `<div class="ct-block__launch"><p class="ct-letters__launch">hours</p><p class="ct-numbers__launch">` + t.hours + `</p></div>` +
-                `<div class="ct-block__launch"><p class="ct-letters__launch">minutes</p><p class="ct-numbers__launch">` + t.minutes + `</p></div>` +
-                `<div class="ct-block__launch"><p class="ct-letters__launch">seconds</p><p class="ct-numbers__launch">` + t.seconds + `</p></div></div>`
+                `<div id="CT__launch">
+                 <div class="CT-block_launch"><p class="CT-letters__launch">days</p><p class="CT-numbers__launch">` + t.days + `</p></div>` +
+                `<div class="CT-block__launch"><p class="CT-letters__launch">hours</p><p class="CT-numbers__launch">` + t.hours + `</p></div>` +
+                `<div class="CT-block__launch"><p class="CT-letters__launch">minutes</p><p class="CT-numbers__launch">` + t.minutes + `</p></div>` +
+                `<div class="CT-block__launch"><p class="CT-letters__launch">seconds</p><p class="CT-numbers__launch">` + t.seconds + `</p></div>
+                </div>`
                 ;
 
             if (t.total <= 0) {
@@ -187,7 +189,7 @@ function displayUpcomingLaunches(upcomingLaunches) {
 
 // DISPLAY COMPLETED LAUNCHES: ---------------------------------------------------
 function displayCompletedLaunches(completedLaunches) {
-    console.log(completedLaunches);
+    // console.log(completedLaunches);
 
     const completedLaunchesContainer = document.querySelector(".completed-launch-wrap");
 

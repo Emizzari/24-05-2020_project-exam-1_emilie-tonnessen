@@ -49,16 +49,18 @@ function displayNextLaunch(nextLaunch) {
     }
 
     function initializeClock(id, endtime) {
-        var clock = document.querySelector(".countdown-wrap__tr");
+        var clock = document.querySelector(".CT-wrap__tr");
 
         var timeinterval = setInterval(function () {
             var t = getTimeRemaining(endtime);
 
             clock.innerHTML = 
-                `<div id="countdown"><div class="ct-block"><p class="ct-letters">days</p><p class="ct-numbers">` + t.days + `</p></div>` +
-                `<div class="ct-block"><p class="ct-letters">hours</p><p class="ct-numbers">` + t.hours + `</p></div>` +
-                `<div class="ct-block"><p class="ct-letters">minutes</p><p class="ct-numbers">` + t.minutes + `</p></div>` +
-                `<div class="ct-block"><p class="ct-letters">seconds</p><p class="ct-numbers">` + t.seconds + `</p></div></div>`                
+                `<div id="CT">
+                     <div class="CT-block"><p class="CT-letters">days</p><p class="CT-numbers">` + t.days + `</p></div>` +
+                    `<div class="CT-block"><p class="CT-letters">hours</p><p class="CT-numbers">` + t.hours + `</p></div>` +
+                    `<div class="CT-block"><p class="CT-letters">minutes</p><p class="CT-numbers">` + t.minutes + `</p></div>` +
+                    `<div class="CT-block"><p class="CT-letters">seconds</p><p class="CT-numbers">` + t.seconds + `</p></div>
+                </div>`                
             ;
 
             if (t.total <= 0) {
