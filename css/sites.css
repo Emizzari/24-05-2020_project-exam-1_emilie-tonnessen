@@ -39,6 +39,10 @@ Red          -                     - #AE0000;
     .section__sites{
         display: none;
     }
+
+    .map{
+        height: 200px;
+    }
 }
 
 /* Tablet: */
@@ -46,12 +50,20 @@ Red          -                     - #AE0000;
     .header__sites{
         background-image: url('../images/sites_header.jpg');
     }
+
+    .map{
+        height: 220px;
+    }
 }
 
 /* Desktop: */
 @media screen and (min-width: 1200px){
     .header__sites{
         background-image: url('../images/sites_header_slim.jpg');
+    }
+
+    .map{
+        height: 280px;
     }
 }
 /* --------------------------------------- */
