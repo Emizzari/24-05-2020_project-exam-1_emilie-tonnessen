@@ -144,6 +144,7 @@ function displayCountdown(nextLaunch) {
 
 // DISPLAY UPCOMING LAUNCHES: ----------------------------------------------------
 function displayUpcomingLaunches(upcomingLaunches) {
+    console.dir(upcomingLaunches);
 
     const upcomingLaunchesContainer = document.querySelector(".upcoming-launch-wrap");
 
