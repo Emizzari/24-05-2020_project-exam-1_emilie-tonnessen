@@ -102,6 +102,7 @@ Red          -                     - #AE0000;
 /* DROP DOWN BUTTONS: -------------------- */
 .dd-container{
     margin-top: 20px;
+   
 }
 
 .dd-container:first-child{
@@ -124,6 +125,7 @@ Red          -                     - #AE0000;
     font-size: 22px;
     font-weight: 300;
     text-align: end;
+    
 }
 
 .dd-btn:hover{
@@ -199,13 +201,20 @@ Red          -                     - #AE0000;
 }
 
 /* TOOGLE: */
-.checkbox,
-.dd-content{
+.checkbox{
     display: none;
 }
 
-.checkbox:checked ~ .dd-content{
-    display: block;
+.checkbox:not(:checked) ~ .dd-content,
+.checkbox:not(:checked) ~ .dd-content-panel{
+    height: 0px;
+    overflow: hidden;
+    padding: 0;  
+}
+
+.checkbox:checked ~ .dd-content,
+.checkbox:checked ~ .dd-content-panel{
+    height: 100%;
 }
 
 .checkbox:checked ~ label .dd-btn__icon-1{
