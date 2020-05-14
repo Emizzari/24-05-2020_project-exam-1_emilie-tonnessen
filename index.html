@@ -50,9 +50,10 @@
             </div>
            
             <!-- Icons for Tablet: -->
-            <div onclick="toogleTabletMenu()" class="icon-container">
-                <i id="hamburger" class="fa fa-bars"></i>
-                <i id="cross" class="fas fa-times"></i>
+            <div onclick="toogleTabletMenu()" class="tablet-icon__open">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
             </div>
         </div>
     </nav>
@@ -71,39 +72,42 @@
         </div>
     </div>
 
+
+
+
     <!-- Mobile Navigation Bar: -->
-    <!-- Renaming to bottom nav? -->
-    <nav class="mobile-nav" id="mobile-scroll-menu">
-        <div onclick="toogleMobileMenu()" class="hamburger-container"> 
-            <i id="hamburger" class="fa fa-bars"></i>     
+    <nav class="bottom-nav-wrap grid__center" id="mobile-scroll-menu">
+        <div onclick="toogleMobileMenu()" class="mobile-icon__open"> 
+            <div class="line-1"></div> 
+            <div class="line-2"></div>
+            <div class="line-3"></div>
         </div>
     </nav>
 
     <!-- Mobile Menu: -->
-    <!-- Renaming to mobile-menu? -->
-    <div id="mobile-block-container">
+    <div id="mobile-block-wrap">
         <div class="mobile-block">
 
-            <div class="mobile-block-logo">
-                <a href="index.html">
-                    <img src="images/logo/logo-white_tr.png" alt="Logo">
-                </a>    
+            <!-- Logo: -->
+            <div class="mobile-block__logo">
+                <a href="index.html"><img src="images/logo/logo-white_tr.png" alt="Logo"></a>    
             </div>
             
-            <!-- mobile menu list? -->
+            <!-- Menu List: -->
             <div class="mobile-menu">
-                <a id="mobile-active" href="index.html"><div>home</div></a>
+                <a id="mobile-menu__active" href="index.html"><div>home</div></a>
                 <a href="launch.html"><div>launch</div></a>
                 <a href="rockets.html"><div>rockets</div></a>
                 <a href="sites.html"><div>sites</div></a>
                 <a href="contact.html"><div>contact</div></a>
                 <a href="about.html"><div> about</div></a>
             </div>
-                        
-            <div class="icon__menu-close" onclick="toogleMobileMenu()">
-                <i class="fas fa-times"></i>
+                
+            <!-- Closing Icon: -->
+            <div class="mobile-icon__close grid__center" onclick="toogleMobileMenu()">
+                <div class="close__line-1"></div>
+                <div class="close__line-2"></div>
             </div>
-
         </div>
     </div>
     <!-- End of Navigation --------------------------------------------->
