@@ -1,6 +1,6 @@
 // Mobile menu toogle
 function toogleMobileMenu() {
-    var mobileMenu = document.getElementById("mobile-block-container");
+    var mobileMenu = document.querySelector("#mobile-block-wrap");
     var body = document.getElementById("body");
 
 
@@ -34,33 +34,11 @@ window.onscroll = function () {
 
 // Tablet menu toogle
 function toogleTabletMenu() {
-    var tabletMenu = document.getElementById("tablet-menu");
-    var hamburgerIcon = document.getElementById("hamburger");
-    var crossIcon = document.getElementById("cross");
-
+    var tabletMenu = document.querySelector("#tablet-menu");
 
     if (tabletMenu.style.right === "-250px") {
         tabletMenu.style.right = "0";
-
-        hamburgerIcon.style.display = "none";
-        crossIcon.style.display = "block";
-
-       // body.style.position = "fixed";
-    }
-    
-    
-    else {
+    } else {
         tabletMenu.style.right = "-250px";
-
-        hamburgerIcon.style.display = "block";
-        crossIcon.style.display = "none";
-
-       // body.style.position = "absolute";
     }
 }
-
-
-
-
-
-
