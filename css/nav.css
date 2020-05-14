@@ -19,19 +19,18 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
     color: #FFF;
     background: linear-gradient(150deg, rgb(29, 101, 163), rgb(8, 10, 10));
     position: fixed;
-    position: -webkit-sticky; /* safari */
+    position: -webkit-fixed; /* safari */
     top: 0;
     z-index: 999;
     box-sizing: border-box;
 }
 
-.top-nav-container__transparent{
+.top-nav-container__tr{
     width: 100%;
     height: 100px;
     color: #FFF;
     background-color: transparent;
     position: absolute;
-    /* border-bottom: 1px solid rgba(255, 255, 255, 1); */
     z-index: 999;
     box-sizing: border-box;
 }
@@ -54,7 +53,7 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
     transition: ease-in-out 1s;
 }
 
-.logo:hover{
+.logo__animation:hover{
     transform: rotate(10deg);
     overflow: hidden;
 }
@@ -291,7 +290,7 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
 }
 
 /* Tablet: */
-@media screen and (max-width: 979px) and (min-width: 481px){
+@media screen and (max-width: 1202px) and (min-width: 481px){
     .mobile-nav{
         display: none;
     }
@@ -326,7 +325,7 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
 }
 
 /* Desktop: */
-@media screen and (min-width: 980px){
+@media screen and (min-width: 1203px){
     .mobile-nav,
     .tablet-menu,
     .icon-container{
