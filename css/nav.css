@@ -123,23 +123,34 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
 
 
 /* TABLET MENU: -------------------------- */
-#cross{
-    display: none;
+.tablet-icon__open{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-right: 20px;
+    box-sizing: border-box;
+
+    justify-self: flex-end;
 }
 
+.tablet-icon__open div{
+    margin: 6px 0;
+    width: 60px;
+    height: 6px;
+    background: white;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+
+/* Block */
 #tablet-menu{
     background: linear-gradient(180deg, rgb(29, 101, 163), rgb(8, 10, 10));
-    float: right;
-    top: 100px;
-    right: -250px;
-    height: 100%;
     position: fixed;
+    right: -250px;
     top: 100px;
+    height: 100%;
     width: 250px;
     transition: 0.4s;
-    overflow: scroll;
-    z-index: 888;
-    
+    z-index: 888;   
 }
 
 .tablet-menu-list a{
@@ -163,43 +174,51 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
 
 
 
-/* MOBILE NAVIGATION BAR: ---------------- */
-
-.mobile-nav{
-    transition: 0.5s;
+/* BOTTOM NAVIGATION BAR: ---------------- */
+/* Bar: */
+.bottom-nav-wrap{
+    background: 
+        linear-gradient(
+            150deg, 
+            rgb(29, 101, 163), 
+            rgb(8, 10, 10)
+        );
+    box-shadow: 
+        0px -5px 10px #00000050;
     width: 100%;
     height: 80px;
-    color: #FFF;
-    background-color: #0F1112;
-    box-shadow: 0px -5px 10px #00000050;
-    background: linear-gradient(150deg, rgb(29, 101, 163), rgb(8, 10, 10));
     position: fixed;
     bottom: 0;   
-    text-align: center;
+    transition: 0.5s;
     z-index: 888;
 }
 
-.hamburger-container{
-    width: 80px;
-    height: 80px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hamburger-container:hover{
+.bottom-nav-wrap:hover{
     cursor: pointer;
 }
 
-#hamburger{
-    font-size: 40px;
-    padding: 20px 0;
+/* Hamburger Icon */
+.mobile-icon__open{
+    display: grid;
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+    margin: 0 20px;
+}
+
+.mobile-icon__open div{
+    margin: 6px 0;
+    width: 60px;
+    height: 6px;
+    background: white;
+    border-radius: 10px;
 }
 /* -------------------------------------- */
 
 
 
 /* MOBILE MENU BLOCK: ------------------- */
-#mobile-block-container{
+/* Wrap */
+#mobile-block-wrap{
     display: none;
     width: 100%;
     height: 100%;
@@ -207,32 +226,36 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
     color: #FFF;
     margin: 0;
     padding: 0;
-
     position: fixed;
     top: 0;
     overflow: hidden;
     z-index: 999;
+    box-sizing: border-box;
 }
 
+
+/* Block */
 .mobile-block{
-    height: 100%;
     display: grid;
-    grid-template: 
+    grid-template-areas: 
         "logo"
         "menu"
         "icon";
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
 }
 
-.mobile-block-logo{
+
+/* Logo */
+.mobile-block__logo{
     text-align: center;
     grid-area: logo;
+    padding: 20px;
 }
 
-.mobile-block-logo img{
-    width: 70%;
-    padding: 40px;
-}
 
+/* Menu list: */
 .mobile-menu{
     grid-area: menu;
     align-self: center;
@@ -251,29 +274,54 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
   text-transform: uppercase;
 }
 
-#mobile-active{
+.mobile-menu a:hover{
+    background-color: #FFFFFF;
+    color: #0F1112;
+}
+
+#mobile-menu__active{
     background-color: #FFFFFF;
     color: #000000;
 }
 
 
-.mobile-menu a:hover{
-    background-color: #FFF;
-    color: #0F1112;
-}
-
-
-
-.icon__menu-close{
-    text-align: center;
-    font-size: 40px;
-    align-self: end;
+/* Closing Icon */
+.mobile-icon__close{
+    box-sizing: border-box;
     grid-area: icon;
-    padding: 20px 0;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 50px;
+    position: relative !important;
+    justify-self: center;
+    align-self: end;
 }
 
-.icon__menu-close:hover{
+.mobile-icon__close:hover{
     cursor: pointer;
+}
+
+.mobile-icon__close div{
+    width: 60px;
+    height: 6px;
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: grid;
+    justify-self: center;
+    align-self: end;
+} 
+
+.close__line-1{
+    position: absolute;
+    transform: rotate(45deg);
+    margin: 0;
+}
+
+.close__line-2{
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: 0;
 }
 /* --------------------------------------- */
 
@@ -283,15 +331,15 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
 /* Mobile: */
 @media screen and (max-width: 480px){
     .top-nav-container, 
-    .top-nav-container__transparent, 
-    .tablet-menu{
+    .top-nav-container__tr, 
+    #tablet-menu{
         display: none;
     }
 }
 
 /* Tablet: */
 @media screen and (max-width: 1202px) and (min-width: 481px){
-    .mobile-nav{
+    .bottom-nav-wrap{
         display: none;
     }
 
@@ -322,11 +370,15 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
         font-size: 40px;
         cursor: pointer;
     }
+
+    .icon-container div{
+        justify-self: end;
+    }
 }
 
 /* Desktop: */
 @media screen and (min-width: 1203px){
-    .mobile-nav,
+    .bottom-nav-wrap,
     .tablet-menu,
     .icon-container{
         display: none;
