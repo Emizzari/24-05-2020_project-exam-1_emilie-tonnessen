@@ -54,8 +54,8 @@ Red          -                     - #AE0000;
 /* --------------------------------------- */
 
 
-
-/* Mobile: */
+/* RESPONSIVE CSS: ----------------------- */
+/* Mobile/Small Viewport: */
 @media screen and (max-width: 480px){
     .footer-container{
         height: 250px;
@@ -80,7 +80,7 @@ Red          -                     - #AE0000;
     }
 }
 
-/* Tablet: */
+/* Tablet/Medium Viewport: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
     .footer-container{
         height: 250px;
@@ -92,11 +92,12 @@ Red          -                     - #AE0000;
 
     .footer-headline h4{
         font-size: 30px;
+        font-weight: 400;
     }
 
     .footer-icon a{
-        font-size: 35px;
-        padding: 0px 15px;
+        font-size: 40px;
+        padding: 0px 20px;
     }
 
     .copyright-container{
@@ -105,7 +106,7 @@ Red          -                     - #AE0000;
     }
 }
 
-/* Desktop: */
+/* Desktop/Large Viewport: */
 @media screen and (min-width: 1200px){
     .footer-container{
         height: 280px;
@@ -115,8 +116,13 @@ Red          -                     - #AE0000;
         grid-gap: 15px;
     }
 
+    .footer-headline{
+        border-bottom: 2px solid #FFFFFF;
+    }
+
     .footer-headline h4{
-        font-size: 35px;
+        font-size: 30px;
+        font-weight: 400;
     }
 
     .footer-icon a{
@@ -124,9 +130,9 @@ Red          -                     - #AE0000;
         padding: 0px 20px;
     }
 
-    .copyright-container{
-        padding: 15px;
-        font-size: 15px;
+    .copyright-container p{
+        padding: 10px;
+        font-size: 13px;
     }
 }
 
