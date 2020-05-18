@@ -51,7 +51,7 @@ function displayNextLaunch(nextLaunch) {
 
     let html = "";
 
-    html += `<h2 class="dd-content__headline">next launch</h2>
+    html += `<h2>next launch</h2>
                 <p class="dd-content__description">${nextLaunch.mission_name}</p>
 
 
