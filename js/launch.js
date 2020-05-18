@@ -51,7 +51,7 @@ function displayNextLaunch(nextLaunch) {
 
     let html = "";
 
-    html += `<h2 class="border-bottom">next launch</h2>
+    html += `<h2 class="dd-content__headline">next launch</h2>
                 <p class="dd-content__description">${nextLaunch.mission_name}</p>
 
 
@@ -70,29 +70,31 @@ function displayNextLaunch(nextLaunch) {
             `;
 
     if (!nextLaunch.details) {
-        html += `<p class="details"> 
+        html += `<p class="dd-content__description"> 
                         <span class="italic">No current details at this moment.</span>
                     </p>
                 `;
     }
     else {
-        html += `<p class="details">${nextLaunch.details}</p>`;
+        html += `<p class="dd-content__description">${nextLaunch.details}</p>`;
     }
 
     html +=`<div class="CT-wrap__launch"> 
-                <div class="loader">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>                            
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="grid__center">
+                    <div class="loader">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>                            
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         `;
