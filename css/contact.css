@@ -70,6 +70,7 @@ Red          -                     - #AE0000;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
     color: #000;
     border: 0px;
+    border-radius: 0px;
 }
 
 .textarea{
