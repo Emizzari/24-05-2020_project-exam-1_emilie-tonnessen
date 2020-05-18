@@ -102,6 +102,7 @@ Red          -                     - #AE0000;
 /* DROP DOWN BUTTONS: -------------------- */
 .dd-container{
     margin-top: 20px;
+    box-sizing: border-box;
 }
 
 .dd-container:first-child{
@@ -169,13 +170,15 @@ Red          -                     - #AE0000;
 .dd-content{
     background-color: #0F1112;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
 .dd-content__panel{
     padding: 20px;
+    box-sizing: border-box;
 }
 
-.dd-content__headline{
+.next-launch h2{
     border-bottom: 2px solid rgb(21, 115, 192);
     background: 
         linear-gradient(
@@ -210,6 +213,7 @@ Red          -                     - #AE0000;
 
 .dd-content__description{
     padding-top: 10px;
+    box-sizing: border-box;
 }
 
 /* TOOGLE: */
@@ -252,6 +256,10 @@ Red          -                     - #AE0000;
     .CT-block__launch{
         padding: 0px 10px;
     }
+
+    .dd-content__headline{
+        font-size: 20px;
+    }
 }
 
 /* Tablet/Medium Viewport: */
@@ -263,6 +271,10 @@ Red          -                     - #AE0000;
     .CT-block__launch{
         padding: 0px 15px;
     }
+
+    .dd-content__headline{
+        font-size: 20px;
+    }
 }
 
 /* Desktop/Large Viewport: */
@@ -273,6 +285,10 @@ Red          -                     - #AE0000;
 
     .CT-block__launch{
         padding: 0px 15px;
+    }
+
+    .dd-content__headline{
+        font-size: 20px;
     }
 }
 /* --------------------------------------- */
