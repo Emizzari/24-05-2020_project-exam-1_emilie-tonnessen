@@ -92,7 +92,12 @@ function displayRockets(rockets) {
                             <h6 class="dd-content__title">details</h6>
                             <p class="dd-content__description">${rockets[i].description}</p>
                        
-                            <a class="wiki" href="${rockets[i].wikipedia}">wikipedia</a>
+                            <a class="wiki" href="${rockets[i].wikipedia}">
+                                <p class="dd-content__description">
+                                  wikipedia
+                                </p>
+                            </a>
+
                         </div>                          
                     </div>
                 </div>`;

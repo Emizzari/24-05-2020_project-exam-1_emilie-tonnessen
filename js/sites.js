@@ -56,8 +56,12 @@ function displayLaunchPads(launchPads) {
 
                             <h6 class="dd-content__title">details</h6>
                             <p class="dd-content__description">${launchPads[i].details}</p>
-                            
-                            <a class="wiki" href="${launchPads[i].wikipedia}">wikipedia</a>
+                                   
+                            <a class="wiki" href="${launchPads[i].wikipedia}">
+                                <p class="dd-content__description">
+                                  wikipedia
+                                </p>
+                            </a>
                         </div>
                     </div>   
                 </div>
