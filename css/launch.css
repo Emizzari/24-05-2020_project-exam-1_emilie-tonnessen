@@ -37,6 +37,10 @@ Red          -                     - #AE0000;
     box-sizing: border-box;
     width: 100%;
 }
+
+.border-bottom{
+    border-bottom: 2px solid #FFFFFF;
+}
 /* --------------------------------------- */
 
 
@@ -61,6 +65,11 @@ Red          -                     - #AE0000;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#CT__launch div{
     box-sizing: border-box;
     width: 100%;
 }
@@ -126,7 +135,7 @@ Red          -                     - #AE0000;
     text-align: start;
     font-weight: 600;
     color: rgb(0, 25, 75);
-    
+    align-self: center;
 }
 
 .dd-btn__icon{
@@ -164,6 +173,19 @@ Red          -                     - #AE0000;
 
 .dd-content__panel{
     padding: 20px;
+}
+
+.dd-content__headline{
+    border-bottom: 2px solid rgb(21, 115, 192);
+    background: 
+        linear-gradient(
+            90deg, 
+            rgb(0, 204, 255), 
+            rgb(21, 115, 192)  
+        );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .dd-content__title{
@@ -225,6 +247,10 @@ Red          -                     - #AE0000;
 @media screen and (max-width: 480px){
     .header__launch{
         background-image: url('../images/launch_header_vertical.jpg');
+    }
+
+    .CT-block__launch{
+        padding: 0px 10px;
     }
 }
 
