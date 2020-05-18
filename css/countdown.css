@@ -11,17 +11,7 @@ Red          -                     - #AE0000;
 
 
 
-/* HEADLINE: ----------------------------- */
-.headline__home{
-        border-bottom: 3px solid #FFF;
-        padding: 0px 10px;
-        text-align: center;  
-    }
-/* --------------------------------------- */
-
-
-
-/* COUNTDOWN HOME: ----------------------- */
+/* STANDARD: ----------------------------- */
 .CT-wrap{ 
     width: 100%;
     background: rgba(0, 0, 0, 0.377);
@@ -78,53 +68,44 @@ Red          -                     - #AE0000;
 
 
 
-/* CTA BUTTON: --------------------------- */
-.home-button{
+/* LAUNCH PAGE VERSION: ------------------ */
+.CT-wrap__launch{
+    display: grid;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+    background: linear-gradient(150deg, rgb(0, 153, 255), rgb(1, 46, 78));
+    margin-top: 20px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+#CT__launch{
     display: grid;
     align-items: center;
     justify-content: center;
-}
-/* --------------------------------------- */
-
-
-
-/* SECTION 3: IMG ------------------------ */
-.section__home{
-    background: url('../images/home_section.jpg');
-    background-repeat: no-repeat;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    
+    box-sizing: border-box;
     width: 100%;
-    background-size: cover;
-    background-position: center;
+}
+
+#CT__launch div{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.CT-letters__launch{
+    font-family: brandon-grotesque, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px; 
+    padding-bottom: 5px; 
+}
+
+.CT-numbers__launch{
+    font-size: 30px;
+    margin-bottom: 0px;
 }
 /* --------------------------------------- */
-
-
-
-/* Mobile: */
-@media screen and (max-width: 480px){
-    .headline__home{
-        font-size: 40px;
-    }
-
-    .section__home{
-        display: none;
-    }
-}
-
-/* Tablet: */
-@media screen and (max-width: 1199px) and (min-width: 481px){
-    .headline__home{
-        font-size: 50px;  
-    }
-
-    .section__home{
-        display: none;
-    }
-}
-
-/* Desktop: */
-@media screen and (min-width: 1200px){
-    .headline__home{
-        font-size: 55px;
-    }
-}

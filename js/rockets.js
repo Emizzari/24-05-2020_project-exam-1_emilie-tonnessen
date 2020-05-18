@@ -118,28 +118,30 @@ function displayRoadster(roadster) {
     let html = "";
 
     
-    html += `   <div class="roadster">
-                    <img class="vehicle-img" src="${roadster.flickr_images}" alt="${roadster.name}">
-                    <div class="vehicle-wrap">
-                        <h5 class="vehicle-headline">${roadster.name}</h5>
+    html += `   <div class="dd-container">
+                    <div class="dd-content">
+                        <img class="vehicle-img" src="${roadster.flickr_images}" alt="${roadster.name}">
+                        <div class="dd-content__panel">
+                            <h5 class="dd-content__headline">${roadster.name}</h5>
 
-                        <h6 class="dd-content__title">launch date</h6>
-                        <p class="dd-content__description">${convertDate(roadster.launch_date_unix)}</p>
+                            <h6 class="dd-content__title">launch date</h6>
+                            <p class="dd-content__description">${convertDate(roadster.launch_date_unix)}</p>
 
-                        <h6 class="dd-content__title">earth distance</h6>
-                        <p class="dd-content__description">${roadster.earth_distance_km} km</p>
+                            <h6 class="dd-content__title">earth distance</h6>
+                            <p class="dd-content__description">${roadster.earth_distance_km} km</p>
 
-                        <h6 class="dd-content__title">mars distance</h6>
-                        <p class="dd-content__description">${roadster.mars_distance_km} km</p>
+                            <h6 class="dd-content__title">mars distance</h6>
+                            <p class="dd-content__description">${roadster.mars_distance_km} km</p>
 
-                        <h6 class="dd-content__title">orbit type</h6>
-                        <p class="dd-content__description">${roadster.orbit_type}</p>
+                            <h6 class="dd-content__title">orbit type</h6>
+                            <p class="dd-content__description">${roadster.orbit_type}</p>
 
-                        <h6 class="dd-content__title">details</h6>
-                        <p class="dd-content__description">${roadster.details}</p>
-                                
-                        <a href='${roadster.video}'><div class="yt">YouTube Video</div></a>
-                        <a href="${roadster.wikipedia}"><div class="wiki">Wikipedia</div></a>
+                            <h6 class="dd-content__title">details</h6>
+                            <p class="dd-content__description">${roadster.details}</p>
+                                    
+                            <a href='${roadster.video}'><div class="yt">YouTube Video</div></a>
+                            <a href="${roadster.wikipedia}"><div class="wiki">Wikipedia</div></a>
+                        </div> 
                     </div> 
                 </div>
             `;

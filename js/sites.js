@@ -40,7 +40,7 @@ function displayLaunchPads(launchPads) {
                     </label>
 
                     <div class="dd-content">
-                    <iframe class="map" src="https://maps.google.com/maps?q=${launchPads[i].location.latitude},${launchPads[i].location.longitude}&hl=en&z=10&amp;output=embed" width="100%"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe class="map" src="https://maps.google.com/maps?q=${launchPads[i].location.latitude},${launchPads[i].location.longitude}&hl=en&z=10&amp;output=embed" width="100%"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         <div class="dd-content__panel">
                             <h6 class="dd-content__title">${launchPads[i].name}</h6>
                             <p class="dd-content__description">${launchPads[i].site_name_long}</p>

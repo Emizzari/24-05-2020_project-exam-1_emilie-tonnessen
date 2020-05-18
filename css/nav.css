@@ -274,7 +274,122 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
 }
 /* --------------------------------------- */
 
+/* TABLET MENU: -------------------------- */
 
+/* TABLET HAMBURGER ICON: ---------------- */
+.tablet-icon__open{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-right: 20px;
+    box-sizing: border-box;
+
+    justify-self: flex-end;
+    position: relative;
+}
+
+.tablet-icon__open div{
+    margin: 6px 0;
+    width: 60px;
+    height: 6px;
+    background: white;
+    border-radius: 5px;
+    align-self: flex-end;
+    transition: .5s;
+    
+}
+/* --------------------------------------- */
+
+
+/* TABLET CROSS ICON: -------------------- */
+.tablet-checkbox:checked ~ .tablet-icon__open .line-1{
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.tablet-checkbox:checked ~ .tablet-icon__open .line-2{
+    opacity: 0;
+}
+
+.tablet-checkbox:checked ~ .tablet-icon__open .line-3{
+    transform: rotate(-45deg);
+    position: absolute; 
+}
+/* --------------------------------------- */
+
+/* TOGGLE: ------------------------------- */
+.tablet-checkbox{
+    display: none;
+}
+
+.tablet-checkbox:checked ~ .tablet-block{
+    right: 0px;
+}
+
+.tablet-checkbox:not( :checked) ~ .tablet-block{
+    right: -250px;
+}
+/* --------------------------------------- */
+
+/* TABLET BLOCK: ------------------------- */
+.tablet-block{
+    background: linear-gradient(180deg, rgb(29, 101, 163), rgb(8, 10, 10));
+    position: fixed;
+    top: 100px;
+    height: 100%;
+    width: 250px;
+    transition: 0.4s;
+    z-index: 888;   
+}
+/* --------------------------------------- */
+
+
+
+/* TABLET MENU: -------------------------- */
+.tablet-menu a{
+    width: 100%;
+}
+
+.tablet-menu a div:hover{
+    color: #000;
+    background: #FFF;
+}
+
+.tablet-menu a div{
+    padding: 20px 30px;
+}
+
+#tablet-active div{
+    background-color: #FFF;
+    color: #000;
+}
+/* End of Tablet Menu -------------------- */
+
+
+
+/* RESPONSIVE: --------------------------- */
+/* Mobile: */
+@media screen and (max-width: 480px){
+    .tablet-icon__open,
+    .tablet-block-wrap,
+    .tablet-block{
+        display: none;
+    }
+}
+
+/* Tablet: */
+@media screen and (max-width: 1202px) and (min-width: 481px){
+
+}
+
+/* Desktop: */
+@media screen and (min-width: 1203px){
+    .tablet-icon__open,
+    .tablet-block-wrap,
+    .tablet-block{
+        display: none;
+    }
+}
+/* --------------------------------------- */
 
 /* RESPONSIVE: --------------------------- */
 /* Mobile: */

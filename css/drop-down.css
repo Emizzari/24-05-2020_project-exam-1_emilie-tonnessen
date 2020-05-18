@@ -1,0 +1,145 @@
+/* COLOUR PALETTE: 
+Blue         -  rgb(0, 82, 136)    - #005288;
+Light Black  -  rgb(34, 39, 43)    - #22272B;
+Medium black -  rgb(24, 28, 31)    - #181C1F;
+Dark black   -  rgb(15, 17, 18)    - #0F1112;
+White        -  rgb(255, 255, 255) - #FFFFFF;
+Black        -  rgb(0,0,0)         - #000000;
+Grey         -  rgb(167, 169, 172) - #A7A9AC;
+Red          -                     - #AE0000;
+------------------------------------------ */
+
+
+
+/* DD CONTAINER: ------------------------- */
+.dd-container{
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.dd-container:first-child{
+    margin-top: 0px !important;
+}
+/* --------------------------------------- */
+
+
+
+/* DD BUTTON: ---------------------------- */
+.dd-btn{
+    background: #005288;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: end;
+}
+
+.dd-btn:hover{
+    cursor: pointer;
+}
+
+.dd-btn__title{
+    text-align: start;
+    font-weight: 600;
+    color: white;
+    align-self: center;
+}
+
+.dd-btn__icon{
+    position: relative;
+    box-sizing: border-box;
+}
+
+.dd-btn__icon-1{
+    box-sizing: border-box;
+    height: 3px;
+    width: 25px;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%); 
+    transform: translate(-50%,-50%);
+}
+
+.dd-btn__icon-2{
+    box-sizing: border-box;
+    width: 3px;
+    height: 25px;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+/* --------------------------------------- */
+
+
+
+/* DD CONTENT: --------------------------- */
+.dd-content{
+    background-color: #0F1112;
+    background: 
+        linear-gradient(
+            180deg, 
+            rgb(0, 204, 255), 
+            rgb(79, 0, 206)
+    );
+    background: #0F1112;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.dd-content__panel{
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dd-content__title{
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1.5px solid rgb(26, 134, 223);
+    padding-top: 25px;
+    color: rgb(26, 134, 223); 
+}
+
+.dd-content__title:first-child{
+    padding-top: 0;
+}
+
+.dd-content__description{
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+/* --------------------------------------- */
+
+
+
+/* TOOGLE: ------------------------------- */
+.checkbox{
+    display: none;
+}
+
+.checkbox:not(:checked) ~ .dd-content,
+.checkbox:not(:checked) ~ .dd-content-panel{
+    height: 0px;
+    overflow: hidden;
+    padding: 0;  
+}
+
+.checkbox:checked ~ .dd-content,
+.checkbox:checked ~ .dd-content-panel{
+    height: 100%;
+}
+
+.checkbox:checked ~ label .dd-btn__icon-1{
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+
+.checkbox:checked ~ label .dd-btn__icon-2{
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+}
+/* --------------------------------------- */
