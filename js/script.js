@@ -29,16 +29,3 @@ window.onscroll = function () {
 
     prevScrollpos = currentScrollPos;
 }
-
-
-
-// Tablet menu toogle
-function toogleTabletMenu() {
-    var tabletMenu = document.querySelector("#tablet-menu");
-
-    if (tabletMenu.style.right === "-250px") {
-        tabletMenu.style.right = "0";
-    } else {
-        tabletMenu.style.right = "-250px";
-    }
-}
