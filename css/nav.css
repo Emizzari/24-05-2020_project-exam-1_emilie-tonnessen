@@ -117,60 +117,9 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
     font-weight: 500; 
     transform: rotate(10deg);    
 }
-/* End of Home Menu */
 /* End of Desktop Menu ------------------- */
 
 
-
-/* TABLET MENU: -------------------------- */
-.tablet-icon__open{
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-right: 20px;
-    box-sizing: border-box;
-
-    justify-self: flex-end;
-}
-
-.tablet-icon__open div{
-    margin: 6px 0;
-    width: 60px;
-    height: 6px;
-    background: white;
-    border-radius: 5px;
-    align-self: flex-end;
-}
-
-/* Block */
-#tablet-menu{
-    background: linear-gradient(180deg, rgb(29, 101, 163), rgb(8, 10, 10));
-    position: fixed;
-    right: -250px;
-    top: 100px;
-    height: 100%;
-    width: 250px;
-    transition: 0.4s;
-    z-index: 888;   
-}
-
-.tablet-menu-list a{
-    width: 100%;
-}
-
-.tablet-menu-list a div:hover{
-    color: #000;
-    background: #FFF;
-}
-
-.tablet-menu-list a div{
-    padding: 20px 30px;
-}
-
-#tablet-active div{
-    background-color: #FFF;
-    color: #000;
-}
-/* End of Tablet Menu -------------------- */
 
 
 
@@ -279,7 +228,7 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
     color: #0F1112;
 }
 
-#mobile-menu__active{
+#mobile-active{
     background-color: #FFFFFF;
     color: #000000;
 }
@@ -331,8 +280,7 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
 /* Mobile: */
 @media screen and (max-width: 480px){
     .top-nav-container, 
-    .top-nav-container__tr, 
-    #tablet-menu{
+    .top-nav-container__tr{
         display: none;
     }
 }
@@ -379,7 +327,6 @@ Red          -  rgb(174, 0, 0)     - #AE0000;
 /* Desktop: */
 @media screen and (min-width: 1203px){
     .bottom-nav-wrap,
-    .tablet-menu,
     .icon-container{
         display: none;
     }
