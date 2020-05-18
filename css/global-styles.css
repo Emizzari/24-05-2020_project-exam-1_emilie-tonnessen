@@ -64,7 +64,7 @@ Red          -                     - #AE0000;
 
 /* HEADLINE: ----------------------------- */
 .headline__about{
-        margin: 0px 20px 20px 0px;
+        margin: 0px 20px 15px 0px;
     }
 
 
@@ -127,14 +127,15 @@ Red          -                     - #AE0000;
         padding: 20px 20px 50px 20px;
     }
 
-    .section img{
+    .section img,
+    .section h2,
+    .section p{
         margin-bottom: 10px;
     }
 
     .section h2{
-        margin-bottom: 10px;
+        text-align: center;
     }
-
     
 }
 
@@ -149,12 +150,10 @@ Red          -                     - #AE0000;
         display: none;
     }
 
-    .section img{
+    .section img,
+    .section h2,
+    .section p{
         margin-bottom: 15px;
-    }
-
-    .section h2{
-        margin-bottom: 5px;
     }
 
    
@@ -174,15 +173,11 @@ Red          -                     - #AE0000;
         max-width: 1300px;
     }
 
-    .section img{
-        margin-bottom: 15px;
+    .section img,
+    .section h2,
+    .section p{
+        margin-bottom: 20px;
     }
-
-    .section h2{
-        margin-bottom: 5px;
-    }
-
-    
 }
 
 
