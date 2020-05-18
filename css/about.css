@@ -33,7 +33,7 @@ Red          -                     - #AE0000;
     .header__about{
         background: url("../images/header_about.jpg"); 
         height: 30% !important;
-        background-position: 84% 80%  !important;   
+        background-position: 84% 80% !important;   
     }
 
     .sectionIMG_about{
@@ -45,7 +45,7 @@ Red          -                     - #AE0000;
 @media screen and (max-width: 1199px) and (min-width: 481px){
     .header__about{
         background: url("../images/header_about.jpg"); 
-        background-position: center bottom !important;   
+        background-position: 85% 85% !important;   
     }
     
     .sectionIMG_about{
@@ -59,7 +59,8 @@ Red          -                     - #AE0000;
 @media screen and (min-width: 1200px){
     .header__about{
         background: url("../images/header_about.jpg"); 
-        background-position: center bottom !important;   
+        background-position: 70% 85% !important;  
+         height: 50% !important; 
     }
 }
 /* --------------------------------------- */
