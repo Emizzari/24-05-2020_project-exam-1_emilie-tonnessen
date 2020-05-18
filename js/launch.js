@@ -52,10 +52,21 @@ function displayNextLaunch(nextLaunch) {
     let html = "";
 
     html += `<h2 class="border-bottom">next launch</h2>
-                <h5 class="border-bottom__below">mission: ${nextLaunch.mission_name}</h5>
-                <h5><span class="bold">Date:</span> ${convertDate(nextLaunch.launch_date_unix)}</h5>
-                <h5><span class="bold">site:</span> ${nextLaunch.launch_site.site_name}</h5>
-                <h5><span class="bold">rocket:</span> ${nextLaunch.rocket.rocket_name}</h5>
+                <p class="dd-content__description">${nextLaunch.mission_name}</p>
+
+
+                <h6 class="dd-content__title">Date:</h6>
+                <p class="dd-content__description">${convertDate(nextLaunch.launch_date_unix)}</p>
+
+
+                <h6 class="dd-content__title">site:</h6> 
+                <p class="dd-content__description">${nextLaunch.launch_site.site_name}</hp>
+
+
+                <h6 class="dd-content__title">rocket:</h6> 
+                <p class="dd-content__description">${nextLaunch.rocket.rocket_name}</p>
+
+                <h6 class="dd-content__title">details:</h6> 
             `;
 
     if (!nextLaunch.details) {
@@ -65,7 +76,7 @@ function displayNextLaunch(nextLaunch) {
                 `;
     }
     else {
-        html += `<p class="details">${nextLaunch[i].details}</p>`;
+        html += `<p class="details">${nextLaunch.details}</p>`;
     }
 
     html +=`<div class="CT-wrap__launch"> 
