@@ -133,11 +133,11 @@ function displayCountdown(nextLaunch) {
             var t = getTimeRemaining(endtime);
 
             countdownWrap.innerHTML =
-                `<div id="CT__launch">
-                 <div class="CT-block_launch"><p class="CT-letters__launch">days</p><p class="CT-numbers__launch">` + t.days + `</p></div>` +
-                `<div class="CT-block__launch"><p class="CT-letters__launch">hours</p><p class="CT-numbers__launch">` + t.hours + `</p></div>` +
-                `<div class="CT-block__launch"><p class="CT-letters__launch">minutes</p><p class="CT-numbers__launch">` + t.minutes + `</p></div>` +
-                `<div class="CT-block__launch"><p class="CT-letters__launch">seconds</p><p class="CT-numbers__launch">` + t.seconds + `</p></div>
+                `<div id="CT__launch">` +
+                    `<div class="CT-block__launch"><p class="CT-letters__launch">days</p><p class="CT-numbers__launch">` + t.days + `</p></div>` +
+                    `<div class="CT-block__launch"><p class="CT-letters__launch">hours</p><p class="CT-numbers__launch">` + t.hours + `</p></div>` +
+                    `<div class="CT-block__launch"><p class="CT-letters__launch">minutes</p><p class="CT-numbers__launch">` + t.minutes + `</p></div>` +
+                    `<div class="CT-block__launch"><p class="CT-letters__launch">seconds</p><p class="CT-numbers__launch">` + t.seconds + `</p></div>
                 </div>`
                 ;
 
