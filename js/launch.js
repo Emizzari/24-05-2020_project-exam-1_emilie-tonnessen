@@ -22,7 +22,7 @@ async function fetchAPI() {
         const completedLaunchesResponse = await fetch(completedLaunchesAPI);
         const completedLaunches = await completedLaunchesResponse.json();
         displayCompletedLaunches(completedLaunches);
-
+        
     } catch (error) {
         console.log(error);
     }
@@ -157,7 +157,7 @@ function displayCountdown(nextLaunch) {
 
 // DISPLAY UPCOMING LAUNCHES: ----------------------------------------------------
 function displayUpcomingLaunches(upcomingLaunches) {
-    console.dir(upcomingLaunches);
+    // console.dir(upcomingLaunches);
 
     const upcomingLaunchesContainer = document.querySelector(".upcoming-launch-wrap");
 

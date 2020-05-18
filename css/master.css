@@ -49,6 +49,9 @@ html{
 }
 
 .main-container{
+    margin-top: 0px;
+    padding-top: 0px;
+    display: block;
     margin-top: auto;
     margin-left: auto;
     max-width: 1600px;
