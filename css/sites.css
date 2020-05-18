@@ -20,7 +20,7 @@ Red          -                     - #AE0000;
     background: url('../images/sites_section.jpg');
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 1000px;
+    /* min-height: 1000px; */
     background-size: cover;
     background-position: center;
 }
