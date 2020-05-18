@@ -27,6 +27,7 @@ Red          -                     - #AE0000;
 /* VECHILES: ----------------------------- */
 .vehicle-wrap{
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .vehicle-headline{
@@ -64,8 +65,17 @@ Red          -                     - #AE0000;
 .wiki{
     color: #A7A9AC;
     text-decoration: underline;
+    padding-bottom: 10px;
+    box-sizing: border-box;
 }
 
+.wiki p{
+
+    box-sizing: border-box;
+    font-weight: 300 !important;
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 16px;
+}
 .yt:hover,
 .wiki:hover{
     text-decoration: none;
