@@ -393,9 +393,12 @@
     }
 
     .section img,
-    .section h2,
-    .section p{
+    .section h2{
         margin-bottom: 10px;
+    }
+
+    .section p{
+        margin-bottom: 20px;
     }
 
     .text-center{
