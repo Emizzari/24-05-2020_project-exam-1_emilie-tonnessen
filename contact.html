@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Technical: -->
     <meta charset="UTF-8">
@@ -25,9 +24,7 @@
     <link rel="stylesheet" rel="stylesheet" type="text/css" href="css/master.css">
 </head>
 
-
-
-<body id="body">
+<body>
  <!-- NAVIGATION: --------------------------------------------------->
     <!-- Top Bar: -->
     <nav class="top-nav-container">
@@ -73,7 +70,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Navigation Bar: -->
+    <!-- Bottom Bar: -->
     <nav class="bottom-nav-wrap grid__center" id="mobile-scroll-menu">
         <div onclick="toogleMobileMenu()" class="mobile-icon__open"> 
             <div class="line-1"></div> 
@@ -106,6 +103,7 @@
                 <div class="close__line-1"></div>
                 <div class="close__line-2"></div>
             </div>
+
         </div>
     </div>
     <!-- End of Navigation --------------------------------------------->
@@ -121,18 +119,15 @@
     <!-- MAIN CONTENT: ------------------------------------------------->
     <main class="main-container">
 
-        <!-- Headline: -->
-        <!-- <div class="headline"><h1>contact form</h1></div> -->
-
+        <!-- Contact Form Container: -->
         <div class="contact-form">
 
-            
-
-            <!-- Image: -->
+            <!-- Section 1: Image -->
             <div class="imgSection__contact"></div>
 
-            <!-- Contact Form: -->
+            <!-- Section 2: Input/Form -->
             <form action="" id="contactForm" class="contactGrid"> 
+
                 <!-- Submit Message: -->
                 <div id="submitMessage">
                     <div>Thank you!</div>
@@ -192,6 +187,7 @@
                     <div class="error" id="messageError"><span class="italic">- Please enter more than 6 letters</span></div>
                 </div>
                 
+                <!-- Submit Button -->
                 <div class="grid__center btn-grid-area"> <!-- centering the button: -->
                     <button class="btn btnContactArea" type="submit">send</button>
                 </div>
@@ -211,15 +207,14 @@
                 <h4>follow our journey</h4>
             </div>
             <div class="footer-icon">
-                <a href="" class="icon-link"><i class="fab fa-twitter-square"></i></a>
-                <a href="" class="icon-link"><i class="fab fa-youtube-square"></i></a>
-                <a href="" class="icon-link"><i class="fab fa-flickr"></i></a>
-                <a href="" class="icon-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/spacex" class="icon-link"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.youtube.com/spacex" class="icon-link"><i class="fab fa-youtube-square"></i></a>
+                <a href="https://www.flickr.com/photos/spacex" class="icon-link"><i class="fab fa-flickr"></i></a>
+                <a href="https://www.instagram.com/spacex/" class="icon-link"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
-
-
+    
     <div class="copyright-container">
         <div class="copyright">
             <p>&copy; 2020 SPACE EXPLORATION TECHNOLOGIES CORP.</p>
@@ -234,5 +229,4 @@
     <script src="js/contact.js"></script>
     <!-- End of JavaScript --------------------------------------------->
 </body>
-
 </html>

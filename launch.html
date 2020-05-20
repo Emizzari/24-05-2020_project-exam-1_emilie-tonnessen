@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Technical: -->
     <meta charset="UTF-8">
@@ -18,16 +17,11 @@
     <!-- Site Icon: -->
     <link rel="icon" href="images/siteicon/siteicon.png">
 
-    <!-- Font Awesome: -->
-    <script src="https://kit.fontawesome.com/f0fe9be787.js" crossorigin="anonymous"></script>
-
     <!-- CSS Link: -->
     <link rel="stylesheet" rel="stylesheet" type="text/css" href="css/master.css">
 </head>
 
-
-
-<body id="body">
+<body>
     <!-- NAVIGATION: --------------------------------------------------->
     <!-- Top Bar: -->
     <nav class="top-nav-container">
@@ -35,9 +29,7 @@
 
             <!-- Logo -->
             <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo/logo-white_tr.png" alt="Logo">
-                </a>
+                <a href="index.html"><img src="images/logo/logo-white_tr.png" alt="Logo"></a>
             </div>
 
             <!-- Desktop Menu -->
@@ -73,7 +65,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Navigation Bar: -->
+    <!-- Bottom Bar: -->
     <nav class="bottom-nav-wrap grid__center" id="mobile-scroll-menu">
         <div onclick="toogleMobileMenu()" class="mobile-icon__open"> 
             <div class="line-1"></div> 
@@ -106,6 +98,7 @@
                 <div class="close__line-1"></div>
                 <div class="close__line-2"></div>
             </div>
+
         </div>
     </div>
     <!-- End of Navigation --------------------------------------------->
@@ -122,46 +115,11 @@
     <main class="main-container launch">  
         <div class="grid">
 
-
-
-            <!-- Display show more buttons -->
-            <!-- <input type="checkbox" id="show-more-1" class="launch-checkbox-1">
-            <label for="show-more-1" class="show-more show-more-1 grid__center">
-                <div class="btn">
-                    show more 1
-                </div>
-            </label>
-
-            <input type="checkbox" id="show-more-2" class="launch-checkbox-2">
-            <label for="show-more-2" class="show-more show-more-2 grid__center">
-                <div class="btn grid__center">
-                    show more 2
-                </div>
-            </label>
-
-            <input type="checkbox" id="show-more-3" class="launch-checkbox-3">
-            <label for="show-more-3" class="show-more show-more-3 grid__center">
-                <div class="btn">
-                    show more 3
-                </div>
-            </label>
-
-            <input type="checkbox" id="show-more-4" class="launch-checkbox-4">
-            <label for="show-more-4" class="show-more show-more-4 grid__center">
-                <div class="btn">
-                    Show all 4
-                </div>
-            </label> -->
-
-
-
             <!-- Section 1: Image -->
-            <div class="section section-img section-img__launch"></div>
-
-
+            <section class="section section-img section-img__launch"></section>
 
             <!-- Section 2: Next Launch -->
-            <div class="next-launch-wrap">
+            <section class="next-launch-wrap">
                 <div class="next-launch">
                     <div class="grid__center">
                         <div class="loader">
@@ -180,14 +138,10 @@
                         </div>
                     </div>
                 </div>   
-            </div>
-
-                
-
-                
+            </section>
 
             <!-- Section 3: Upcoming Launch -->
-            <div class="upcoming-launch">
+            <section class="upcoming-launch">
                 <h2 class="text-center">upcoming launches</h2>
                 <div class="upcoming-launch-wrap">
                     <div class="grid__center">
@@ -207,13 +161,10 @@
                         </div>
                     </div>
                 </div> 
-            </div>
-
-                
-
+            </section>
 
             <!-- Section 4: Completed Launch -->
-            <div class="completed-launch">
+            <section class="completed-launch">
                 <h2 class="text-center">completed launches</h2>
                 <div class="completed-launch-wrap">
                     <div class="grid__center">
@@ -233,14 +184,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-     
-            
-            
+            </section>
+      
         </div>
-        <div class="dark"></div>
     </main>
-    
     <!-- End of Main Content ------------------------------------------->
 
 
@@ -250,14 +197,10 @@
         <div class="question">
             <h3 class="questions-headline">got any questions?</h3>
             <a href="contact.html">
-                <div class="btn btn__large btn__hover-dark">
-                    contact us
-                </div>
+                <div class="btn btn__large btn__hover-dark">contact us</div>
             </a>
         </div>
-        <div class="empty-div">
-    
-        </div>
+        <div class="empty-div"></div>
     </div>
     <!-- End of Question Section --------------------------------------->
 
@@ -269,14 +212,14 @@
                 <h4>follow our journey</h4>
             </div>
             <div class="footer-icon">
-                <a href="" class="icon-link"><i class="fab fa-twitter-square"></i></a>
-                <a href="" class="icon-link"><i class="fab fa-youtube-square"></i></a>
-                <a href="" class="icon-link"><i class="fab fa-flickr"></i></a>
-                <a href="" class="icon-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/spacex" class="icon-link"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.youtube.com/spacex" class="icon-link"><i class="fab fa-youtube-square"></i></a>
+                <a href="https://www.flickr.com/photos/spacex" class="icon-link"><i class="fab fa-flickr"></i></a>
+                <a href="https://www.instagram.com/spacex/" class="icon-link"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
-
+    
     <div class="copyright-container">
         <div class="copyright">
             <p>&copy; 2020 SPACE EXPLORATION TECHNOLOGIES CORP.</p>
@@ -291,5 +234,4 @@
     <script src="js/launch.js"></script>
     <!-- End of JavaScript --------------------------------------------->
 </body>
-
 </html>

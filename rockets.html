@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <head>
     <!-- Technical: -->
     <meta charset="UTF-8">
@@ -20,16 +17,11 @@
     <!-- Site Icon: -->
     <link rel="icon" href="images/siteicon/siteicon.png">
 
-    <!-- Font Awesome: -->
-    <script src="https://kit.fontawesome.com/f0fe9be787.js" crossorigin="anonymous"></script>
-
     <!-- CSS Link: -->
     <link rel="stylesheet" rel="stylesheet" type="text/css" href="css/master.css">
 </head>
 
-
-
-<body id="body">
+<body>
     <!-- NAVIGATION: --------------------------------------------------->
     <!-- Top Bar: -->
     <nav class="top-nav-container">
@@ -75,7 +67,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Navigation Bar: -->
+    <!-- Bottom Bar: -->
     <nav class="bottom-nav-wrap grid__center" id="mobile-scroll-menu">
         <div onclick="toogleMobileMenu()" class="mobile-icon__open"> 
             <div class="line-1"></div> 
@@ -84,7 +76,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu: -->
+    <!-- Mobile Block/Menu: -->
     <div id="mobile-block-wrap">
         <div class="mobile-block">
 
@@ -129,10 +121,11 @@
         <!-- Grid: -->
         <div class="grid">
 
-            <!-- Image Section: Desktop -->
+            <!-- Section 1: Image -->
             <div class="section-img section-img__rockets"></div>
 
-            <div class="roadster-wrap">
+            <!-- Section 2: Roadster -->
+            <section class="roadster-wrap">
                 <div class="grid__center">
                     <div class="loader">
                         <div></div>
@@ -149,10 +142,10 @@
                         <div></div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Rockets: -->
-            <div class="rockets-wrap">
+            <!-- Section 3: Rockets -->
+            <section class="rockets-wrap">
                 <div class="grid__center">
                     <div class="loader">
                         <div></div>
@@ -169,7 +162,7 @@
                         <div></div>
                     </div>
                 </div>
-            </div>
+            </section>
 
         </div>
     </main>
@@ -182,14 +175,10 @@
         <div class="question">
             <h3 class="questions-headline">got any questions?</h3>
             <a href="contact.html">
-                <div class="btn btn__large btn__hover-dark">
-                    contact us
-                </div>
+                <div class="btn btn__large btn__hover-dark">contact us</div>
             </a>
         </div>
-        <div class="empty-div">
-    
-        </div>
+        <div class="empty-div"></div>
     </div>
     <!-- End of Question Section --------------------------------------->
 
@@ -202,14 +191,14 @@
                 <h4>follow our journey</h4>
             </div>
             <div class="footer-icon">
-                <a href="" class="icon-link"><i class="fab fa-twitter-square"></i></a>
-                <a href="" class="icon-link"><i class="fab fa-youtube-square"></i></a>
-                <a href="" class="icon-link"><i class="fab fa-flickr"></i></a>
-                <a href="" class="icon-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/spacex" class="icon-link"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.youtube.com/spacex" class="icon-link"><i class="fab fa-youtube-square"></i></a>
+                <a href="https://www.flickr.com/photos/spacex" class="icon-link"><i class="fab fa-flickr"></i></a>
+                <a href="https://www.instagram.com/spacex/" class="icon-link"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
-
+    
     <div class="copyright-container">
         <div class="copyright">
             <p>&copy; 2020 SPACE EXPLORATION TECHNOLOGIES CORP.</p>
@@ -224,5 +213,4 @@
     <script src="js/rockets.js"></script>
     <!-- End of JavaScript --------------------------------------------->
 </body>
-
 </html>

@@ -1,5 +1,4 @@
 // Declare API
-const launchAPI = "https://api.spacexdata.com/v3/launches";
 const nextLaunchAPI = "https://api.spacexdata.com/v3/launches/next";
 const upcomingLaunchesAPI = "https://api.spacexdata.com/v3/launches/upcoming";
 const completedLaunchesAPI = "https://api.spacexdata.com/v3/launches/past";
@@ -28,9 +27,9 @@ async function fetchAPI() {
     }
 }
 
-
 // Call the fetch function
 fetchAPI();
+
 
 
 // CONVERT TO DATE FORMAT ------------------------------------------------------
@@ -107,11 +106,9 @@ function displayNextLaunch(nextLaunch) {
 
 // DISPLAY COUNTDOWN TIMER: ----------------------------------------------------
 function displayCountdown(nextLaunch) {
-
-    // Countdown Variable
     var deadline = nextLaunch.launch_date_utc;
 
-    // Calculate the time remaining (not my code!! ned to document!!!)
+    // Calculate the time remaining
     function getTimeRemaining(endtime) {
         var t = Date.parse(endtime) - Date.parse(new Date());
         var seconds = Math.floor((t / 1000) % 60);
@@ -157,8 +154,6 @@ function displayCountdown(nextLaunch) {
 
 // DISPLAY UPCOMING LAUNCHES: ----------------------------------------------------
 function displayUpcomingLaunches(upcomingLaunches) {
-    // console.dir(upcomingLaunches);
-
     const upcomingLaunchesContainer = document.querySelector(".upcoming-launch-wrap");
 
     let html = "";
@@ -206,8 +201,6 @@ function displayUpcomingLaunches(upcomingLaunches) {
 
 // DISPLAY COMPLETED LAUNCHES: ---------------------------------------------------
 function displayCompletedLaunches(completedLaunches) {
-    // console.log(completedLaunches);
-
     const completedLaunchesContainer = document.querySelector(".completed-launch-wrap");
 
     let html = "";

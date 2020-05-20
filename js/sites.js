@@ -22,8 +22,6 @@ fetchLaunchPads();
 
 // DISPLAY ROCKETS LAUNCHES: -----------------------------------------------------
 function displayLaunchPads(launchPads) {
-    console.dir(launchPads); // Remove when finished
-
     const launchPadsContainer = document.querySelector(".launch-pads-wrap");
 
     let html = "";

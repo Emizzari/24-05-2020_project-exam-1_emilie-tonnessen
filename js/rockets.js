@@ -5,16 +5,16 @@ const roadsterAPI = "https://api.spacexdata.com/v3/roadster";
 //Fetch  API
 async function fetchVehicles() {
     try {
-        const responseRocketsAPI = await fetch(rocketsAPI);
+        // Roadster
         const responseRoadsterAPI = await fetch(roadsterAPI);
-        
-
-        const rockets = await responseRocketsAPI.json();
         const roadster = await responseRoadsterAPI.json();
-        
-
-        displayRockets(rockets);
         displayRoadster(roadster);
+
+        // Rockets
+        const responseRocketsAPI = await fetch(rocketsAPI);
+        const rockets = await responseRocketsAPI.json();
+        displayRockets(rockets);
+        
     } catch (error) {
         console.log(error);
     }
@@ -36,8 +36,6 @@ function convertDate(dateFormate) {
 
 // DISPLAY ROCKETS LAUNCHES: -----------------------------------------------------
 function displayRockets(rockets) {
-    console.dir(rockets); // Remove when finished
-
     const rocketsContainer = document.querySelector(".rockets-wrap");
 
     let html = "";
@@ -111,13 +109,10 @@ function displayRockets(rockets) {
 
 // DISPLAY ROADSTER LAUNCHES: ----------------------------------------------------
 function displayRoadster(roadster) {
-    console.dir(roadster);
-
     const roadsterContainer = document.querySelector(".roadster-wrap");
 
     let html = "";
 
-    
     html += `   <div class="dd-container">
                     <div class="dd-content">
                         <img class="vehicle-img" src="${roadster.flickr_images}" alt="${roadster.name}">

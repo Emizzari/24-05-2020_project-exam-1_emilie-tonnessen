@@ -1,6 +1,5 @@
-// Declare API
+// API: --------------------------------------------------------------------------
 const nextLaunchAPI = "https://api.spacexdata.com/v3/launches/next";
-
 
 //Fetch json API
 async function fetchNextLaunch() {
@@ -17,20 +16,13 @@ async function fetchNextLaunch() {
 
 // Call the fetch function
 fetchNextLaunch();
+// END OF API --------------------------------------------------------------------
 
 
-// Displaying the countdown timer
+
+// Displaying the countdown timer ------------------------------------------------
 function displayNextLaunch(nextLaunch) {
-    console.log(nextLaunch);
-
-    
-    
-
-    
-
-
     var deadline = nextLaunch.launch_date_utc;
-    console.log(deadline);
 
     // Calculate the time remaining (not my code!! ned to document!!!)
     function getTimeRemaining(endtime) {
@@ -71,3 +63,4 @@ function displayNextLaunch(nextLaunch) {
 
     initializeClock('countdown', deadline);
 }
+// END OF COUNTDOWN TIMER  -------------------------------------------------------
