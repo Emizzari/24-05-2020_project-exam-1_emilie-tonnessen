@@ -170,6 +170,24 @@
     justify-content: center;
 }
 
+.btn__simplistic{
+    background: transparent;
+    border: 1px solid #FFF;
+    padding: 15px;
+    width: 130px;
+    text-align: center;
+    transition: .5s;
+    
+}
+
+.btn__simplistic:hover{
+    width: 140px;
+    background: #FFF;
+    border: 1px solid black;
+    color: black;
+    font-weight: 600;
+}
+
 .btn:hover{  
     background: transparent;
     box-shadow: 
