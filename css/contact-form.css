@@ -232,6 +232,7 @@ Red          -                     - #AE0000;
         background-image: url('../images/contact.jpg');
         height: 50% !important;
         border-bottom: 8px solid #0077c7;
+         background-position: 100% 35% !important;
     }
 
     .contactGrid{
