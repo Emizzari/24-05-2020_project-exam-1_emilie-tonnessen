@@ -26,12 +26,11 @@ Red          -                     - #AE0000;
 
 /* DD BUTTON: ---------------------------- */
 .dd-btn{
-    background: transparent;
-    border-bottom: 1px dashed #FFF;
-    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */
+    background: #005288;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     display: grid;
     grid-template-columns: 4fr 1fr;
-    padding: 30px 0px 10px 10px;
+    padding: 20px;
     font-size: 22px;
     font-weight: 300;
     text-align: end;
