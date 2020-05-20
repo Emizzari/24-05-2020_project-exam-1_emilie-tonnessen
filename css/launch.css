@@ -10,38 +10,11 @@ Red          -                     - #AE0000;
 ------------------------------------------ */
 
 
-.grid__launch{
-    display: grid;
-    grid-template-areas: 
-    'nextLaunch nextLaunch'
-    'upcomingLaunch compleedLauncht'
-    'checkbox checkbox'
-    ;
-    padding: 50px;
-    box-sizing: border-box;
-    position: relative;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.launch{
-    background: url("../images/header3.png");
-    
-    background-repeat: no-repeat;
-    width: 100%;
-       background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
-    background-attachment: fixed
-}
-
-
-
 /* NEXT LAUNCH: -------------------------- */
 .next-launch-wrap{
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    grid-area: nextLaunch;
 }
 
 .next-launch{
@@ -54,15 +27,8 @@ Red          -                     - #AE0000;
 
 .next-launch h2{
     border-bottom: 2px solid rgb(21, 115, 192);
-    background: 
-        linear-gradient(
-            90deg, 
-            rgb(0, 204, 255), 
-            rgb(101, 113, 228)  
-        );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* color: rgb(26, 134, 223); */
+    color: #FFFFFF;
 }
 
 .border-bottom{
@@ -75,19 +41,16 @@ Red          -                     - #AE0000;
 /* UPCOMING LAUNCH: ---------------------- */
 .upcoming-launch{
     position: relative;
-    margin-top: 50px;
 }
 
 .upcoming-launch-wrap{
-    /* max-height: 800px;
-    overflow: scroll; */
-    /* background: #181C1F;  */
-    /* padding: 20px; */
-    grid-area: upcomingLaunch;
-    
+    max-height: 800px;
+    overflow: scroll;
+    background: #181C1F; 
+    padding: 20px;
 }
 
-/* .show-more{
+.show-more{
     background: 
         linear-gradient(
             180deg, 
@@ -98,24 +61,17 @@ Red          -                     - #AE0000;
    position: absolute;
    width: 100%;
    bottom: 100px;
-} */
+}
 /* --------------------------------------- */
 
 
 
 /* COMPLETED LAUNCH: --------------------- */
-.completed-launch{
-    margin-top: 50px;
-    
-}
-
 .completed-launch-wrap{
-    /* max-height: 800px;
-    overflow: scroll; */
-    /* background: #181C1F;  */
-    /* padding: 20px; */
-    grid-area: completedLaunch;
-    border-left: 3px solid #FFF;
+    max-height: 800px;
+    overflow: scroll;
+    background: #181C1F; 
+    padding: 20px;
 }
 /* --------------------------------------- */
 
@@ -131,17 +87,20 @@ Red          -                     - #AE0000;
 .show-more-3,
 .show-more-4{
     display: none;
-    grid-area: checkbox;
 }
 
 .show-more{
     grid-area: checkbox;
+    z-index: 10000;
+    height: 100px;
+   
+   
 }
 
 /* First Button */
 .launch-checkbox-1:not( :checked) ~ .upcoming-launch,
 .launch-checkbox-1:not( :checked) ~ .completed-launch{
-    height: 1000px;
+    height: 1100px;
     overflow: hidden;
 }
 
@@ -195,6 +154,10 @@ Red          -                     - #AE0000;
 /* Fourth button */
 .launch-checkbox-4:checked ~ .show-more-4{
     display: none;
+}
+
+.launch-checkbox-4:checked ~ .launch{
+    background: red;
 }
 
 
