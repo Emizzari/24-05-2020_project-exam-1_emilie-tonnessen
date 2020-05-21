@@ -50,14 +50,11 @@ function displayNextLaunch(nextLaunch) {
     html += `<h2>next launch</h2>
                 <p class="dd-content__description">${nextLaunch.mission_name}</p>
 
-
                 <h6 class="dd-content__title">Date:</h6>
                 <p class="dd-content__description">${convertDate(nextLaunch.launch_date_unix)}</p>
 
-
                 <h6 class="dd-content__title">site:</h6> 
                 <p class="dd-content__description">${nextLaunch.launch_site.site_name}</hp>
-
 
                 <h6 class="dd-content__title">rocket:</h6> 
                 <p class="dd-content__description">${nextLaunch.rocket.rocket_name}</p>
