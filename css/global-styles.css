@@ -76,6 +76,7 @@
 
 .section-img__sites{
     background: url('../images/sites_section.jpg');
+    max-height: 490px;
 }
 
 .section-img__about{
