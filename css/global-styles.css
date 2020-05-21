@@ -20,10 +20,10 @@
 
 /* HEADER: ------------------------------- */
 .header{
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important;
     width: 100%;
     height: 60%;
-    background-size: cover;
+    background-size: cover !important;
     background-position: center;
     box-sizing: border-box;
     margin-top: 100px;
