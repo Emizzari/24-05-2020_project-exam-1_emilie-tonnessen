@@ -1,7 +1,7 @@
 // Mobile menu toogle
 function toogleMobileMenu() {
     var mobileMenu = document.querySelector("#mobile-block-wrap");
-    var body = document.querySelector("body");
+    var body = document.querySelector("#body");
 
 
     if (mobileMenu.style.display === "block") {
