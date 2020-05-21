@@ -41,7 +41,7 @@ Red          -                     - #AE0000;
 
 /* IMAGE SECTION: ------------------------ */
 .imgSection__contact{
-    background: url("../images/contact.jpg");
+    background: url("../images/header__contact.jpg");
     background-size: cover;
     background-position: center;
     border-right: 8px solid #0077c7;
@@ -169,7 +169,7 @@ Red          -                     - #AE0000;
 /* Mobile: */
 @media screen and (max-width: 480px){
     .header__contact{
-        background-image: url('../images/contact.jpg');
+        background-image: url('../images/header__contact.jpg');
         height: 40% !important;
         border-bottom: 8px solid #0077c7;
     }
@@ -229,7 +229,7 @@ Red          -                     - #AE0000;
 /* Tablet: */
 @media screen and (max-width: 1199px) and (min-width: 481px){
     .header__contact{
-        background-image: url('../images/contact.jpg');
+        background-image: url('../images/header__contact.jpg');
         height: 50% !important;
         border-bottom: 8px solid #0077c7;
          background-position: 100% 35% !important;
