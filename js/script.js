@@ -1,7 +1,7 @@
 // Mobile menu toogle
 function toogleMobileMenu() {
     var mobileMenu = document.querySelector("#mobile-block-wrap");
-    var body = document.getElementById("body");
+    var body = document.querySelector("body");
 
 
     if (mobileMenu.style.display === "block") {
@@ -16,7 +16,6 @@ function toogleMobileMenu() {
 
 // Mobile Menu Hide on scolling down - show on scrolling up
 var prevScrollpos = window.pageYOffset;
-
 
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;

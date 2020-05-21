@@ -43,9 +43,6 @@ function convertDate(launchDate) {
 
 // DISPLAY NEXT LAUNCH ---------------------------------------------------------
 function displayNextLaunch(nextLaunch) {
-    // console.log(nextLaunch);
-
-    // Target the container
     const nextLaunchWrap = document.querySelector(".next-launch");
 
     let html = "";
@@ -73,8 +70,7 @@ function displayNextLaunch(nextLaunch) {
                         <span class="italic">No current details at this moment.</span>
                     </p>
                 `;
-    }
-    else {
+    } else {
         html += `<p class="dd-content__description">${nextLaunch.details}</p>`;
     }
 
