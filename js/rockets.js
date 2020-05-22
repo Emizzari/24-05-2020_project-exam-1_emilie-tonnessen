@@ -26,7 +26,7 @@ fetchVehicles();
 
 
 // DATE FORMAT: ------------------------------------------------------------------
-function convertDate(dateFormate) {
+function formatDate(dateFormate) {
     let date = new Date(dateFormate * 1000);
     return date.toLocaleDateString();
 }
@@ -120,7 +120,7 @@ function displayRoadster(roadster) {
                             <h5 class="dd-content__headline">${roadster.name}</h5>
 
                             <h6 class="dd-content__title">launch date</h6>
-                            <p class="dd-content__description">${convertDate(roadster.launch_date_unix)}</p>
+                            <p class="dd-content__description">${formatDate(roadster.launch_date_unix)}</p>
 
                             <h6 class="dd-content__title">earth distance</h6>
                             <p class="dd-content__description">${roadster.earth_distance_km} km</p>
