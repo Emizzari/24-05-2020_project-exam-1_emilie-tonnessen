@@ -408,15 +408,11 @@
     }
 
     .section-img__home,
-    .section-img__launch,
+    /* .section-img__launch, */
     .section-img__rockets,
     .section-img__sites,
     .section-img__about{
         display: none;
-    }
-
-    .CT-block__launch{
-        padding: 0px 10px;
     }
 
     .dd-content__headline{
@@ -427,6 +423,7 @@
         height: 200px;
     }
 }
+
 
 
 /* Tablet/Medium Viewport: */
@@ -513,10 +510,6 @@
     .section h2,
     .section p{
         margin-bottom: 15px;
-    }
-
-    .CT-block__launch{
-        padding: 0px 15px;
     }
 
     .dd-content__headline{
@@ -614,17 +607,13 @@
         margin-bottom: 20px;
     }
 
-    .CT-block__launch{
-        padding: 0px 15px;
-    }
-
     .dd-content__headline{
         font-size: 20px;
     }
 
-    .section-img__launch{
+    /* .section-img__launch{
         display: none;
-    }
+    } */
 
     .map{
         height: 280px;

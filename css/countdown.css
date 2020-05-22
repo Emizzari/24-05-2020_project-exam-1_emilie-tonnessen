@@ -74,7 +74,6 @@ Red          -                     - #AE0000;
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 20px; 
     background: linear-gradient(150deg, rgb(0, 153, 255), rgb(1, 46, 78));
     margin-top: 20px;
     color: #FFFFFF;
@@ -107,5 +106,73 @@ Red          -                     - #AE0000;
 .CT-numbers__launch{
     font-size: 30px;
     margin-bottom: 0px;
+}
+/* --------------------------------------- */
+
+
+
+/* RESPONSIVE CSS: ----------------------- */
+/* Mobile/Small Viewport:  */
+@media screen and (max-width: 660px){
+    .section-img__launch{
+        display: none;
+    }
+
+    .CT-wrap__launch{
+        padding: 20px 0px;
+    }
+
+    .CT-block__launch{
+        padding: 10px;
+    }
+}
+
+/* Tablet/Medium Viewport: */
+@media screen and (max-width: 972px) and (min-width: 661px){
+    .section-img__launch{
+        display: block;
+    }
+
+    .CT-wrap__launch{
+        padding: 20px 0px;
+    }
+
+    .CT-block__launch{
+        box-sizing: border-box;
+        padding: 0px 5px;
+    }
+
+    .CT-block__launch:first-child{
+        padding: 0;
+    }
+}
+
+/* Desktop/Large Viewport: */
+@media screen and (min-width: 973px) and (max-width: 1199px){
+    .section-img__launch{
+        display: none;
+    }
+
+    .CT-wrap__launch{
+        padding: 20px 0px;
+    }
+
+    .CT-block__launch{
+        padding: 0px 5%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .section-img__launch{
+        display: none;
+    }
+
+    .CT-wrap__launch{
+        padding: 20px 0px;
+    }
+
+    .CT-block__launch{
+        padding: 17px;
+    }
 }
 /* --------------------------------------- */
