@@ -6,7 +6,7 @@ const completedLaunchesAPI = "https://api.spacexdata.com/v3/launches/past";
 //Fetch json API
 async function fetchAPI() {
     try {
-        // Next Launch:
+        // Next Launch & Countdown:
         const nextLaunchResponse = await fetch(nextLaunchAPI);
         const nextLaunch = await nextLaunchResponse.json();
         displayNextLaunch(nextLaunch);
