@@ -5,10 +5,8 @@ const nextLaunchAPI = "https://api.spacexdata.com/v3/launches/next";
 async function fetchNextLaunch() {
     try {
         const response = await fetch(nextLaunchAPI);
-
         const nextLaunch = await response.json();
-
-        displayNextLaunch(nextLaunch);
+        displayCountdown(nextLaunch);
     } catch (error) {
         console.log(error);
     }
@@ -20,17 +18,18 @@ fetchNextLaunch();
 
 
 
-// Displaying the countdown timer ------------------------------------------------
-function displayNextLaunch(nextLaunch) {
-    var deadline = nextLaunch.launch_date_utc;
+// DISPLAY COUNTDOWN TIMER: ------------------------------------------------------
+function displayCountdown(nextLaunch) {
+    var launchDate = nextLaunch.launch_date_utc;
 
-    // Calculate the time remaining (not my code!! ned to document!!!)
-    function getTimeRemaining(endtime) {
+    function remainingTime(endtime) {
         var t = Date.parse(endtime) - Date.parse(new Date());
+
         var seconds = Math.floor((t / 1000) % 60);
         var minutes = Math.floor((t / 1000 / 60) % 60);
         var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
         var days = Math.floor(t / (1000 * 60 * 60 * 24));
+
         return {
             'total': t,
             'days': days,
@@ -40,27 +39,31 @@ function displayNextLaunch(nextLaunch) {
         };
     }
 
-    function initializeClock(id, endtime) {
-        var clock = document.querySelector(".CT-wrap__tr");
+    function countdownTimer(id, endtime) {
+        var countdownContainer = document.querySelector(".CT-wrap__tr");
 
-        var timeinterval = setInterval(function () {
-            var t = getTimeRemaining(endtime);
+        var timeInterval = setInterval(function () {
+            var time = remainingTime(endtime);
 
-            clock.innerHTML = 
+            let html ="";
+
+            html += 
                 `<div id="CT">
-                     <div class="CT-block"><p class="CT-letters">days</p><p class="CT-numbers">` + t.days + `</p></div>` +
-                    `<div class="CT-block"><p class="CT-letters">hours</p><p class="CT-numbers">` + t.hours + `</p></div>` +
-                    `<div class="CT-block"><p class="CT-letters">minutes</p><p class="CT-numbers">` + t.minutes + `</p></div>` +
-                    `<div class="CT-block"><p class="CT-letters">seconds</p><p class="CT-numbers">` + t.seconds + `</p></div>
-                </div>`                
-            ;
+                     <div class="CT-block"><p class="CT-letters">days</p><p class="CT-numbers">` + time.days + `</p></div>` +
+                    `<div class="CT-block"><p class="CT-letters">hours</p><p class="CT-numbers">` + time.hours + `</p></div>` +
+                    `<div class="CT-block"><p class="CT-letters">minutes</p><p class="CT-numbers">` + time.minutes + `</p></div>` +
+                    `<div class="CT-block"><p class="CT-letters">seconds</p><p class="CT-numbers">` + time.seconds + `</p></div>
+                </div>`;
 
-            if (t.total <= 0) {
-                clearInterval(timeinterval);
+            countdownContainer.innerHTML = html;
+
+            // If the countdown hits 0, clear the timer
+            if (time.total <= 0) {
+                clearInterval(timeInterval);
             }
+        // update every 1 second
         }, 1000);
     }
-
-    initializeClock('countdown', deadline);
+    countdownTimer('countdown', launchDate);
 }
 // END OF COUNTDOWN TIMER  -------------------------------------------------------
