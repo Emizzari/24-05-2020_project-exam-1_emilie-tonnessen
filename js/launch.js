@@ -33,8 +33,8 @@ fetchAPI();
 
 
 // CONVERT TO DATE FORMAT ------------------------------------------------------
-function convertDate(launchDate) {
-    let date = new Date(launchDate * 1000);
+function formatDate(launchDate) {
+    let date = new Date(launchDate * 1000);  
     return date.toLocaleDateString();
 }
 // END OF DATE FORMAT ----------------------------------------------------------
@@ -51,7 +51,7 @@ function displayNextLaunch(nextLaunch) {
                 <p class="dd-content__description">${nextLaunch.mission_name}</p>
 
                 <h6 class="dd-content__title">Date:</h6>
-                <p class="dd-content__description">${convertDate(nextLaunch.launch_date_unix)}</p>
+                <p class="dd-content__description">${formatDate(nextLaunch.launch_date_unix)}</p>
 
                 <h6 class="dd-content__title">site:</h6> 
                 <p class="dd-content__description">${nextLaunch.launch_site.site_name}</hp>
@@ -99,15 +99,16 @@ function displayNextLaunch(nextLaunch) {
 
 // DISPLAY COUNTDOWN TIMER: ----------------------------------------------------
 function displayCountdown(nextLaunch) {
-    var deadline = nextLaunch.launch_date_utc;
+    var launchDate = nextLaunch.launch_date_utc;
 
-    // Calculate the time remaining
-    function getTimeRemaining(endtime) {
+    function remainingTime(endtime) {
         var t = Date.parse(endtime) - Date.parse(new Date());
+
         var seconds = Math.floor((t / 1000) % 60);
         var minutes = Math.floor((t / 1000 / 60) % 60);
         var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
         var days = Math.floor(t / (1000 * 60 * 60 * 24));
+
         return {
             'total': t,
             'days': days,
@@ -117,29 +118,33 @@ function displayCountdown(nextLaunch) {
         };
     }
 
-    // Initiate the timer
-    function initializeCountdown(id, endtime) {
-        var countdownWrap = document.querySelector(".CT-wrap__launch");
+    function countdownTimer(id, endtime) {
+        var countdownContainer = document.querySelector(".CT-wrap__launch");
 
-        var timeinterval = setInterval(function () {
-            var t = getTimeRemaining(endtime);
+        var timeInterval = setInterval(function () {
+            var time = remainingTime(endtime);
 
-            countdownWrap.innerHTML =
+            let html = "";
+
+            html +=
                 `<div id="CT__launch">` +
-                    `<div class="CT-block__launch"><p class="CT-letters__launch">days</p><p class="CT-numbers__launch">` + t.days + `</p></div>` +
-                    `<div class="CT-block__launch"><p class="CT-letters__launch">hours</p><p class="CT-numbers__launch">` + t.hours + `</p></div>` +
-                    `<div class="CT-block__launch"><p class="CT-letters__launch">minutes</p><p class="CT-numbers__launch">` + t.minutes + `</p></div>` +
-                    `<div class="CT-block__launch"><p class="CT-letters__launch">seconds</p><p class="CT-numbers__launch">` + t.seconds + `</p></div>
+                    `<div class="CT-block__launch"><p class="CT-letters__launch">days</p><p class="CT-numbers__launch">` + time.days + `</p></div>` +
+                    `<div class="CT-block__launch"><p class="CT-letters__launch">hours</p><p class="CT-numbers__launch">` + time.hours + `</p></div>` +
+                    `<div class="CT-block__launch"><p class="CT-letters__launch">minutes</p><p class="CT-numbers__launch">` + time.minutes + `</p></div>` +
+                    `<div class="CT-block__launch"><p class="CT-letters__launch">seconds</p><p class="CT-numbers__launch">` + time.seconds + `</p></div>
                 </div>`
                 ;
 
-            if (t.total <= 0) {
-                clearInterval(timeinterval);
+            countdownContainer.innerHTML = html;
+
+            // If the countdown hits 0, clear the timer
+            if (time.total <= 0) {
+                clearInterval(timeInterval);
             }
+            // update every 1 second
         }, 1000);
     }
-
-    initializeCountdown('countdown', deadline);
+    countdownTimer('countdown', launchDate);
 }
 // END OF COUNTDOWN TIMER: -------------------------------------------------------
 
@@ -158,7 +163,7 @@ function displayUpcomingLaunches(upcomingLaunches) {
                 <div class="dd-container"> 
                     <input type="checkbox" id="toggle_id-${i}" class="checkbox"/>
                     <label class="dd-btn" for="toggle_id-${i}">
-                        <h6 class="dd-btn__title">${upcomingLaunches[i].mission_name} - ${convertDate(upcomingLaunches[i].launch_date_unix)}</h6>  
+                        <h6 class="dd-btn__title">${upcomingLaunches[i].mission_name} - ${formatDate(upcomingLaunches[i].launch_date_unix)}</h6>  
                         <div class="dd-btn__icon grid__center">
                             <div class="dd-btn__icon-1"></div>
                             <div class="dd-btn__icon-2"></div> 
@@ -204,7 +209,7 @@ function displayCompletedLaunches(completedLaunches) {
         html +=`<div class="dd-container">
                     <input class="checkbox" type="checkbox" id="toggle_id-${i}"/>
                     <label class="dd-btn" for="toggle_id-${i}">
-                        <h6 class="dd-btn__title">${completedLaunches[i].mission_name} - ${convertDate(completedLaunches[i].launch_date_unix)}</h6>  
+                        <h6 class="dd-btn__title">${completedLaunches[i].mission_name} - ${formatDate(completedLaunches[i].launch_date_unix)}</h6>  
                         <div class="dd-btn__icon grid__center">
                             <div class="dd-btn__icon-1"></div>
                             <div class="dd-btn__icon-2"></div> 
