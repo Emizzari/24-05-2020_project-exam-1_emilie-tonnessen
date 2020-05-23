@@ -38,8 +38,6 @@ function formatDate(dateFormate) {
 function displayRockets(rockets) {
     const rocketsContainer = document.querySelector(".rockets-wrap");
 
-    console.dir(rockets);
-
     let html = "";
 
     for (let i = 0; i < rockets.length; i++) {
