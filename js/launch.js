@@ -126,13 +126,11 @@ function displayCountdown(nextLaunch) {
 
             let html = "";
 
-            html +=
-                `<div id="CT__launch">` +
+            html +=    
                     `<div class="CT-block__launch"><p class="CT-letters__launch">days</p><p class="CT-numbers__launch">` + time.days + `</p></div>` +
                     `<div class="CT-block__launch"><p class="CT-letters__launch">hours</p><p class="CT-numbers__launch">` + time.hours + `</p></div>` +
                     `<div class="CT-block__launch"><p class="CT-letters__launch">minutes</p><p class="CT-numbers__launch">` + time.minutes + `</p></div>` +
-                    `<div class="CT-block__launch"><p class="CT-letters__launch">seconds</p><p class="CT-numbers__launch">` + time.seconds + `</p></div>
-                </div>`
+                    `<div class="CT-block__launch"><p class="CT-letters__launch">seconds</p><p class="CT-numbers__launch">` + time.seconds + `</p></div>`
                 ;
 
             countdownContainer.innerHTML = html;
